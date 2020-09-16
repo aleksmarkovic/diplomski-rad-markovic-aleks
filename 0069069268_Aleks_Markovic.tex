@@ -1,3 +1,5 @@
+% !TeX encoding = windows-1250
+
 \input{tex_aux/rithesis_preamble}
 
 % pomocu \includeonly moze se kompajlirati samo odredjeno poglavlje, da se skrati vrijeme kompajliranja, dok se ne isprave pogreske u tom poglavlju npr.:
@@ -10,17 +12,17 @@
 \frontmatter   % - ne dirati
 
 % upisati naziv studija
-\degreesubject{Diplomski studij raèunarstva} % upisati odgovarajuci naziv studija
+\degreesubject{Diplomski studij ra?unarstva} % upisati odgovarajuci naziv studija
 
 % upisati vrstu rada
 \documenttype{Diplomski rad}  % Zavrsni rad ili Diplomski rad
 
 \title{Upravljanje robotom i mapiranje okoline u Unity 3D
-	 \\ Robot control and mapping with Unity 3D}   % upisati specificni naslov rada
+	 \\ (Robot control and mapping with Unity 3D)}   % upisati specificni naslov rada
 
 \date{\MONTH~\the\year.}   % ne dirati - mjesec i godina ?e se upisati sami
 
-\author{Aleks Markoviæ}  % upisati svoje ime i prezime
+\author{Aleks Markovi?}  % upisati svoje ime i prezime
 \jmbag{0069069268}  % upisati vlastiti JMBAG
 \maketitle		% ne dirati
 
@@ -56,9 +58,9 @@
 \mainmatter		% ne dirati
 
 % Ovdje pomo?u include funkcije ucitavati kreirana poglavlja. Poglavljima dajte logicna imena s obzirom na sadrzaj prikazan u njima (bez razmaka u imenu).
-\include{Intro}   % ovo poslije staviti pod komentar kada se nau?i koristiti
-%\include{Poglavlje_1}  % dati neko logicno ime umjesto ``Poglavlje_1''
-%\include{Poglavlje_2} 
+%\include{Intro}   % ovo poslije staviti pod komentar kada se nau?i koristiti
+\include{Uvod}  % dati neko logicno ime umjesto ``Poglavlje_1''
+\include{SoftverskiAlati} 
 %\include{Poglavlje_3} % itd.
 
 
