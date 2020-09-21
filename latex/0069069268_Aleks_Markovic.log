@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  17 SEP 2020 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  21 SEP 2020 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -747,14 +747,22 @@ Poglavlje 2.
 
 
 
-]) [3]
+]
+<slike/unitySS.png, id=132, 1726.45pt x 1349.04pt>
+File: slike/unitySS.png Graphic file (type png)
+<use slike/unitySS.png>
+Package pdftex.def Info: slike/unitySS.png  used on input line 32.
+(pdftex.def)             Requested size: 436.93283pt x 341.41727pt.
+
+Overfull \hbox (6.93283pt too wide) in paragraph at lines 32--33
+ [] 
+ []
+
+[3]) [4 <./slike/unitySS.png>]
 \openout2 = `Literatura.aux'.
 
- (./Literatura.tex (./0069069268_Aleks_Markovic.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
-
-)) [4
+ (./Literatura.tex
+(./0069069268_Aleks_Markovic.bbl)) [5
 
 
 
@@ -777,16 +785,16 @@ Package glossaries Warning: Use of \glossary with glossaries.sty is deprecated.
 \@gls@deffile=\write10
 \openout10 = `0069069268_Aleks_Markovic.glsdefs'.
 
-) [5
+) [6
 
-] (./Sazetak.tex) [6
+] (./Sazetak.tex) [7
 
 ]
 \openout2 = `Prilog_1.aux'.
 
  (./Prilog_1.tex
 Dodatak A.
-) [7
+) [8
 
 
 ]
@@ -798,28 +806,27 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `0069069268_Aleks_Markovic.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 9A93B8AB3C090C2FE57C23D052B30B82;780.
+(rerunfilecheck)             Checksum: B593445BCABF7AE60D6DE119F9ABAD8C;777.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 15335 strings out of 481239
- 256019 string characters out of 5920377
- 590728 words of memory out of 5000000
- 30203 multiletter control sequences out of 15000+600000
- 540633 words of font info for 54 fonts, out of 8000000 for 9000
+ 15377 strings out of 481239
+ 256540 string characters out of 5920377
+ 592838 words of memory out of 5000000
+ 30229 multiletter control sequences out of 15000+600000
+ 540286 words of font info for 53 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 54i,5n,44p,1067b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,6n,81p,1067b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on 0069069268_Aleks_Markovic.pdf (15 pages, 91524 bytes).
+st/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on 0069069268_Aleks_Markovic.pdf (16 pages, 307187 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

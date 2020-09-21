@@ -1,15 +1,40 @@
 % !TeX encoding = windows-1250
 \chapter{Softverski alati}
-\qquad Prije samog riješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti ?to su i kako funkcioniraju kori?teni softverski alati. Definirati ?e se i koji su preduvjeti, tj. knji?nice ili alati koji svaki od njih zahtjeva da se mo?e odraditi funkcija koja im se zada za prethodno navedenu svrhu.
+\qquad Prije samog riješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati ?e se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se mo?e odraditi funkcija koja im se zada za prethodno navedenu svrhu.
+\qquad Korištene su najnovije dostupne a stabilne inaèice korištenih alata:
+\begin{enumerate}
+	\item ROS Noetic Ninjemys - datum izlaska 23. svibnja 2020.
+	\item Unity 2019. LTS - izašlo polovicom 2020. godine
+	\item ROS\# 1.6 - datum izlaska 20. prosinca 2019.
+\end{enumerate}
+
 
 \section{ROS}
 \qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav. Iako sadrži rijeèi operacijski sustav, on to nije. Postoji i eksperimentalna verzija za Windows 10 i OS X, no ovaj æe se rad usredotoèiti na razvoj na Linux-u. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez da se treba imati posebno znanje o korištenom hardveru.
 \qquad ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje praktiènosti i potencijala ubrzo proširio i u ostale grane robotike. Prije prelaska na ROS, svaki proizvoðaè robota je je trebao razvijati svoj API (Application Programming Interface) za komunikaciju i upravljanje svojim robotima. Sada roboti diljem svijeta veæinom koriste ROS kao svoj primarni sustav za komunikaciju i upravljanje, te je zbog toga vrlo korisno nauèiti ROS. Sa istim znanjem i vještinama moguæe je razvijati softver koji æe poslužiti na razlièitim robotima, razlièitih proizvoðaèa, upravo radi ROS unificiranja. 
-\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. \emph{rosurl}
+\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. \cite{rosurl}
+\qquad free open source??
 
-\section{Unity 3D}
+\section{Unity}
+\qquad Unity je cross-platform (multi-platformsko) razvojno okruženje, primarno za razvijanje raèunalnih igra. Sveukupni razvoj Unity razvojnog okruženja radi amerièka korporacija Unity Technologies. Takoðer, sam softver je besplatan za edukacijske i osobne svrhe te komercijalne svrhe do 100.000 amerièkih dolara prihoda. Postoji veliki izbor besplatnih i ne besplatnih paketa koji se može koristiti za ubrzati i olakšati odreðene zadatke, a to se sve nalazi na tzv. "Unity Asset Store". \cite{unityassetstore}
+\qquad Unity LTS (Long Term Support) verzija se u tekuæoj godini dovrši za prošlu - Unity 2019. LTS je došao sredinom 2020. godine, a nova, 2020. verzija je veæ dostupna i ona se postepeno nadograðuje. LTS verzija se svakog tjedna ažurira novim zakrpama.
+\qquad Unity Editor je glavni alat za razvoj (slika~\ref{fig:unityeditor}). U njemu se radi veæina razvoja oko vizualnih elemenata i interakcije izmeðu njih. Glavne komponente ureðivaèa su sljedeæe: 
+\begin{enumerate}
+	\item Hierarchy (hijerarhija) 
+	\item Scene (scena)
+	\item Game (igra)
+	\item Inspector (inspektor)
+	\item Console (konzola)
+	\item Project (projekt)
+	\item Ostalo
+\end{enumerate}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=12cm,width=21cm,keepaspectratio=true]{unitySS}
+		\caption{Unity Editor}
+		\label{fig:unityeditor}
+	\end{center}
+\end{figure}
+
 \section{ROS\#}
 
-% itd.
-
-%%%%  POGLAVLJE ZAVRSENO  %%%%%

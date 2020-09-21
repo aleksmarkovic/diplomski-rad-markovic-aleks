@@ -6,11 +6,11 @@
 \contentsline {section}{\numberline {1.2}Naslov sekcije}{1}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Softverski alati}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}ROS}{2}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Unity 3D}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}ROS\#}{3}{section.2.3}%
-\contentsline {chapter}{Bibliografija}{4}{chapter*.4}%
-\contentsline {chapter}{Pojmovnik}{5}{chapter*.4}%
-\contentsline {chapter}{Sa\v zetak}{6}{chapter*.4}%
-\contentsline {chapter}{\numberline {A}Naslov priloga}{7}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Naslov sekcije}{7}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Naslov sekcije}{7}{section.A.2}%
+\contentsline {section}{\numberline {2.2}Unity}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}ROS\#}{4}{section.2.3}%
+\contentsline {chapter}{Bibliografija}{5}{chapter*.5}%
+\contentsline {chapter}{Pojmovnik}{6}{chapter*.5}%
+\contentsline {chapter}{Sa\v zetak}{7}{chapter*.5}%
+\contentsline {chapter}{\numberline {A}Naslov priloga}{8}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Naslov sekcije}{8}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Naslov sekcije}{8}{section.A.2}%
