@@ -1,6 +1,7 @@
 % !TeX encoding = windows-1250
 \chapter{Softverski alati}
 \qquad Prije samog riješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati ?e se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se mo?e odraditi funkcija koja im se zada za prethodno navedenu svrhu.
+
 \qquad Korištene su najnovije dostupne a stabilne inaèice korištenih alata:
 \begin{enumerate}
 	\item ROS Noetic Ninjemys - datum izlaska 23. svibnja 2020.
@@ -11,23 +12,29 @@
 
 \section{ROS}
 \qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav. Iako sadrži rijeèi operacijski sustav, on to nije. Postoji i eksperimentalna verzija za Windows 10 i OS X, no ovaj æe se rad usredotoèiti na razvoj na Linux-u. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez da se treba imati posebno znanje o korištenom hardveru.
+
 \qquad ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje praktiènosti i potencijala ubrzo proširio i u ostale grane robotike. Prije prelaska na ROS, svaki proizvoðaè robota je je trebao razvijati svoj API (Application Programming Interface) za komunikaciju i upravljanje svojim robotima. Sada roboti diljem svijeta veæinom koriste ROS kao svoj primarni sustav za komunikaciju i upravljanje, te je zbog toga vrlo korisno nauèiti ROS. Sa istim znanjem i vještinama moguæe je razvijati softver koji æe poslužiti na razlièitim robotima, razlièitih proizvoðaèa, upravo radi ROS unificiranja. 
-\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. \cite{rosurl}
+\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreð
+enoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. \cite{rosurl}
+
 \qquad free open source??
 
 \section{Unity}
 \qquad Unity je cross-platform (multi-platformsko) razvojno okruženje, primarno za razvijanje raèunalnih igra. Sveukupni razvoj Unity razvojnog okruženja radi amerièka korporacija Unity Technologies. Takoðer, sam softver je besplatan za edukacijske i osobne svrhe te komercijalne svrhe do 100.000 amerièkih dolara prihoda. Postoji veliki izbor besplatnih i ne besplatnih paketa koji se može koristiti za ubrzati i olakšati odreðene zadatke, a to se sve nalazi na tzv. "Unity Asset Store". \cite{unityassetstore}
+
 \qquad Unity LTS (Long Term Support) verzija se u tekuæoj godini dovrši za prošlu - Unity 2019. LTS je došao sredinom 2020. godine, a nova, 2020. verzija je veæ dostupna i ona se postepeno nadograðuje. LTS verzija se svakog tjedna ažurira novim zakrpama.
+\subsection{Editor}
+
 \qquad Unity Editor je glavni alat za razvoj (slika~\ref{fig:unityeditor}). U njemu se radi veæina razvoja oko vizualnih elemenata i interakcije izmeðu njih. Glavne komponente ureðivaèa su sljedeæe: 
-\begin{enumerate}
-	\item Hierarchy (hijerarhija) 
-	\item Scene (scena)
-	\item Game (igra)
-	\item Inspector (inspektor)
-	\item Console (konzola)
-	\item Project (projekt)
-	\item Ostalo
-\end{enumerate}
+\begin{itemize}
+	\item Hierarchy (hijerarhija) - Hijerarhijski prikaz svih elemenata u trenutnoj sceni. Unity svoje elemente u sceni naziva GameObject (igraèi objekt). 
+	\item Scene (scena) - Glavni prozor gdje se radi sve u vezi s elementima koji se mogu grafièki prikazati.
+	\item Game (igra) - Prozor koji služi kao emulacija igre. Pritiskom na "Play" gumb pokreæe se igra i ovaj pokreæe se ovaj prozor gdje se može igrati i vidjeti što i kako radi nakon izrade u prozoru scene.
+	\item Inspector (inspektor) - Nakon odabira odreðenog elementa iz hijerarhije (element se takoðer može odabrati i u sceni), ovdje se prikazuju sve komponente nadodane na taj odabrani element tj. GameObject. Mogu se dodavati razne komponente koje Unity pruža, tipa prikaz slika i teksta, animacije, efekti i još mnogo toga, ali i skripte koje sama osoba koja razvija softver može napisati.
+	\item Console (konzola) - Mjesto gdje se ispisuju sve poruke, upozorenja i greške. 
+	\item Project (projekt) - Ovime se može upravljati arhitekturom projekta. Od klasiènog stvaranja mapa i datoteka, imenovanja i ostalog, do dodavanja specifiènih Unity dodataka.
+	\item Ostalo - Meni traka u kojoj se mogu pristupiti svim ostalim postavkama (ukljuèujuæi i veæ navedenim stavkama). Dodatni alati se mogu postaviti kao aktivni i vidljivi, npr. pristup Asset Store-u, panel za animacije i animator te ostale stvari koje nisu vezane za zadatak ovog rada. 
+\end{itemize}
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[height=12cm,width=21cm,keepaspectratio=true]{unitySS}
@@ -35,6 +42,37 @@
 		\label{fig:unityeditor}
 	\end{center}
 \end{figure}
+
+\newpage
+\subsection{Skripte}
+
+\qquad Unity takoðer svojim korisnicima omoguæava programiranje vlastitih (ili korištenje tuðih) skripta. Programiranje se vrši u C\# programskom jeziku, koji se izvršava na \textit{Mono} razvojnom okruženju. Takoðer, moguæe je skripte programirati u \textit{JavaScriptu}, ali je podrška lošija.
+
+\qquad Cilj \textit{Mono} razvojnog okruženja je da omoguæi korištenje .NET Framework-a na razne operacijske sustave, jer je inaèe .NET framework razvijen od strane Microsofta samo za Windows OS. Komponente \textit{Mono} framework-a ukljuèuju:
+\begin{itemize}
+	\item C\# kompajler - Potpun kompajler, sa svim znaèajkama od C\# 1.0 do 6.0.
+	\item Mono Runtime \cite{monoabout} - Glavne komponente:
+	\begin{itemize}
+		\item Just-in-Time (JIT) kompajler - kompilacija koda tokom izvršavanja programa. 
+		\item Ahead-of-Time (AOT) kompajler - kompilacija koda u nativni kod stroja gdje æe se izvršavati, prije njegovog izvršavanja.
+		\item Èitaè knjižnica - omoguæuje nam uèitavanje vanjskih programskih knjižnica.
+		\item Sakupljaè smeæa (Garbage collector) - automatsko brisanje objekata u memoriji koji se više ne koriste.
+		\item Dretveni sustav - omoguæava izvršavanje više dretva (threads) istovremeno, pospješuje brzinu i produktivnost odreðenog programa ako je isprogramirano na pametan naèin.
+		\item Interoperabilnost - karakteristika da više programskih sustava mogu bez poteškoæa meðusobno funkcionirati.
+	\end{itemize}
+
+	\item .NET Framework knjižnica klasa - \textit{Mono} platforma pruža set klasa kao temelj za razvijanje aplikacija. Navedene su klase kompatibilne s Microsoftovim .NET Framework klasama.
+	\item \textit{Mono} pruža i dodatne klase koje nisu ukljuèene u Microsoftovim baznim klasama koje su posebice korisne za razvijanje Linux aplikacija, npr. Gtk+, Zip, OpenGL, Cairo, POSIX i druge.
+\end{itemize}
+\qquad Glavne znaèajke \textit{Mono} radnog okruženja:
+\begin{itemize}
+	\item Multi-platformsko radno okruženje - Linux, macOS, BSD, Microsoft Windows.
+	\item Multi-jezièan - C\#, VB 8, Java, Python, Ruby i još mnogi.
+	\item Kompatibilan s binarnim kodom.
+	\item Kompatibilan s Microsoft APIjem - pokreæe ASP.NET, ADO.NET, Silverlight i Windows.Forms.
+	\item Otvorenog koda i besplatan - sav \textit{Mono} sadržaj, ukljuèujuæi i knjižnice, distribuiran je koristeæi MIT licencu.
+	\item Opsežna pokrivenost - implementacije mnogih popularnih knjižnica i protokola.
+\end{itemize}
 
 \section{ROS\#}
 

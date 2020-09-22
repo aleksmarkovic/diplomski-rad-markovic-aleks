@@ -6,11 +6,18 @@
   note  = {{, 17. rujna 2020.}},
 }
 
+@Electronic{monoabout,
+  author = {Mono Project},
+  title  = {Mono},
+  url    = {https://www.mono-project.com/docs/about-mono/},
+  note   = {{, 21. rujna 2020.}},
+}
+
 @Electronic{unityassetstore,
   author = {Unity Technologies},
   title  = {Unity Asset Store},
   url    = {https://assetstore.unity.com},
-  note   = {{, 21. rujna 2020.}},
+  note   = {{, 22. rujna 2020.}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

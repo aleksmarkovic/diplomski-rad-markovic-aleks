@@ -29,7 +29,13 @@ Ros službene stranice. , s Interneta,  \url{www.ros.org} {, 17. rujna 2020.}
 \bibitem{unityassetstore}
 \BIBentryALTinterwordspacing
 U.~Technologies. Unity asset store. , s Interneta,
-  \url{https://assetstore.unity.com} {, 21. rujna 2020.}
+  \url{https://assetstore.unity.com} {, 22. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{monoabout}
+\BIBentryALTinterwordspacing
+M.~Project. Mono. , s Interneta,
+  \url{https://www.mono-project.com/docs/about-mono/} {, 21. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
