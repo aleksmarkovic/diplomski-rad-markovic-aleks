@@ -7,12 +7,12 @@
 \contentsline {chapter}{\numberline {2}Softverski alati}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}ROS}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Unity}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Editor}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Skripte}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Editor}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Skripte}{6}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}ROS\#}{7}{section.2.3}%
-\contentsline {chapter}{Bibliografija}{8}{chapter*.5}%
-\contentsline {chapter}{Pojmovnik}{9}{chapter*.5}%
-\contentsline {chapter}{Sa\v zetak}{10}{chapter*.5}%
-\contentsline {chapter}{\numberline {A}Naslov priloga}{11}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Naslov sekcije}{11}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Naslov sekcije}{11}{section.A.2}%
+\contentsline {chapter}{Bibliografija}{9}{chapter*.6}%
+\contentsline {chapter}{Pojmovnik}{10}{chapter*.6}%
+\contentsline {chapter}{Sa\v zetak}{11}{chapter*.6}%
+\contentsline {chapter}{\numberline {A}Naslov priloga}{12}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Naslov sekcije}{12}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Naslov sekcije}{12}{section.A.2}%

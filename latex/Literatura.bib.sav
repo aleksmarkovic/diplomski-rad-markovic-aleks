@@ -13,6 +13,13 @@
   note   = {{, 21. rujna 2020.}},
 }
 
+@Electronic{rossharprepo,
+  author = {Siemens},
+  title  = {ROS#},
+  url    = {https://github.com/siemens/ros-sharp},
+  note   = {{, 23. rujna 2020.}},
+}
+
 @Electronic{unityassetstore,
   author = {Unity Technologies},
   title  = {Unity Asset Store},

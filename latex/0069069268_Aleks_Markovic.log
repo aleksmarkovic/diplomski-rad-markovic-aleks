@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  22 SEP 2020 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  23 SEP 2020 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,10 +599,38 @@ Package: glossary-tree 2020/02/13 v4.45 (NLCT)
 
 Package glossaries Info: Writing glossary file 0069069268_Aleks_Markovic.glo on
  input line 88.
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count326
+\lst@gtempboxa=\box54
+\lst@token=\toks36
+\lst@length=\count327
+\lst@currlwidth=\dimen173
+\lst@column=\count328
+\lst@pos=\count329
+\lst@lostspace=\dimen174
+\lst@width=\dimen175
+\lst@newlines=\count330
+\lst@lineno=\count331
+\lst@maxwidth=\dimen176
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count332
+\lst@skipnumbers=\count333
+\lst@framebox=\box55
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count326
-\l__pdf_internal_box=\box54
+\l__kernel_color_stack_int=\count334
+\l__pdf_internal_box=\box56
 )
 
 LaTeX Warning: Unused global option(s):
@@ -612,41 +640,42 @@ LaTeX Warning: Unused global option(s):
 (./Literatura.aux) (./Prilog_1.aux))
 \openout1 = `0069069268_Aleks_Markovic.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count327
-\scratchdimen=\dimen173
-\scratchbox=\box55
-\nofMPsegments=\count328
-\nofMParguments=\count329
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count330
-\MPscratchDim=\dimen174
-\MPnumerator=\count331
-\makeMPintoPDFobject=\count332
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count335
+\scratchdimen=\dimen177
+\scratchbox=\box57
+\nofMPsegments=\count336
+\nofMParguments=\count337
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen178
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
+\everyMPtoPDFconversion=\toks38
 ) ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 10.
+LaTeX Info: Redefining \selectfont on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -654,8 +683,8 @@ Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 10.
+\AtBeginShipoutBox=\box58
+Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -666,18 +695,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count333
+\c@section@level=\count341
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
 
 (./0069069268_Aleks_Markovic.out) (./0069069268_Aleks_Markovic.out)
 \@outlinefile=\write6
 \openout6 = `0069069268_Aleks_Markovic.out'.
 
 
-(./0069069268_Aleks_Markovic.glsdefs) [1
+(./0069069268_Aleks_Markovic.glsdefs)
+\c@lstlisting=\count342
+ [1
 Non-PDF special ignored!
 <special> header=psfrag.pro
 
@@ -748,44 +779,47 @@ Poglavlje 2.
 
 
 ] [3]
-Overfull \hbox (21.45226pt too wide) in paragraph at lines 36--37
+Overfull \hbox (21.45226pt too wide) in paragraph at lines 60--61
 []\OT1/cmr/m/n/12 Ostalo - Meni traka u ko-joj se mogu pris-tu-piti svim os-ta-
 lim pos-tav-kama (uklju^^Tcuju^^Sci
  []
 
-<slike/unitySS.png, id=155, 1726.45pt x 1349.04pt>
+[4]
+<slike/unitySS.png, id=164, 1726.45pt x 1349.04pt>
 File: slike/unitySS.png Graphic file (type png)
 <use slike/unitySS.png>
-Package pdftex.def Info: slike/unitySS.png  used on input line 40.
+Package pdftex.def Info: slike/unitySS.png  used on input line 64.
 (pdftex.def)             Requested size: 436.93283pt x 341.41727pt.
 
-Overfull \hbox (6.93283pt too wide) in paragraph at lines 40--41
+Overfull \hbox (6.93283pt too wide) in paragraph at lines 64--65
  [] 
  []
 
-[4]
-Overfull \hbox (7.9399pt too wide) in paragraph at lines 49--50
+[5 <./slike/unitySS.png>]
+Overfull \hbox (7.9399pt too wide) in paragraph at lines 73--74
  \OT1/cmr/m/n/12 Unity tako[]der svo-jim ko-ris-ni-cima omogu^^Scava pro-gra-mi
 -ra-nje vlas-ti-tih (ili kori^^Tstenje
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5 <./slike/unitySS.png>]
-Overfull \hbox (6.5732pt too wide) in paragraph at lines 58--59
+Overfull \hbox (6.5732pt too wide) in paragraph at lines 82--83
 [][]\OT1/cmr/m/n/12 Cita^^Tc knji^^Tznica - omogu^^Scuje nam u^^Tcitavanje vanj
 -skih pro-gram-skih knji^^Tznica. 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1953) has occurred while \output is active []
 
- [6])
-[7]
+ [6]
+Overfull \hbox (6.3427pt too wide) in paragraph at lines 112--113
+ \OT1/cmr/m/n/12 ROS# je set pro-gram-skih knji^^Tznica i alata otvo-re-nog kod
+a u C#-u koja omogu^^Scuje
+ []
+
+[7]) [8]
 \openout2 = `Literatura.aux'.
 
- (./Literatura.tex (./0069069268_Aleks_Markovic.bbl)) [8
+ (./Literatura.tex (./0069069268_Aleks_Markovic.bbl)) [9
 
 
 
@@ -801,57 +835,59 @@ Package glossaries Warning: Use of \glossary with glossaries.sty is deprecated.
 (glossaries)                options kernelglossredefs=false (to restore the 
 (glossaries)                former definition of \glossary) and nomain (if the 
 
-(glossaries)                file extensions cause a conflict) on input line 75.
+(glossaries)                file extensions cause a conflict) on input line 92.
 
 
 (./Kratice.tex
 \@gls@deffile=\write10
 \openout10 = `0069069268_Aleks_Markovic.glsdefs'.
 
-) [9
+) [10
 
-] (./Sazetak.tex) [10
+] (./Sazetak.tex) [11
 
 ]
 \openout2 = `Prilog_1.aux'.
 
  (./Prilog_1.tex
 Dodatak A.
-) [11
+) [12
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./0069069268_Aleks_Markovic.aux (./Uvod.aux) (./SoftverskiAlati.aux)
 (./Literatura.aux) (./Prilog_1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `0069069268_Aleks_Markovic.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 547A42414C6441B7A8FCCBE421C4CA37;898.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
+(rerunfilecheck)             Checksum: 4E45FE16BB2B0E2453C73B37403C8CE3;898.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 15391 strings out of 481239
- 256721 string characters out of 5920377
- 591871 words of memory out of 5000000
- 30235 multiletter control sequences out of 15000+600000
- 540940 words of font info for 55 fonts, out of 8000000 for 9000
+ 17075 strings out of 481239
+ 278754 string characters out of 5920377
+ 799588 words of memory out of 5000000
+ 31895 multiletter control sequences out of 15000+600000
+ 542053 words of font info for 60 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 54i,6n,81p,1067b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,10n,81p,1067b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmtt12.pfb>
-Output written on 0069069268_Aleks_Markovic.pdf (20 pages, 331169 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmtt12.pfb>
+Output written on 0069069268_Aleks_Markovic.pdf (21 pages, 365042 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

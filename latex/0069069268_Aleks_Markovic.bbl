@@ -38,4 +38,10 @@ M.~Project. Mono. , s Interneta,
   \url{https://www.mono-project.com/docs/about-mono/} {, 21. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rossharprepo}
+\BIBentryALTinterwordspacing
+Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
+  23. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

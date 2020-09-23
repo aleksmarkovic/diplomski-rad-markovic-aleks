@@ -1,3 +1,5 @@
+
+
 % !TeX encoding = windows-1250
 \chapter{Softverski alati}
 \qquad Prije samog riješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati ?e se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se mo?e odraditi funkcija koja im se zada za prethodno navedenu svrhu.
@@ -11,13 +13,35 @@
 
 
 \section{ROS}
-\qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav. Iako sadrži rijeèi operacijski sustav, on to nije. Postoji i eksperimentalna verzija za Windows 10 i OS X, no ovaj æe se rad usredotoèiti na razvoj na Linux-u. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez da se treba imati posebno znanje o korištenom hardveru.
+\qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav i unatoè tome što sadrži rijeèi operacijski sustav, on to nije. Postoji i eksperimentalna verzija za Windows 10 i OS X, no ovaj æe se rad usredotoèiti na razvoj na Linux-u. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez da se treba imati posebno znanje o korištenom hardveru.
 
 \qquad ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje praktiènosti i potencijala ubrzo proširio i u ostale grane robotike. Prije prelaska na ROS, svaki proizvoðaè robota je je trebao razvijati svoj API (Application Programming Interface) za komunikaciju i upravljanje svojim robotima. Sada roboti diljem svijeta veæinom koriste ROS kao svoj primarni sustav za komunikaciju i upravljanje, te je zbog toga vrlo korisno nauèiti ROS. Sa istim znanjem i vještinama moguæe je razvijati softver koji æe poslužiti na razlièitim robotima, razlièitih proizvoðaèa, upravo radi ROS unificiranja. 
-\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreð
-enoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. \cite{rosurl}
 
-\qquad free open source??
+\qquad ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. Takoðer ROS sadrži razne upravljaèke programe i algoritme, i sve je otvorenog koda - besplatno.\cite{rosurl}
+
+\qquad Nedavno je razvijen i novi ROS, ROS 2. Prva službena verzija izdana je krajem 2017. Iako je preporuèljivo koristiti više future-proof tehnologije, za ovaj rad odabran je ROS 1 iz razloga što neki od kritiènih alata za uspjeh rada nisu podržani na najnovijim verzijama ROS-a 2. Unatoè tome što je ROS 2 više future-proof i noviji, ROS 1 se i dalje razvija te nova verzija izlazi svake godine. Neke od razlika izmeðu ROS-a 1 i 2 navedene su u tablici \ref{tab:rosversions}.
+\begin{table}[!htbp]
+	\scriptsize
+	\renewcommand{\arraystretch}{1.2}
+	\caption{ROS 1 i ROS 2 bitne razlike}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Znaèajka & ROS 1 & ROS 2
+		\\ [0.5ex]
+		\hline \hline
+		Testirane platforme & Ubuntu & Ubuntu, OS X, Windows 10 \\ [0.5ex] % razmak do iducega retka
+		C++ & C++11 & C++14, C++17 \\ [0.5ex]
+		Python & Python 2 & Python 3.5 \\ [0.5ex]
+		Roslaunch & XML & Python - kompleksnija logika \\ [0.5ex]
+		Èvor u procesu & 1 & Više od 1 \\ [0.5ex]
+		& Velika zajednica s puno stabilnih & Minimalne ovisnosti, bolja prenosivost, \\
+		Ostalo & i odliènih paketa. & pouzdanost, perzistentnost i rad \\
+		&  Puno literature i tutorijala. & u stvarnom vremenu (real-time).\\ [0.5ex]
+		\hline
+	\end{tabular}
+	\label{tab:rosversions}
+\end{table}
 
 \section{Unity}
 \qquad Unity je cross-platform (multi-platformsko) razvojno okruženje, primarno za razvijanje raèunalnih igra. Sveukupni razvoj Unity razvojnog okruženja radi amerièka korporacija Unity Technologies. Takoðer, sam softver je besplatan za edukacijske i osobne svrhe te komercijalne svrhe do 100.000 amerièkih dolara prihoda. Postoji veliki izbor besplatnih i ne besplatnih paketa koji se može koristiti za ubrzati i olakšati odreðene zadatke, a to se sve nalazi na tzv. "Unity Asset Store". \cite{unityassetstore}
@@ -74,5 +98,22 @@ enoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih so
 	\item Opsežna pokrivenost - implementacije mnogih popularnih knjižnica i protokola.
 \end{itemize}
 
-\section{ROS\#}
+\qquad Programiranje prilagoðenih skripti omoguæava kompleksna ponašanja i radnje u igri/softveru kojega se razvija. Gotovo sve akcije koje se može napraviti u Editoru, može se i u skripti, te se time može drastièno poveæati opseg moguænosti.
+\begin{lstlisting}
+#include <stdio.h>
 
+int main(int argc, char ** argv)
+{
+printf("Hello world!\n");
+return 0;
+}
+\end{lstlisting}
+\section{ROS\#}
+\qquad ROS\# je set programskih knjižnica i alata otvorenog koda u C\#-u koja omoguæuje komunikaciju izmeðu ROS-a i .NET aplikacija - Unity-ja, razvijen od strane Siemens kompanije. ROS\# je bio primarno razvijen za Windows OS, ali se uspješno može koristiti i na druge operacijske sustave. Paket se može preuzeti s Unity Asset Store-a ili direktno sa službenog Github repozitorija. \cite{rossharprepo} Ovo je ujedno i glavni alat koji æe se koristiti u ovom radu za stvaranje mosta izmeðu ROS-a i Unity-a.
+
+\qquad Glavni sadržaj ovog paketa je sljedeæi:
+\begin{itemize}
+	\item .NET riješenje za RosBridgeClient (knjižnica koja omoguæuje spajanje vanjskih aplikacija na ROS sustav), Urdf (robotski modeli) i MessageGeneration (generiranje poruka).
+	\item ROS paketi korišteni od strane ROS\#-a.
+	\item Unity projekt koji sadrži primjer scenu te RosBridgeClient, Urdf i MessageGeneration ekstenzije za Unity.
+\end{itemize}
