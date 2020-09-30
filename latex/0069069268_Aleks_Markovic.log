@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  23 SEP 2020 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  29 SEP 2020 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,7 +637,7 @@ LaTeX Warning: Unused global option(s):
     [11].
 
 (./0069069268_Aleks_Markovic.aux (./Uvod.aux) (./SoftverskiAlati.aux)
-(./Literatura.aux) (./Prilog_1.aux))
+(./KonfiguracijaRadneOkoline.aux) (./Literatura.aux) (./Prilog_1.aux))
 \openout1 = `0069069268_Aleks_Markovic.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -731,12 +731,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 ] (./Zahvala.tex) [5
 
 ] (./0069069268_Aleks_Markovic.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -778,14 +778,17 @@ Poglavlje 2.
 
 
 
-] [3]
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+[4]
 Overfull \hbox (21.45226pt too wide) in paragraph at lines 60--61
 []\OT1/cmr/m/n/12 Ostalo - Meni traka u ko-joj se mogu pris-tu-piti svim os-ta-
 lim pos-tav-kama (uklju^^Tcuju^^Sci
  []
 
-[4]
-<slike/unitySS.png, id=164, 1726.45pt x 1349.04pt>
+<slike/unitySS.png, id=171, 1726.45pt x 1349.04pt>
 File: slike/unitySS.png Graphic file (type png)
 <use slike/unitySS.png>
 Package pdftex.def Info: slike/unitySS.png  used on input line 64.
@@ -817,9 +820,49 @@ a u C#-u koja omogu^^Scuje
  []
 
 [7]) [8]
+\openout2 = `KonfiguracijaRadneOkoline.aux'.
+
+ (./KonfiguracijaRadneOkoline.tex
+Poglavlje 3.
+
+Overfull \hbox (4.76355pt too wide) in paragraph at lines 8--9
+[]\OT1/cmr/m/n/12 Instalacija ROS-a No-etic Ninjemys-a gdje je po-trebno pra-ti
+ti upute na slu^^Tzbenim
+ []
+
+
+Underfull \vbox (badness 2828) has occurred while \output is active []
+
+ [9
+
+
+
+]
+Overfull \hbox (21.90671pt too wide) in paragraph at lines 25--26
+[]\OT1/cmr/m/it/12 source /ho-me/u-ser/cat-kin[]ws/deve/setup.bash \OT1/cmr/m/n
+/12 ili \OT1/cmr/m/it/12 so-urce /op-t/ros/no-etic/se-tup.bash 
+ []
+
+
+LaTeX Warning: Citation `percgit' on page 10 undefined on input line 29.
+
+[10]
+Overfull \hbox (7.2385pt too wide) in paragraph at lines 43--44
+[] \OT1/cmr/m/n/12 Osim ure[]divanja ro-bot-skih vri-jed-nosti, po-trebno je i 
+ure-diti i ar-gu-ment \OT1/cmr/m/it/12 urdf[]file
+ []
+
+[11]
+<slike/URDFImport.png, id=236, 499.8675pt x 421.575pt>
+File: slike/URDFImport.png Graphic file (type png)
+<use slike/URDFImport.png>
+Package pdftex.def Info: slike/URDFImport.png  used on input line 51.
+(pdftex.def)             Requested size: 202.42233pt x 170.71764pt.
+) [12 <./slike/URDFImport.png>]
 \openout2 = `Literatura.aux'.
 
- (./Literatura.tex (./0069069268_Aleks_Markovic.bbl)) [9
+ (./Literatura.tex
+(./0069069268_Aleks_Markovic.bbl)) [13
 
 
 
@@ -842,35 +885,39 @@ Package glossaries Warning: Use of \glossary with glossaries.sty is deprecated.
 \@gls@deffile=\write10
 \openout10 = `0069069268_Aleks_Markovic.glsdefs'.
 
-) [10
+) [14
 
-] (./Sazetak.tex) [11
+] (./Sazetak.tex) [15
 
 ]
 \openout2 = `Prilog_1.aux'.
 
  (./Prilog_1.tex
 Dodatak A.
-) [12
+) [16
 
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./0069069268_Aleks_Markovic.aux (./Uvod.aux) (./SoftverskiAlati.aux)
-(./Literatura.aux) (./Prilog_1.aux))
+(./KonfiguracijaRadneOkoline.aux) (./Literatura.aux) (./Prilog_1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
 Package rerunfilecheck Info: File `0069069268_Aleks_Markovic.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 4E45FE16BB2B0E2453C73B37403C8CE3;898.
+(rerunfilecheck)             Checksum: 73DBCB140DCAD7317057FF8B2CBFF9C8;978.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 17075 strings out of 481239
- 278754 string characters out of 5920377
+ 17124 strings out of 481239
+ 279578 string characters out of 5920377
  799588 words of memory out of 5000000
- 31895 multiletter control sequences out of 15000+600000
+ 31916 multiletter control sequences out of 15000+600000
  542053 words of font info for 60 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  54i,10n,81p,1067b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -884,10 +931,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
 /public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt12.pfb>
-Output written on 0069069268_Aleks_Markovic.pdf (21 pages, 365042 bytes).
+Output written on 0069069268_Aleks_Markovic.pdf (25 pages, 406969 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

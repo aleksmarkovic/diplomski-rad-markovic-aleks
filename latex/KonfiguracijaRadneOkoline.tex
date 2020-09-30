@@ -1,0 +1,66 @@
+% !TeX encoding = windows-1250
+\chapter{Konfiguracija radne okoline}
+\qquad U ovom æe se poglavlju opisati postupak konfiguriranja radne okoline. Ovo je potrebno iz razloga što veæina alata nije testirana na najnovijim Ubuntu i ROS verzijama pa su odreðene adaptacije bile potrebne.
+
+\qquad Instalaciju i konfiguraciju se može podijeliti u nekoliko koraka, od kojih æe se pojasniti samo one koji su zahtjevali dodatne korake:
+\begin{enumerate}
+	\item Instalacija Ubuntu 20.04 OS-a.
+	\item Instalacija ROS-a Noetic Ninjemys-a gdje je potrebno pratiti upute na službenim stranicama. Vrši se instalacija potpunog paketa.
+	\item Instalacija Unity-ja. Dobro je povremeno instalirati noviju verziju jer sadrži korisna ažuriranja.
+	\item Instalacija Visual Studio Code-a - text editor koji æe se koristiti uz Unity za programiranje skripta. Razlog odabira Visual Studio Code-a je taj što je potrebno imati podršku za Unity i moguænost spajanja i pokretanja alata za otklanjanja pogreška (debugger).
+	\item Instalacija .NET Core radne okoline za omoguæiti rad Unity-ja s Visual Studio Code - podrška za C\#. \cite{netcoreinstall}
+	\item Visual Studio Code konfiguracija za Unity. \cite{vscodeconfig} 
+	\item Instalacija \textit{Mono} radne okoline. \cite{monoinstall} Preporuèljivo je nakon ovog koraka pokrenuti i naredbu \textit{sudo apt install mono-complete} da bi se instalirali eventualni segmenti koji fale.
+	\item Instalacija Turtlebot 3 paketa za ROS 1. \cite{turtlebotinstall}
+\end{enumerate}
+
+\section{Dodatni koraci}
+\qquad Ovdje æe biti navedeni i eventualno pojašnjeni dodatni koraci. Neki od tih su jednostavna instalacija dodatnog paketa, a neki promjene da bi odreðena stvar mogla proraditi.
+
+\qquad Kada je neki alat ili knjižnicu u ROS-u potrebno instalirati iz izvornog koda, to se u osnovi radi na sljedeæi naèin (eventualni alati imaju specificirana potrebna dodatna podešavanja):
+\begin{enumerate}
+	\item Preuzimanje i spremanje mape s datotekama izvornog koda u ROS radni folder (workspace - \textit{~/catkin\_ws/src/}) - ova mapa je proizvoljna ali ROS standard je \textit{catkin\_ws} u \textit{home} direktoriju Linux Ubuntu OS-a.
+	\item U korijenskom \textit{catkin\_ws} direktoriju pokreæe se naredba \textit{catkin\_make} koja izgradi sav kod u njemu. Tada se pojave dvije nove mape - \textit{build} i \textit{devel}. Nakon toga treba pozvati izgenerirani \textit{setup.bash} sljedeæom naredbom koja omoguæava korištenje novo izgraðenih paketa:
+	
+\textit{source /home/user/catkin\_ws/deve/setup.bash} ili \textit{source /opt/ros/noetic/setup.bash}
+\end{enumerate}
+
+\begin{itemize}
+	\item Za omoguæiti mapiranje robotske okoline potrebno je dodatni instalirati \textit{slam} pakete za mapiranje. Instalacija se vrši iz izvornog koda kojeg je moguæe dohvatiti s git repozitorija paketa \cite{percgit} gdje se nalazi i drugih paketa za robotsku percepciju. 
+	\item Osnovna spona koja omoguæuje slanje podataka izmeðu ROS-a i Unity-ja je \textit{RosBridge} paket kojeg inaèe dohvaæamo naredbom \textit{sudo apt-get install ros-noetic-rosbridge-server}. Istoga koristi ROS\#. ROS Noetic-u instalacija ovog paketa na klasièan naèin ne radi, ali više o tome u sljedeæem odlomku.
+	\item Za korištenje željenog robota u Unity, prvi korak je unijeti njegov model. Koristi se URDF (Universal Robotic Description Format - univerzalni robotski opisni format). URDF je pisan u XML formatu i koristi se za opisati sve elemente opisanog robota. 
+\end{itemize}
+
+\subsection{Uvoz URDF modela u Unity}
+\qquad Za uvoz URDF modela potrebno je pokrenuti odreðenu \textit{launch} datoteku koja se nalazi u ros-sharp (datoteèno prihvatljiv naziv za ROS\#) paketu. Datoteka se nalazi u \textit{ros-sharp/ROS/file-server/launch} direktoriju koja se pokreæe \textit{roslaunch publish\_description\_turtlebot.launch} no prije samog pokretanja potrebno ju je urediti iz razloga što je to samo primjer za Turtlebot 2 robot, koji ima drugaèije specifikacije od Turtlebot 3 robota.
+
+\qquad \textit{Launch} datoteke su takoðer pisane u XML formatu i one služe za pokretanje više èvorova odjednom. U datoteci se može podesiti i dodatne parametre za pokretanje odreðenih èvorova. \textit{Roslaunch} je korišten za pokretanje tih datoteka i to se može uèiniti pozivanjem paketa i specifiène \textit{launch} datoteke ili direktno pozivanjem \textit{launch} datoteke definiranjem njezine datoteène putanje:
+
+\qquad - \textit{roslaunch ime\_paketa launch\_datoteka}
+
+\qquad - \textit{roslaunch ../catkin\_ws/src/paket/launch/launch\_datoteka}
+
+\qquad Osim ureðivanja robotskih vrijednosti, potrebno je i urediti i argument \textit{urdf\_file} na naèin da se iz \textit{xacro.py} izbaci \textit{.py} te doda flag \textit{--inorder}. To se mora iz razloga što su sve prijašnje verzije ROS-a bile na Python 2, ali je ROS Noetic na Python-u 3.
+
+\qquad Još jedna promjena koja je potrebna a povezana je s verzijama Python-a je za uspješno pokretanje \textit{RosBridge} poslužitelja. Naime, ako se izvrši instalacija standardnom \textit{apt install} naredbom, RosBridge neæe raditi jer se kose vrste varijabla (\textit{str} i \textit{byte}) koje su drugaèije definirane u svakoj verziji Python-a, pa je iz tog razloga potrebno instalirati cijeli RosBridge iz izvornog koda \cite{rosbridgegit} uz namještenu toènu verziju Python-a (2).
+
+\qquad Nakon ovih koraka može se pokrenuti Unity i u izborniku odabrati \textit{RosBridgeClient -> Transfer URDF from ROS} gdje se otvara prozorèiæ (slika~\ref{fig:urdfimport}) u kojemu je potrebno izmijeniti IP adresu gdje æe se pronaæi RosBridge poslužitelj. Ostale vrijednosti bi trebale biti dobre po zadanim vrijednostima. Prije spajanja, potrebno je pokrenuti TurtleBot simulaciju i gore navedenu \textit{launch} skriptu. Dovršetkom ovog koraka, u Unity projekt se sprema URDF model kojega se može prikazati i koristiti u scenama.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=6cm,width=12cm,keepaspectratio=true]{URDFImport}
+		\caption{URDF uvoz}
+		\label{fig:urdfimport}
+	\end{center}
+\end{figure}
+
+
+\qquad Za korištenje simuliranog okruženja koristi ste \textit{Gazebo} softver, no iz razloga limitirane kompatibilnosti umjesto zadnjeg Gazebo 11, koristi se Gazebo 9. nakon brisanja Gazebo 11, Gazebo 9 se instalalira sljedeæim naredbama, zajedno s potrebnim paketima:
+
+\qquad \textit{sudo apt install gazebo9-common}
+
+\qquad \textit{sudo apt-get install libgazebo9-*}
+
+\qquad \textit{sudo apt install ros-noetic-gazebo-ros-pkgs}
+
+

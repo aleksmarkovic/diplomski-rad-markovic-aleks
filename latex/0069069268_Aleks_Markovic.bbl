@@ -44,4 +44,37 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
   23. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{netcoreinstall}
+\BIBentryALTinterwordspacing
+Microsoft. .net core instalacija. , s Interneta,
+  \url{https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#2004-}
+  {, 24. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vscodeconfig}
+\BIBentryALTinterwordspacing
+------. Visual studio code konfiguracija. , s Interneta,
+  \url{https://code.visualstudio.com/docs/other/unity} {, 24. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{monoinstall}
+\BIBentryALTinterwordspacing
+M.~Project. Instalacija mono radne okoline. , s Interneta,
+  \url{https://www.mono-project.com/download/stable/#download-lin} {, 24. rujna
+  2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{turtlebotinstall}
+\BIBentryALTinterwordspacing
+Robotis. Instalacija turtlebot 3 paketa. , s Interneta,
+  \url{https://emanual.robotis.com/docs/en/platform/turtlebot3/pc_setup/#pc-setup}
+  {, 24. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rosbridgegit}
+\BIBentryALTinterwordspacing
+R.~W. Tools. Rosbridge. , s Interneta,
+  \url{https://github.com/RobotWebTools/rosbridge_suite} {, 28. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

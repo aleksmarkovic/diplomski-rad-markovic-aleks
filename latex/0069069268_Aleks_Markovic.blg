@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 0069069268_Aleks_Markovic.aux
 A level-1 auxiliary file: Uvod.aux
 A level-1 auxiliary file: SoftverskiAlati.aux
+A level-1 auxiliary file: KonfiguracijaRadneOkoline.aux
 A level-1 auxiliary file: Literatura.aux
 The style file: tex_aux/IEEEtranHR.bst
 A level-1 auxiliary file: Prilog_1.aux
@@ -12,49 +13,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Literatura.bib
+Warning--I didn't find a database entry for "percgit"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 4 entries,
+You've used 9 entries,
             4087 wiz_defined-function locations,
-            844 strings with 7708 characters,
-and the built_in function-call counts, 1482 in all, are:
-= -- 108
-> -- 13
+            866 strings with 8298 characters,
+and the built_in function-call counts, 3277 in all, are:
+= -- 253
+> -- 33
 < -- 0
-+ -- 7
-- -- 3
-* -- 50
-:= -- 288
-add.period$ -- 11
-call.type$ -- 4
-change.case$ -- 4
++ -- 17
+- -- 8
+* -- 90
+:= -- 632
+add.period$ -- 26
+call.type$ -- 9
+change.case$ -- 9
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 114
-empty$ -- 135
-format.name$ -- 3
-if$ -- 303
+cite$ -- 9
+duplicate$ -- 259
+empty$ -- 305
+format.name$ -- 8
+if$ -- 694
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 31
-newline$ -- 43
-num.names$ -- 3
-pop$ -- 96
+int.to.str$ -- 9
+missing$ -- 71
+newline$ -- 68
+num.names$ -- 8
+pop$ -- 216
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 108
+skip$ -- 248
 stack$ -- 0
-substring$ -- 8
-swap$ -- 61
+substring$ -- 18
+swap$ -- 141
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 4
+type$ -- 9
 warning$ -- 0
-while$ -- 3
-width$ -- 5
-write$ -- 61
+while$ -- 8
+width$ -- 10
+write$ -- 111
+(There was 1 warning)
