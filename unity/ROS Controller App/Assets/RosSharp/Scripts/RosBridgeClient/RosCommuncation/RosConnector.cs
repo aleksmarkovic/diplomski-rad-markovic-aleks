@@ -29,12 +29,13 @@ namespace RosSharp.RosBridgeClient
         public RosSocket RosSocket { get; private set; }
         public RosSocket.SerializerEnum Serializer;
         public Protocol protocol;
-        public string RosBridgeServerUrl = PlayerPrefs.GetString("host", string.Empty);
+        public string RosBridgeServerUrl;
 
         public ManualResetEvent IsConnected { get; private set; }
 
         public virtual void Awake()
         {
+          //  RosBridgeServerUrl = PlayerPrefs.GetString("host", string.Empty);
             IsConnected = new ManualResetEvent(false);
             new Thread(ConnectAndWait).Start();
         }

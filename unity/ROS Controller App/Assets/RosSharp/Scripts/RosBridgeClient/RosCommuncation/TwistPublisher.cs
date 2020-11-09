@@ -56,6 +56,10 @@ namespace RosSharp.RosBridgeClient
             previousRealTime = Time.realtimeSinceStartup;
             previousPosition = PublishedTransform.position;
             previousRotation = PublishedTransform.rotation;
+            
+            Debug.Log(message.linear.x);
+            Debug.Log(message.linear.y);
+            Debug.Log(message.linear.z);
 
             Publish(message);
         }
