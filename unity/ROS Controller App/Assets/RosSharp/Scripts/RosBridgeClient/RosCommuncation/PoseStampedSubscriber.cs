@@ -17,15 +17,12 @@ using UnityEngine;
 
 namespace RosSharp.RosBridgeClient
 {
-    public class PoseStampedSubscriber : UnitySubscriber<MessageTypes.Nav.Odometry>
+    public class PoseStampedSubscriber : UnitySubscriber<MessageTypes.Geometry.PoseStamped>
     {
         public Transform PublishedTransform;
 
-        [SerializeField]
         private Vector3 position;
-        [SerializeField]
         private Quaternion rotation;
-        [SerializeField]
         private bool isMessageReceived;
 
         protected override void Start()
@@ -39,7 +36,7 @@ namespace RosSharp.RosBridgeClient
                 ProcessMessage();
         }
 
-        protected override void ReceiveMessage(MessageTypes.Nav.Odometry message)
+        protected override void ReceiveMessage(MessageTypes.Geometry.PoseStamped message)
         {
             position = GetPosition(message).Ros2Unity();
             rotation = GetRotation(message).Ros2Unity();
@@ -52,21 +49,21 @@ namespace RosSharp.RosBridgeClient
             PublishedTransform.rotation = rotation;
         }
 
-        private Vector3 GetPosition(MessageTypes.Nav.Odometry message)
+        private Vector3 GetPosition(MessageTypes.Geometry.PoseStamped message)
         {
             return new Vector3(
-                (float)message.pose.pose.position.x,
-                (float)message.pose.pose.position.y,
-                (float)message.pose.pose.position.z);
+                (float)message.pose.position.x,
+                (float)message.pose.position.y,
+                (float)message.pose.position.z);
         }
 
-        private Quaternion GetRotation(MessageTypes.Nav.Odometry message)
+        private Quaternion GetRotation(MessageTypes.Geometry.PoseStamped message)
         {
             return new Quaternion(
-                (float)message.pose.pose.orientation.x,
-                (float)message.pose.pose.orientation.y,
-                (float)message.pose.pose.orientation.z,
-                (float)message.pose.pose.orientation.w);
+                (float)message.pose.orientation.x,
+                (float)message.pose.orientation.y,
+                (float)message.pose.orientation.z,
+                (float)message.pose.orientation.w);
         }
     }
 }

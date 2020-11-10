@@ -12,6 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
+using UnityEngine;
 
 namespace RosSharp.RosBridgeClient
 {
@@ -26,6 +27,7 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(MessageTypes.Sensor.LaserScan laserScan)
         {
+            Debug.Log(laserScan);
             laserScanWriter.Write(laserScan);
         }
     }
