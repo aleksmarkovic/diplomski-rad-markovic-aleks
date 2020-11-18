@@ -27,7 +27,6 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(MessageTypes.Sensor.LaserScan laserScan)
         {
-            Debug.Log(laserScan);
             laserScanWriter.Write(laserScan);
         }
     }
