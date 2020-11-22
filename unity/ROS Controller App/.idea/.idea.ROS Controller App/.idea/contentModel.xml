@@ -71,6 +71,7 @@
                 <e p="JoySubscriber.cs" t="Include" />
                 <e p="LaserScanPublisher.cs" t="Include" />
                 <e p="LaserScanSubscriber.cs" t="Include" />
+                <e p="MapSubscriber.cs" t="Include" />
                 <e p="OdometrySubscriber.cs" t="Include" />
                 <e p="PoseStampedPublisher.cs" t="Include" />
                 <e p="PoseStampedSubscriber.cs" t="Include" />

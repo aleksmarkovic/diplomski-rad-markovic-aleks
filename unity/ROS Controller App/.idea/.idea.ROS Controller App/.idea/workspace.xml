@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39e3d3-3f5d-48d0-9a13-559cbdff5fd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/LaserScanSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/LaserScanSubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Camera.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Camera.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Laserscan NIC.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Laserscan NIC.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MovementController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Control.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +42,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PGM.cs" />
+        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/LaserScanSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
+        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" />
       </list>
     </option>
   </component>
@@ -102,7 +99,9 @@
       <workItem from="1605557411566" duration="181000" />
       <workItem from="1605632168535" duration="7114000" />
       <workItem from="1605693676463" duration="890000" />
-      <workItem from="1605723752950" duration="1673000" />
+      <workItem from="1605723752950" duration="2428000" />
+      <workItem from="1606070766943" duration="2037000" />
+      <workItem from="1606075629191" duration="3829000" />
     </task>
     <servers />
   </component>
@@ -125,5 +124,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1332" y="308" width="776" height="783" key="find.popup" timestamp="1606072337530">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state x="1332" y="308" width="776" height="783" key="find.popup/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1606072337530" />
   </component>
 </project>
