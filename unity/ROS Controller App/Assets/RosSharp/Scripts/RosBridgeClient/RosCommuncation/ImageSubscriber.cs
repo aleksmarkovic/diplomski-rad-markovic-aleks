@@ -14,6 +14,7 @@ limitations under the License.
 */
 
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace RosSharp.RosBridgeClient
 {
@@ -21,7 +22,8 @@ namespace RosSharp.RosBridgeClient
     public class ImageSubscriber : UnitySubscriber<MessageTypes.Sensor.CompressedImage>
     {
         public MeshRenderer meshRenderer;
-
+        public Image imageToUpdate;
+        
         private Texture2D texture2D;
         private byte[] imageData;
         private bool isMessageReceived;
@@ -48,8 +50,19 @@ namespace RosSharp.RosBridgeClient
         {
             texture2D.LoadImage(imageData);
             texture2D.Apply();
-            meshRenderer.material.SetTexture("_MainTex", texture2D);
+           // meshRenderer.material.SetTexture("_MainTex", texture2D);
+           
+           GetComponent<Renderer>().material.mainTexture = texture2D;
+
+           var sprite = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), Vector2.zero);
+
+           if (sprite != null)
+           {
+               imageToUpdate.sprite = sprite;
+           }
+           
             isMessageReceived = false;
+            
         }
 
     }

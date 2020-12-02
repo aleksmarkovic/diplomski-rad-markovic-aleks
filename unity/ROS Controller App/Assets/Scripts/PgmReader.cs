@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using RosSharp.RosBridgeClient.MessageTypes.Nav;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,12 +13,15 @@ namespace PGM
         public Image imageToUpdate;
         private Texture2D texture;
         private Color[] mapColorArray;
+        private List<Color> mapColorList;
         private bool setMap;
+        private int blankCounter = 0;
         private void Awake()
         {
           //  Texture2D texture = new Texture2D((int) message.info.width, (int) message.info.height);
-          texture = new Texture2D(384, 384);
           setMap = false;
+          texture = new Texture2D(384, 384);
+            mapColorList = new List<Color>();
         }
 
         private void Update()
@@ -25,7 +29,14 @@ namespace PGM
             if (setMap)
             {
                 setMap = false;
-                
+                // Debug.Log(blankCounter);
+               // var size = Mathf.Sqrt((mapColorArray.Length) - blankCounter);
+               // Debug.Log(size); 
+               // texture.Resize((int)size, (int)size);
+               //
+              //  texture.Apply();
+
+
               texture.SetPixels(mapColorArray);
                 texture.Apply();
 
@@ -42,29 +53,28 @@ namespace PGM
 
         public void VisualizeMap(OccupancyGrid message)
         {
-           //  string InputFileName = "map.pgm"; //args[0]
-           //
-           // PGM picture = new PGM(InputFileName);
-           // Debug.Log(picture.GetPgmBytes().Length);
-    
-
-          //  var pgmInfo = picture.PrintPGMInfo();
-          try
+            try
           {
               var mapByteArray = message.data;
 
+              for (var i = 0; i < mapByteArray.Length; i++)
+              {
+                  if (mapByteArray[i] == -1)
+                      blankCounter++;
+              } //todo
+              
               mapColorArray = new Color[mapByteArray.Length];
-// Debug.Log(mapByteArray.Length);
 
               for (var i = 0; i < mapByteArray.Length; i++)
               {
-                  // Debug.Log(mapByteArray[i]);
                   Color color;
                   
                   switch (mapByteArray[i])
                   {    
                       case -1:
                           color = new Color(1, 1,1);
+                          blankCounter++;
+                          continue;
                           break;
                       default:
                       case 0:
@@ -74,12 +84,12 @@ namespace PGM
                           color = new Color(0, 0, 1);
                           break;
                   }
-                  // Debug.Log(color);
-                 // var color = new Color((float) mapByteArray[i] / 100, (float) mapByteArray[i] / 100,
-                //      (float) mapByteArray[i] / 100);
+               //   mapColorList.Add(color);
                   mapColorArray[i] = color;
-              }
 
+              }
+            //  mapColorArray = new Color[mapColorList.Count];
+          //    mapColorArray = mapColorList.ToArray();
               setMap = true;
           }
           catch (Exception e)

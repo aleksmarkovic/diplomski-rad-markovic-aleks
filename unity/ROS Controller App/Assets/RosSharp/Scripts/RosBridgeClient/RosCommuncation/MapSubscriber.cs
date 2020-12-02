@@ -31,11 +31,8 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(OccupancyGrid message)
         {
-            // if (!sent)
-            // {
-                pgmReader.VisualizeMap(message);
+            pgmReader.VisualizeMap(message);
                 sent = true;
-            // }
         }
     }
 }

@@ -29,12 +29,13 @@ namespace RosSharp.RosBridgeClient
         public RosSocket RosSocket { get; private set; }
         public RosSocket.SerializerEnum Serializer;
         public Protocol protocol;
-        public string RosBridgeServerUrl = "ws://192.168.0.1:9090";
+        public string RosBridgeServerUrl;
 
         public ManualResetEvent IsConnected { get; private set; }
 
         public virtual void Awake()
         {
+            RosBridgeServerUrl = Settings.SettingsInstance.ipConfig;
             IsConnected = new ManualResetEvent(false);
             new Thread(ConnectAndWait).Start();
         }

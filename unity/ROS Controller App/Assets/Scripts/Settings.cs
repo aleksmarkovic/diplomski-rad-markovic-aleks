@@ -1,28 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    [SerializeField]
-    private InputField ipInputField;
-    [SerializeField]
-    private Button cameraButton;
-    
+
+    public static Settings SettingsInstance;
+
+    public string ipConfig;
+
+    [SerializeField] private InputField ipInputField;
+    [SerializeField] private Button cameraButton;
+
     private void Awake()
     {
-        cameraButton.onClick.AddListener(LoadCamera);
-    } 
-    
-    private void LoadCamera()
-    {        
-        SceneManager.LoadScene("Camera");
+        if (SettingsInstance != null)
+        {
+            Destroy(SettingsInstance);
+        }
+        else
+        {
+            SettingsInstance = this;
+            DontDestroyOnLoad(this);
+
+            cameraButton.onClick.AddListener(LoadControl);
+            ipConfig = PlayerPrefs.GetString("ipConfig", "ws://192.168.8.101:9090");
+        }
+    }
+
+    private void LoadControl()
+    {
+        SceneManager.LoadScene("Control");
     }
 
     public void SaveHost()
     {
-        PlayerPrefs.SetString("host", ipInputField.text);
+        var inputText = ipInputField.text;
+        ipConfig = "ws://" + inputText;
+        PlayerPrefs.SetString("ipConfig", ipConfig);
     }
 }
