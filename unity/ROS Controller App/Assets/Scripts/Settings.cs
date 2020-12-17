@@ -38,7 +38,7 @@ public class Settings : MonoBehaviour
     public void SaveHost()
     {
         var inputText = ipInputField.text;
-        ipConfig = "ws://" + inputText;
+        ipConfig = "ws://" + inputText + ":9090";
         PlayerPrefs.SetString("ipConfig", ipConfig);
     }
 }

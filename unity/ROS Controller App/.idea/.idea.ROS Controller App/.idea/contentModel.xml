@@ -174,7 +174,12 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="ButtonAction.cs" t="Include" />
+          <e p="CameraFollower.cs" t="Include" />
+          <e p="CameraSwitch.cs" t="Include" />
           <e p="Control.cs" t="Include" />
+          <e p="DragCanvasObject.cs" t="Include" />
+          <e p="MapResizer.cs" t="Include" />
+          <e p="MapRobotPositioner.cs" t="Include" />
           <e p="PGM.cs" t="Include" />
           <e p="PgmReader.cs" t="Include" />
           <e p="Settings.cs" t="Include" />

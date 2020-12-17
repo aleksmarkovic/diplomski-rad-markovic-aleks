@@ -20,18 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39e3d3-3f5d-48d0-9a13-559cbdff5fd4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Control.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PGM.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/ed/21c7b757/MapMetaData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/02/6f9914f1/OccupancyGrid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,11 +52,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PGM.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/LaserScanSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragCanvasObject.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MapResizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Settings.cs" />
       </list>
     </option>
   </component>
@@ -115,6 +123,13 @@
       <workItem from="1606422238274" duration="3206000" />
       <workItem from="1606853289047" duration="1341000" />
       <workItem from="1606935067597" duration="3417000" />
+      <workItem from="1607268786132" duration="11100000" />
+      <workItem from="1607367977297" duration="2831000" />
+      <workItem from="1607456168133" duration="3379000" />
+      <workItem from="1607545617252" duration="902000" />
+      <workItem from="1607629777536" duration="2116000" />
+      <workItem from="1608062083716" duration="858000" />
+      <workItem from="1608145683125" duration="1283000" />
     </task>
     <servers />
   </component>
@@ -143,24 +158,5 @@
       <screen x="0" y="27" width="3440" height="1345" />
     </state>
     <state x="1332" y="308" width="776" height="783" key="find.popup/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1606072337530" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs</url>
-          <line>36</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" initialLine="36">
-            <startOffsets>
-              <option value="1140" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1141" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
