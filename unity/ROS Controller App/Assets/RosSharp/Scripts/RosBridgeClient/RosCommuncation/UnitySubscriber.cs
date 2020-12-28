@@ -30,6 +30,10 @@ namespace RosSharp.RosBridgeClient
         protected virtual void Start()
         {
             rosConnector = GetComponent<RosConnector>();
+
+            if (Settings.SettingsInstance.MultiRobot != null && Settings.SettingsInstance.MultiRobot.NumberOfRobots > 1)
+                Topic = "/" + Settings.SettingsInstance.MultiRobot.RobotsPrefix + NumberOfRobot(rosConnector.gameObject.name) + Topic;
+
             new Thread(Subscribe).Start();
         }
 
@@ -43,6 +47,11 @@ namespace RosSharp.RosBridgeClient
         }
 
         protected abstract void ReceiveMessage(T message);
+
+        private string NumberOfRobot(string nameOfConnector)
+        {
+            return nameOfConnector[nameOfConnector.Length - 1].ToString();
+        }
 
     }
 }

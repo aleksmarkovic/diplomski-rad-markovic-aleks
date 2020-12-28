@@ -32,7 +32,7 @@
 \end{itemize}
 
 \subsection{Uvoz URDF modela u Unity}
-\qquad Za uvoz URDF modela potrebno je pokrenuti odreðenu \textit{launch} datoteku koja se nalazi u ros-sharp (datoteèno prihvatljiv naziv za ROS\#) paketu. Datoteka se nalazi u \textit{ros-sharp/ROS/file-server/launch} direktoriju koja se pokreæe \textit{roslaunch publish\_description\_turtlebot.launch} no prije samog pokretanja potrebno ju je urediti iz razloga što je to samo primjer za Turtlebot 2 robot, koji ima drugaèije specifikacije od Turtlebot 3 robota.
+\qquad Za uvoz URDF modela potrebno je pokrenuti odreðenu \textit{launch} datoteku koja se nalazi u ros-sharp (datoteèno prihvatljiv naziv za ROS\#) paketu. Datoteka se nalazi u \textit{ros-sharp/ROS/file-server/launch}, odnosno \textit{catkin\_ws/src/file-server/launch} direktoriju koja se pokreæe \textit{roslaunch publish\_description\_turtlebot.launch} no prije samog pokretanja potrebno ju je urediti iz razloga što je to samo primjer za Turtlebot 2 robot, koji ima drugaèije specifikacije od Turtlebot 3 robota.
 
 \qquad \textit{Launch} datoteke su takoðer pisane u XML formatu i one služe za pokretanje više èvorova odjednom. U datoteci se može podesiti i dodatne parametre za pokretanje odreðenih èvorova. \textit{Roslaunch} je korišten za pokretanje tih datoteka i to se može uèiniti pozivanjem paketa i specifiène \textit{launch} datoteke ili direktno pozivanjem \textit{launch} datoteke definiranjem njezine datoteène putanje:
 
@@ -40,11 +40,19 @@
 
 \qquad - \textit{roslaunch ../catkin\_ws/src/paket/launch/launch\_datoteka}
 
-\qquad Osim ureðivanja robotskih vrijednosti, potrebno je i urediti i argument \textit{urdf\_file} na naèin da se iz \textit{xacro.py} izbaci \textit{.py} te doda flag \textit{--inorder}. To se mora iz razloga što su sve prijašnje verzije ROS-a bile na Python 2, ali je ROS Noetic na Python-u 3.
+\qquad Osim ureðivanja robotskih vrijednosti, potrebno je i urediti i argument \textit{urdf\_file} na naèin da se iz \textit{xacro.py} izbaci \textit{.py} te doda flag \textit{--inorder}. To se mora iz razloga što su sve prijašnje verzije ROS-a bile na Python 2, ali je ROS Noetic na Python-u 3. (slika~\ref{fig:urdfimportlaunch})
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=6cm,width=12cm,keepaspectratio=true]{URDFImportLaunch}
+		\caption{Launch datoteka za URDF uvoz}
+		\label{fig:urdfimportlaunch}
+	\end{center}
+\end{figure}
 
 \qquad Još jedna promjena koja je potrebna a povezana je s verzijama Python-a je za uspješno pokretanje \textit{RosBridge} poslužitelja. Naime, ako se izvrši instalacija standardnom \textit{apt install} naredbom, RosBridge neæe raditi jer se kose vrste varijabla (\textit{str} i \textit{byte}) koje su drugaèije definirane u svakoj verziji Python-a, pa je iz tog razloga potrebno instalirati cijeli RosBridge iz izvornog koda \cite{rosbridgegit} uz namještenu toènu verziju Python-a (2).
 
-\qquad Nakon ovih koraka može se pokrenuti Unity i u izborniku odabrati \textit{RosBridgeClient -> Transfer URDF from ROS} gdje se otvara prozorèiæ (slika~\ref{fig:urdfimport}) u kojemu je potrebno izmijeniti IP adresu gdje æe se pronaæi RosBridge poslužitelj. Ostale vrijednosti bi trebale biti dobre po zadanim vrijednostima. Prije spajanja, potrebno je pokrenuti TurtleBot simulaciju i gore navedenu \textit{launch} skriptu. Dovršetkom ovog koraka, u Unity projekt se sprema URDF model kojega se može prikazati i koristiti u scenama.
+\qquad Nakon ovih koraka može se pokrenuti Unity i u izborniku odabrati \textit{RosBridgeClient - Transfer URDF from ROS} gdje se otvara prozorèiæ (slika~\ref{fig:urdfimport}) u kojemu je potrebno izmijeniti IP adresu gdje æe se pronaæi RosBridge poslužitelj. Ostale vrijednosti bi trebale biti dobre po zadanim vrijednostima. Prije spajanja, potrebno je pokrenuti TurtleBot simulaciju i gore navedenu \textit{launch} skriptu. Dovršetkom ovog koraka, u Unity projekt se sprema URDF model kojega se može prikazati i koristiti u scenama.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -55,7 +63,7 @@
 \end{figure}
 
 
-\qquad Za korištenje simuliranog okruženja koristi ste \textit{Gazebo} softver, no iz razloga limitirane kompatibilnosti umjesto zadnjeg Gazebo 11, koristi se Gazebo 9. nakon brisanja Gazebo 11, Gazebo 9 se instalalira sljedeæim naredbama, zajedno s potrebnim paketima:
+\qquad Za korištenje simuliranog okruženja koristi ste \textit{Gazebo} softver, no iz razloga limitirane kompatibilnosti umjesto zadnjeg Gazebo 11, u sluèaju da simulacija ne radi, potrebno je instalirati Gazebo 9 pakete:
 
 \qquad \textit{sudo apt install gazebo9-common}
 
@@ -64,3 +72,8 @@
 \qquad \textit{sudo apt install ros-noetic-gazebo-ros-pkgs}
 
 
+\subsection{Dodatno}
+
+\qquad Dodatne informacije o konfiguriranju dostupne su na službenom ros-sharp repozitoriju u sekciji wiki stranica. \cite{rossharprepo}
+
+\qquad Takoðer, u službenom repozitoriju nalaze se Unity testne scene s kojima se može testirati osnovne funkcionalnosti.

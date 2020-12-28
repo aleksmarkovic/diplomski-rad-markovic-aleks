@@ -11,9 +11,10 @@
 \contentsline {chapter}{\numberline {3}Konfiguracija radne okoline}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Dodatni koraci}{10}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Uvoz URDF modela u Unity}{11}{subsection.3.1.1}%
-\contentsline {chapter}{Bibliografija}{13}{chapter*.7}%
-\contentsline {chapter}{Pojmovnik}{14}{chapter*.7}%
-\contentsline {chapter}{Sa\v zetak}{15}{chapter*.7}%
-\contentsline {chapter}{\numberline {A}Naslov priloga}{16}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Naslov sekcije}{16}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Naslov sekcije}{16}{section.A.2}%
+\contentsline {subsection}{\numberline {3.1.2}Dodatno}{13}{subsection.3.1.2}%
+\contentsline {chapter}{Bibliografija}{14}{chapter*.8}%
+\contentsline {chapter}{Pojmovnik}{15}{chapter*.8}%
+\contentsline {chapter}{Sa\v zetak}{16}{chapter*.8}%
+\contentsline {chapter}{\numberline {A}Naslov priloga}{17}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Naslov sekcije}{17}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Naslov sekcije}{17}{section.A.2}%

@@ -41,7 +41,7 @@ namespace PGM
             
                 if (sprite != null)
                 {
-                    imageToUpdate.sprite = sprite;
+                   // imageToUpdate.sprite = sprite;
                 }
             }
         }
