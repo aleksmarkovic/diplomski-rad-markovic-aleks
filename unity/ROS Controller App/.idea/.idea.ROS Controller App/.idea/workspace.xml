@@ -20,29 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39e3d3-3f5d-48d0-9a13-559cbdff5fd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.ist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.lof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/Literatura.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Literatura.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/Prilog_1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Prilog_1.aux" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/UnitySubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/UnitySubscriber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Control.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +42,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PGM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovementButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/ed/21c7b757/MapMetaData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/02/6f9914f1/OccupancyGrid.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,7 +59,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DragObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragCanvasObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapResizer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" />
@@ -79,7 +66,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" />
+        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
+        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MovementButton.cs" />
       </list>
     </option>
   </component>
@@ -93,6 +84,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -151,7 +143,9 @@
       <workItem from="1608667326773" duration="2300000" />
       <workItem from="1608976995641" duration="2615000" />
       <workItem from="1609065346818" duration="3279000" />
-      <workItem from="1609149517070" duration="3592000" />
+      <workItem from="1609149517070" duration="3617000" />
+      <workItem from="1609186656621" duration="3715000" />
+      <workItem from="1609234125330" duration="5090000" />
     </task>
     <servers />
   </component>
@@ -176,6 +170,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="349" y="334" width="1022" height="737" key="SettingsEditor" timestamp="1609243636776">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state x="349" y="334" width="1022" height="737" key="SettingsEditor/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609243636776" />
     <state x="1332" y="308" width="776" height="783" key="find.popup" timestamp="1606072337530">
       <screen x="0" y="27" width="3440" height="1345" />
     </state>

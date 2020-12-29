@@ -78,6 +78,7 @@
                 <e p="RosConnector.cs" t="Include" />
                 <e p="TfSubscriber.cs" t="Include" />
                 <e p="TwistPublisher.cs" t="Include" />
+                <e p="TwistPublisherStatic.cs" t="Include" />
                 <e p="TwistSubscriber.cs" t="Include" />
                 <e p="UnityFibonacciActionClient.cs" t="Include" />
                 <e p="UnityFibonacciActionSever.cs" t="Include" />
@@ -181,6 +182,7 @@
           <e p="DragCanvasObject.cs" t="Include" />
           <e p="MapResizer.cs" t="Include" />
           <e p="MapRobotPositioner.cs" t="Include" />
+          <e p="MovementButton.cs" t="Include" />
           <e p="MultiRobotControl.cs" t="Include" />
           <e p="PGM.cs" t="Include" />
           <e p="PgmReader.cs" t="Include" />

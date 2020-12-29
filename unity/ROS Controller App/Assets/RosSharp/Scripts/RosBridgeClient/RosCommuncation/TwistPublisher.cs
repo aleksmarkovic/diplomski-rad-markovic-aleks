@@ -45,7 +45,6 @@ namespace RosSharp.RosBridgeClient
         }
         private void UpdateMessage()
         {
-           
             Vector3 linearVelocity = (PublishedTransform.localPosition - previousPosition) / Time.fixedDeltaTime;
             Vector3 angularVelocity = (PublishedTransform.localRotation.eulerAngles - previousRotation.eulerAngles) / Time.fixedDeltaTime;
 

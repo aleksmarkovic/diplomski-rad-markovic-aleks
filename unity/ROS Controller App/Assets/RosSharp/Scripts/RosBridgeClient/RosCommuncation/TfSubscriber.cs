@@ -42,11 +42,11 @@ namespace RosSharp.RosBridgeClient
             // position = GetPosition(message).Ros2Unity();
             // rotation = GetRotation(message).Ros2Unity();
             isMessageReceived = true;
-            foreach(var transforma in message.transforms)
-            {
-                Debug.Log(transforma.header.frame_id);
-               // Debug.Log(transforma.transform.translation.x);
-            }
+            // foreach(var transforma in message.transforms)
+            // {
+            //     Debug.Log(transforma.header.frame_id);
+            //    // Debug.Log(transforma.transform.translation.x);
+            // }
 
         }
 
