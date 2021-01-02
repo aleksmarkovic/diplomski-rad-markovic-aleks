@@ -50,7 +50,6 @@ namespace RosSharp.RosBridgeClient
         {
             texture2D.LoadImage(imageData);
             texture2D.Apply();
-           // meshRenderer.material.SetTexture("_MainTex", texture2D);
            
            GetComponent<Renderer>().material.mainTexture = texture2D;
 

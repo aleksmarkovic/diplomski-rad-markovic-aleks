@@ -1,8 +1,8 @@
 
 
 % !TeX encoding = windows-1250
-\chapter{Softverski alati}
-\qquad Prije samog riješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati ?e se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se mo?e odraditi funkcija koja im se zada za prethodno navedenu svrhu.
+\chapter{Programski alati}
+\qquad Prije samog rješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati æe se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se može odraditi funkcija koja im se zada za prethodno navedenu svrhu.
 
 \qquad Korištene su najnovije dostupne a stabilne inaèice korištenih alata:
 \begin{enumerate}
@@ -99,21 +99,14 @@ Sve to na najnovijoj tada dostupnoj LTS verziji Linux Ubuntu operacijskog sustav
 \end{itemize}
 
 \qquad Programiranje prilagoðenih skripti omoguæava kompleksna ponašanja i radnje u igri/softveru kojega se razvija. Gotovo sve akcije koje se može napraviti u Editoru, može se i u skripti, te se time može drastièno poveæati opseg moguænosti.
-\begin{lstlisting}
-#include <stdio.h>
+\clearpage
 
-int main(int argc, char ** argv)
-{
-printf("Hello world!\n");
-return 0;
-}
-\end{lstlisting}
 \section{ROS\#}
 \qquad ROS\# je set programskih knjižnica i alata otvorenog koda u C\#-u koja omoguæuje komunikaciju izmeðu ROS-a i .NET aplikacija - Unity-ja, razvijen od strane Siemens kompanije. ROS\# je bio primarno razvijen za Windows OS, ali se uspješno može koristiti i na druge operacijske sustave. Paket se može preuzeti s Unity Asset Store-a ili direktno sa službenog Github repozitorija. \cite{rossharprepo} Ovo je ujedno i glavni alat koji æe se koristiti u ovom radu za stvaranje mosta izmeðu ROS-a i Unity-a.
 
 \qquad Glavni sadržaj ovog paketa je sljedeæi:
 \begin{itemize}
-	\item .NET riješenje za RosBridgeClient (knjižnica koja omoguæuje spajanje vanjskih aplikacija na ROS sustav), Urdf (robotski modeli) i MessageGeneration (generiranje poruka).
+	\item .NET rješenje za RosBridgeClient (knjižnica koja omoguæuje spajanje vanjskih aplikacija na ROS sustav), Urdf (robotski modeli) i MessageGeneration (generiranje poruka).
 	\item ROS paketi korišteni od strane ROS\#-a.
 	\item Unity projekt koji sadrži primjer scenu te RosBridgeClient, Urdf i MessageGeneration ekstenzije za Unity.
 \end{itemize}

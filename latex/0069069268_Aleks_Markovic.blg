@@ -2,7 +2,9 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 0069069268_Aleks_Markovic.aux
 A level-1 auxiliary file: Uvod.aux
+A level-1 auxiliary file: RazradaProblema.aux
 A level-1 auxiliary file: SoftverskiAlati.aux
+A level-1 auxiliary file: Rjesenje.aux
 A level-1 auxiliary file: KonfiguracijaRadneOkoline.aux
 A level-1 auxiliary file: Literatura.aux
 The style file: tex_aux/IEEEtranHR.bst
@@ -19,45 +21,45 @@ Warning--I didn't find a database entry for "percgit"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 9 entries,
+You've used 10 entries,
             4087 wiz_defined-function locations,
-            866 strings with 8298 characters,
-and the built_in function-call counts, 3277 in all, are:
-= -- 253
-> -- 33
+            872 strings with 8469 characters,
+and the built_in function-call counts, 3638 in all, are:
+= -- 282
+> -- 37
 < -- 0
-+ -- 17
-- -- 8
-* -- 90
-:= -- 632
-add.period$ -- 26
-call.type$ -- 9
-change.case$ -- 9
++ -- 19
+- -- 9
+* -- 98
+:= -- 703
+add.period$ -- 29
+call.type$ -- 10
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 9
-duplicate$ -- 259
-empty$ -- 305
-format.name$ -- 8
-if$ -- 694
+cite$ -- 10
+duplicate$ -- 288
+empty$ -- 339
+format.name$ -- 9
+if$ -- 772
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 71
-newline$ -- 68
-num.names$ -- 8
-pop$ -- 216
+int.to.str$ -- 10
+missing$ -- 79
+newline$ -- 73
+num.names$ -- 9
+pop$ -- 240
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 248
+skip$ -- 275
 stack$ -- 0
-substring$ -- 18
-swap$ -- 141
+substring$ -- 20
+swap$ -- 157
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 9
+type$ -- 10
 warning$ -- 0
-while$ -- 8
-width$ -- 10
-write$ -- 111
+while$ -- 9
+width$ -- 12
+write$ -- 121
 (There was 1 warning)

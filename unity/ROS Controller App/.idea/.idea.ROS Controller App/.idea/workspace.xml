@@ -20,16 +20,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e39e3d3-3f5d-48d0-9a13-559cbdff5fd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.bbl" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.bbl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.ist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.lof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/0069069268_Aleks_Markovic.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Literatura.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Literatura.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Literatura.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Literatura.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Prilog_1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Prilog_1.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/RazradaProblema.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/RazradaProblema.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/RazradaProblema.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/RazradaProblema.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/SoftverskiAlati.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/SoftverskiAlati.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/SoftverskiAlati.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/SoftverskiAlati.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Uvod.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Uvod.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Control.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/JsonDotNet201Source.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/JsonDotNet201Source.zip.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JsonDotNet/link.xml.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +96,6 @@
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/LaserScanSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/MapSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" />
-        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DragCanvasObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapResizer.cs" />
@@ -64,13 +104,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/UnitySubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/OdometrySubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisher.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TfSubscriber.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" />
         <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/TwistPublisherStatic.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MovementButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" />
       </list>
     </option>
   </component>
@@ -81,6 +122,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34996957" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30006087" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -105,10 +148,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8276">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8276" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -146,6 +189,9 @@
       <workItem from="1609149517070" duration="3617000" />
       <workItem from="1609186656621" duration="3715000" />
       <workItem from="1609234125330" duration="5090000" />
+      <workItem from="1609357383643" duration="641000" />
+      <workItem from="1609604514663" duration="618000" />
+      <workItem from="1609605968314" duration="2942000" />
     </task>
     <servers />
   </component>
@@ -170,6 +216,70 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1674" height="484" key="GridCell.Tab.0.bottom" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.0.bottom/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.0.center" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.0.center/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.0.left" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.0.left/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.0.right" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.0.right/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.1.bottom" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.1.bottom/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.1.center" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.1.center/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.1.left" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.1.left/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.1.right" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.1.right/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.2.bottom" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.2.bottom/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.2.center" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.2.center/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.2.left" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.2.left/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.2.right" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.2.right/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.3.bottom" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.3.bottom/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.3.center" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.3.center/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.3.left" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.3.left/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
+    <state width="1674" height="484" key="GridCell.Tab.3.right" timestamp="1609613829525">
+      <screen x="0" y="27" width="3440" height="1345" />
+    </state>
+    <state width="1674" height="484" key="GridCell.Tab.3.right/0.27.3440.1345/3440.241.1920.1080@0.27.3440.1345" timestamp="1609613829525" />
     <state x="349" y="334" width="1022" height="737" key="SettingsEditor" timestamp="1609243636776">
       <screen x="0" y="27" width="3440" height="1345" />
     </state>

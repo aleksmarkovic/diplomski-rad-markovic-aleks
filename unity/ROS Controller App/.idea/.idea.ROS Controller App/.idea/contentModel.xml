@@ -11,7 +11,6 @@
           <e p="Plugins" t="Include">
             <e p="External" t="Include">
               <e p="Newtonsoft.Json.Bson.xml" t="Include" />
-              <e p="Newtonsoft.Json.xml" t="Include" />
               <e p="websocket-sharp.xml" t="Include" />
             </e>
           </e>

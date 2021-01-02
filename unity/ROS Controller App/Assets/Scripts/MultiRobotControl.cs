@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using RosSharp.RosBridgeClient;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MultiRobotControl : MonoBehaviour
 {
     [SerializeField] private GameObject[] rosConnector;
     [SerializeField] private GameObject[] robotModel;
-
+    [SerializeField] private Button multiRobotButton;
+    
     private ImageSubscriber activeRobotCamera;
     private ImageSubscriber inactiveRobotCamera;
 
@@ -22,7 +24,11 @@ public class MultiRobotControl : MonoBehaviour
              
              inactiveRobotCamera = rosConnector[1].GetComponent<ImageSubscriber>();
              inactiveRobotCamera.enabled = false;
-        } 
+        }
+        else
+        {
+            multiRobotButton.interactable = false;
+        }
     }
 
     public void SwitchRobotCamera()

@@ -4,6 +4,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Unity Editor\relax }}{7}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{14}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces URDF uvoz\relax }}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{12}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Model robota u Unity-ju\relax }}{15}{figure.caption.8}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{26}{figure.caption.11}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{26}{figure.caption.12}%

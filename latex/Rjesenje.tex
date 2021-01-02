@@ -1,0 +1,145 @@
+% !TeX encoding = windows-1250
+\chapter{Opis rješenja}
+
+\qquad U ovom æe se poglavlju primarno opisati aplikacija i njezina arhitektura. Opisati æe se kako je aplikacija napravljena i na kojem principu ona radi. Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente glavni dijelovi dijagrama.
+
+\qquad Prvi korak sustava jest pokretanje Gazebo simulacije u ROS-u gdje se simulira robota i njegovo okruženje. Realna alternativa bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
+
+\qquad Drugi korak jest Unity. Pod Unity se misli na Editor i njegove standalone te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Znaèi da koju god aplikaciju se pokreæe, moæi æe se spojiti na navedeni robotski sustav.
+
+\qquad Izmeðu navedena dva koraka, nalazi se ROS\#, most koji spaja ROS i Unity. ROS\# pomoæu RosBridgeClient-a (pojasnit ROSBRIDGECLIENT) otvara vezu izmeðu njih. Isti radi na temelju pretplate i izdavanja poruka na ROS teme (topic). Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
+
+\qquad Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
+\begin{itemize}
+	\item Unity se pretplaæuje na ROS teme - povratne informacije, npr. odometrija, slika kamere, laserscan,
+	\item Unity izdaje nove poruke na ROS teme - kontrolne poruke, npr. upravljanje robotom.	
+\end{itemize}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=12cm,width=21cm,keepaspectratio=true]{diagram}
+		\caption{Dijagram sustava \cite{rossharpgazebosim}}
+		\label{fig:maindiagram}
+	\end{center}
+\end{figure}
+\clearpage
+
+\section{Opis suèelja i Unity objekata}
+
+\qquad U ovoj æe se sekciji opisati èemu služe glavni objekti u korištenim Unity scenama.
+
+\subsection{Meni}
+\qquad Napravljen je jednostavni inicijalni meni s nekoliko polja za upis:
+\begin{itemize}
+	\item IP adresa - polje za unos IP adrese ROS-a, tj. robota. IP adresu, ako je nepromjenjiva, je dovoljno upisati jednom jer se sprema pomoæu Unity znaèajke \emph{PlayerPrefs} koja služi za spremanje igraèevih (korisnièkih) postavka.
+	\item Broj robota - opcionalno polje u sluèaju da ima više robota u simulaciji.
+	\item Prefix robota - opcionalno polje u sluèaju da ima više robota u simulaciji. Pod prefix se podrazumijeva prefix ROS tema ispred teme robota. Npr. postoji simulacija s više Turtlebot-ova gdje svaki Turtlebot ima svoje ROS teme kojeg su inaèe istog naziva, njima je potrebno dodati prefix ispred naziva ROS teme da bi se znalo na kojeg Turtlebot-a se ta ROS tema odnosi (slika \ref{fig:multirobotexample}). Prefix je potrebno definirati u glavnoj \emph{launch} datoteci simulacije. (PRILOG ??)
+\end{itemize}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=8cm,width=16cm,keepaspectratio=true]{multiRobotExample}
+		\caption{Primjer ROS tema s više robota}
+		\label{fig:multirobotexample}
+	\end{center}
+\end{figure}
+
+\emph{Connect} gumb vodi na glavnu scenu gdje se vrši spajanje na ROS i gdje zapoèinje sva interakcija. Sljedeæe æe se navesti svi elementi (objekti) u glavnoj sceni i èemu služe.
+
+\subsection{Ros Connector}
+
+\qquad Na glavnoj sceni najbitniji element, tj. objekt, jest \textbf{RosConnector} koji prvobitno služi za otvaranje veze prema ROS-u. Osim toga, njegova druga glavna uloga jest sadržavanje svih skripta kojima je zadaæa pretplata ili izdavanje poruka na ROS temu. \textbf{RosConnector} sadrži sljedeæe relevantne skripte:istovremeno
+\begin{itemize}
+	\item \emph{Image Subscriber} koji se pretplaæuje na jednu ROS temu kamere, u ovom sluèaju se koristi \emph{/camera/rgb/image\_raw/compressed}.
+	\item \emph{Laser Scan Subscriber} koji se pretplaæuje na ROS temu laserskog skena (\emph{/scan}). 
+	\item \emph{Map Subscriber} koji se pretplaæuje na ROS temu \emph{/map} koju izdaje èvor \emph{slam\_gmapping}. 
+	\item \emph{Odometry Subscriber} koji se pretplaæuje na temu \emph{/odom} i dohvaæa odometrijske podatke robota. Dobivene podatke skripta koristi za ažuriranje odometrijskih podataka robotskog modela u Unity prostoru.
+	\item \emph{Joystick Publisher} izdaje poruke na \emph{/joy} ROS temu, koja služi kao joystick kontrola robota.
+	\item \emph{Twist Publisher Static} uèitava ulaz gumbova na glavnoj sceni za upravljanje smjerom robota. Isti izdaje poruke na \emph{/cmd\_vel} ROS temi koja upravlja linearnom i kutnom brzinom robota.
+\end{itemize}
+
+\subsection{Plane}
+
+\qquad Plane je 3D objekt koji služi kao podloga (pod ili teren) robotu. Bez podloge bi se trebala iskljuèiti svojstvo gravitacije u Unity-ju, no na taj naèin se može podloga iskoristiti za projekciju generirane mape okoline robota. Na naèin kada stavimo prikaz scene iznad navedenog objekta i robota, dobiva se efekt robota koji ide kroz mapu koja se paralelno izraðuje.
+
+\subsection{Model robota}
+
+\qquad Model robota se prikazuje kao zaseban objekt u sceni, u ovom sluèaju objekt \textbf{turtlebot3\_waffle\_pi}. Isti je generiran prijašnje navedenim alatom za uvoz URDF modela i sadrži podobjekte po svojstvima robota kao na slici \ref{fig:robotmodel}.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=8cm,width=14cm,keepaspectratio=true]{robotModel}
+		\caption{Model robota u Unity-ju}
+		\label{fig:robotmodel}
+	\end{center}
+\end{figure}
+
+Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi pomoænim skriptama ROS\#-a koje uèitavaju stanja kotaèa sa simulacije. 
+
+\subsection{Canvas}
+
+\qquad \textbf{Canvas} u Unity-ju je 2D objekt koji veæinom služi za slaganje grafièkih komponenta suèelja, npr. gumbovi, tekst ulazi i sl. Jedna od najveæih prednosti Canvas-a je responzivnost. Canvas-u se može definirati bazna rezolucija, koja se onda može skalirati ovisno o rezoluciji ureðaja gdje je aplikacija pokrenuta. Isto vrijedi za sve elemente u Canvas-u. Elementi se mogu "usidriti" u nekom kutu ekrana, mogu se širiti i smanjivati ovisno o rezoluciji, mijenjati poziciju ovisno o velièini ekrana i sl.
+
+\qquad U ovoj aplikaciji Canvas se sastoji od sljedeæih elemenata:
+\begin{itemize}
+	\item \emph{Camera Image} kao što ime govori, ovo je element Canvas-a gdje nam se prikazuje slika s kamere. Slika kamere se uèitava kao tekstura te ista preslikava kao \emph{Sprite} na navedeni element koji sadrži polje za sliku. Element je proširen po cijeloj dužini i širini Canvas-a, tako da se ovisno o rezoluciji ekrana skalira.
+	\item \emph{Control} je objekt koji sadrži podobjekte koji su gumbovi za odreðivanje linearne i kutne brzine robota. 
+	\item \emph{Laserscan Button} je gumb koji ukljuèuje i iskljuèuje prikaz objekata generiranih laserskim skenom.
+	\item \emph{Camera Button} je gumb koji mjenja prikaz kamere (topografski prikaz mape i robota te prikaz u prvom licu s kamere robota).
+	\item \emph{Switch Robot Camera} mjenja prikaz kamere u prvom licu na drugog robota (u sluèaju da ima više robota u simulaciji). Ako u simulaciji postoji samo jedan robot, tada je taj gumb iskljuèen.
+\end{itemize}
+
+\subsection{Multi Robot Control}
+
+\qquad Navedeni objekt služi samo za pokretanje prethodno navedene skripte koja omoguæuje prikaz više robota odjednom.
+\clearpage
+
+\section{Znaèajke i moguænosti rješenja}
+
+\qquad U sljedeæoj æe se sekciji navesti i opisati znaèajke i moguænosti koje se implementiralo u ovom radu.
+
+\subsection{Kamere}
+
+\qquad U sceni postoje dvije kamere. Kamera u Unity-ju oznaèava kako se scena prikazuje. Ona može biti iz razlièitih kuteva, sa razlièitom širinom i dubinom snimanja, bilo kojom pozicijom snimanja i još mnogo postavka. Jedna æe kamera biti postavljena iznad 3D objekata, a druga æe biti namještena da snima Canvas - u ovom sluèaju pozicija kamere nije bitna jer fiksno snima 2D Canvas.
+
+\begin{itemize}
+	\item Prikaz kamere iz prvog lica - Prva znaèajka na koju se nailazi prilikom pokretanja aplikacije je prikaz kamere iz prvog lica. Slika se u stvarnom vremenu dohvaæa sa robota te se kao tekstura postavlja na prijašnje navedenom Canvas objektu.
+	\item Prikaz kamere iz ptièje perspektive - U ovoj se perspektivi prikazuje 3D model robota na 2D mapi koja se izraðuje s dobivenim podacima iz \emph{/map} ROS teme, gdje se izraðuje nova tekstura koja se precrtava na \emph{Plane} objekt. Takoðer su u ovoj perspektive vidljive sfere (takoðer 3D objekti) koji se crtaju shodno podacima iz \emph{/scan} ROS teme.
+\end{itemize}
+
+\subsection{Laserski sken}
+
+\qquad ROS teme laserskog skena šalju poruke tipa \emph{sensor\_msgs/LaserScan} u kojem se nalazi više vrsta podataka, ali je u ovom sluèaju bitno float32 polje \emph{ranges}. Problem je što ovo polje zna sadržavati beskonaène brojeve te tada ROS\# izbacuje grešku i ne nastavlja s procesiranjem tog polja. Iz toga razloga je bilo potrebno napraviti ROS èvor koji æe èitati temu laserskog skena, ROS tema \emph{/scan}, filtrirati podatke koji su beskonaèni te izdati novu ROS temu sa ispravljenim podacima. Dobiveni podaci se pomoæu ROS\# skripte \emph{Laser Scan Writer} i \emph{Laser Scan Visualizer} crtaju kao sfere u 3D prostoru oko robota. 
+
+\subsection{Mapiranje}
+
+\qquad Mapiranje u Unity-ju se vrši na naèin da se uèitavaju podaci iz ROS tema \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina mape te int8 polje podataka u kojem se nalazi podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
+Proces crtanja mape u Unity-ju je sljedeæi:
+\begin{enumerate}
+	\item Uèitava se dužina i širina mape.
+	\item Inicijalizira se nova varijable za mapu koja æe biti tipa \emph{Color} i biti æe iste duljine kao i polje podataka iz \emph{/map} teme.
+	\item Iterira se po tom dobivenom polju podataka te se ovisno o dobivenom podatku u novoinicijalizirano polje boja dodaje nova definirana boja.
+	\item Nakon iteriranja je potrebno postaviti zastavicu (flag) u \emph{true} koja predstavlja da je potrebno nacrtati novu mapu na suèelju.
+	\item Unity funkcija \emph{Update} koja se izvršava svako osvježavanje ekrana, provjerava navedenu zastavicu i izraðuje novu teksturu na temelju definiranog polja boja, dužine i širine mape te se ista nova tekstura sprema na glavnu teksturu \emph{Renderer} komponente na \emph{Plane} objektu. 
+\end{enumerate}
+
+Korištena metoda mapiranja je \emph{SLAM (Simultana Lokalizacija i Mapiranje) gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je kreator prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. mape.
+
+\subsection{Upravljanje}
+
+\qquad Upravljanje robotom se može vršiti na dva naèina: 
+\begin{itemize}
+	\item Korištenjem gumbova na suèelju - Svaki gumb inkrementira ili dekrementira brzinu za definirani korak. Trenutno definirani korak za linearnu brzinu iznosti 0.05, a za kutnu 0.02. Svakom promjenom se na \emph{cmd\_vel} ROS temi šalje poruka tipa \emph{geometry\_msgs/Twist} s novom brzinom. Poruka sadrži Vector3 tip varijable za linearnu i kutnu brzinu.
+	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Manager-a}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu (ONDA GRE U TWIST BLABLA). Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
+\end{itemize}
+
+\begin{lstlisting}
+#include <stdio.h>
+
+int main(int argc, char ** argv)
+{
+printf("Hello world!\n");
+return 0;
+}
+\end{lstlisting}
+

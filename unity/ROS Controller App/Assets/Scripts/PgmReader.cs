@@ -36,13 +36,6 @@ namespace PGM
                 texture.Apply();
             
                 GetComponent<Renderer>().material.mainTexture = texture;
-            
-                var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
-            
-                if (sprite != null)
-                {
-                   // imageToUpdate.sprite = sprite;
-                }
             }
         }
 
