@@ -7,12 +7,6 @@ using UnityEngine.UI;
 public class MovementButton : MonoBehaviour
 {
     [SerializeField] private TwistPublisherStatic twistPublisherStatic;
-    private Button button;
-    private void Start()
-    {
-        button = GetComponent<Button>();
-       // button.onClick.AddListener(ButtonAction);
-    }
 
     public void ButtonAction()
     {
@@ -20,10 +14,7 @@ public class MovementButton : MonoBehaviour
         switch (gameObject.name)
         {
             case "Up":
-                button.GetComponentInChildren<Text>().text = gameObject.name;
                 twistPublisherStatic.LinearClickUp();
-                button.GetComponentInChildren<Text>().text = "gameObject.name";
-
                 break;
             case "Down":
                 twistPublisherStatic.LinearClickDown();

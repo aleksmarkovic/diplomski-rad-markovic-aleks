@@ -17,7 +17,7 @@ public class MultiRobotControl : MonoBehaviour
     private void Awake()
     {
         activeRobotCamera = rosConnector[0].GetComponent<ImageSubscriber>();
-        if (Settings.SettingsInstance.MultiRobot != null && Settings.SettingsInstance.MultiRobot.NumberOfRobots > 1)
+        if (Settings.SettingsInstance.MultiRobot != null)
         {
              robotModel[1].SetActive(true);
              rosConnector[1].SetActive(true);

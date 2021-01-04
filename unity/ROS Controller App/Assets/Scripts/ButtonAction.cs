@@ -15,10 +15,8 @@ public class ButtonAction : MonoBehaviour
         button.onClick.AddListener(ToggleObject);    
     }
 
-
     private void ToggleObject()
     {
         visualizationObject.SetActive(!visualizationObject.activeSelf);
-    }
-    
+    }    
 }

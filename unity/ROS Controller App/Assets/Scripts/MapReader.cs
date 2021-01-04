@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace PGM
 {
-    public class PgmReader : MonoBehaviour
+    public class MapReader : MonoBehaviour
     {
         public Image imageToUpdate;
         
@@ -30,8 +30,6 @@ namespace PGM
                 setMap = false;
                 
                 texture.Resize((int)mapWidth, (int)mapHeight);
-                texture.Apply();
-
                 texture.SetPixels(mapColorArray);
                 texture.Apply();
             
