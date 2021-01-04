@@ -14,6 +14,8 @@ limitations under the License.
 */
 
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 using PGM;
 using RosSharp.RosBridgeClient.MessageTypes.Nav;
 using UnityEngine;
@@ -22,8 +24,8 @@ namespace RosSharp.RosBridgeClient
 {
     public class MapSubscriber : UnitySubscriber<MessageTypes.Nav.OccupancyGrid>
     {
-        public PgmReader pgmReader;
-        private bool sent = false;
+        public MapReader mapReader;
+
         protected override void Start()
         {
             base.Start();
@@ -31,8 +33,7 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(OccupancyGrid message)
         {
-            pgmReader.VisualizeMap(message);
-                sent = true;
+            Task.Run(() => mapReader.VisualizeMap(message));
         }
     }
 }

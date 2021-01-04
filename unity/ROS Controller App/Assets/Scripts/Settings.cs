@@ -20,7 +20,6 @@ public class Settings : MonoBehaviour
     
     [SerializeField] private InputField ipInputField;
     [SerializeField] private InputField prefixInputField;
-    [SerializeField] private InputField numberInputField;
     [SerializeField] private Button cameraButton;
 
     private void Awake()
@@ -50,7 +49,7 @@ public class Settings : MonoBehaviour
         ipConfig = "ws://" + inputText + ":9090";
         PlayerPrefs.SetString("ipConfig", ipConfig);
         
-        if (numberInputField.text.Length > 0)
+        if (prefixInputField.text.Length > 0)
             SaveMultiRobot();
     }
 
@@ -58,7 +57,7 @@ public class Settings : MonoBehaviour
     {
         MultiRobot = new MultiRobot
         {
-            RobotsPrefix = prefixInputField.text, NumberOfRobots = Int32.Parse(numberInputField.text)
+            RobotsPrefix = prefixInputField.text, NumberOfRobots = 2
         };
     }
 }

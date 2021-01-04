@@ -28,22 +28,13 @@ namespace RosSharp.RosBridgeClient
 
         private void Awake()
         {
-            InitializeButtons();
             InitializeMessage();
-
         }
         protected override void Start()
         {
             base.Start();
         }
 
-        private void InitializeButtons()
-        {
-            // buttonUp.onClick.AddListener(LinearClickUp);
-            // buttonDown.onClick.AddListener(LinearClickDown);
-            // buttonRight.onClick.AddListener(AngularClickRight);
-            // buttonLeft.onClick.AddListener(AngularClickLeft);
-        }
         
         private void InitializeMessage()
         {
@@ -56,12 +47,26 @@ namespace RosSharp.RosBridgeClient
         public void LinearClickUp()
         {
             message.linear.x += linearStep;
+
+            if (message.linear.x < 0)
+            {
+                message.linear.x = 0;
+                message.angular.z = 0;
+            }
+
             Publish(message);
         }
         
         public void LinearClickDown()
         {
             message.linear.x -= linearStep;
+
+            if (message.linear.x > 0)
+            {
+                message.linear.x = 0;
+                message.angular.z = 0;
+            }
+
             Publish(message);
         }
         

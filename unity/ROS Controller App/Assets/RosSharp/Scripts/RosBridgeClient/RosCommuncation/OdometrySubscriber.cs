@@ -21,7 +21,6 @@ namespace RosSharp.RosBridgeClient
     public class OdometrySubscriber : UnitySubscriber<MessageTypes.Nav.Odometry>
     {
         public Transform PublishedTransform;
-        public MapRobotPositioner mapRobotPositioner;
         
         private Vector3 position;
         private Quaternion rotation;
@@ -40,18 +39,24 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(MessageTypes.Nav.Odometry message)
         {
-            position = GetPosition(message).Ros2Unity();
+           // position = GetPosition(message).Ros2Unity();
             rotation = GetRotation(message).Ros2Unity();
+            position = GetPosition(message).Ros2Unity();
+           // rotation = GetRotation(message);
+
             isMessageReceived = true;
         }
         private void ProcessMessage()
         {
-            // PublishedTransform.localPosition = position;
-            // PublishedTransform.localRotation = rotation;
-           PublishedTransform.position = position;
-           PublishedTransform.rotation = rotation;
-            
-            mapRobotPositioner.SetPosition(position);
+            PublishedTransform.position = position;
+
+          //   PublishedTransform.position = new Vector3(position.x, position.z, -position.y);
+         //   PublishedTransform.rotation = new Quaternion(rotation.y, -rotation.z, -rotation.x, rotation.w);
+            PublishedTransform.rotation = rotation;
+            //  mapRobotPositioner.SetPosition(position);
+
+            //             return new Quaternion(quaternion.y, -quaternion.z, -quaternion.x, quaternion.w);
+
         }
 
         private Vector3 GetPosition(MessageTypes.Nav.Odometry message)
