@@ -51,6 +51,12 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
   23. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rosbridgesuite}
+\BIBentryALTinterwordspacing
+ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
+  {, 03. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{netcoreinstall}
 \BIBentryALTinterwordspacing
 Microsoft. .net core instalacija. , s Interneta,

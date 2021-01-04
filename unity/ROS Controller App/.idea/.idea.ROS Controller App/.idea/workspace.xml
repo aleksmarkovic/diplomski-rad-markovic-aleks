@@ -34,43 +34,14 @@
       <change beforePath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/KonfiguracijaRadneOkoline.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../latex/Literatura.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Literatura.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../latex/Literatura.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Literatura.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/Prilog_1.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Prilog_1.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/RazradaProblema.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/RazradaProblema.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/RazradaProblema.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/RazradaProblema.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Rjesenje.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Rjesenje.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../latex/Rjesenje.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Rjesenje.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../latex/SoftverskiAlati.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/SoftverskiAlati.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../latex/SoftverskiAlati.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/SoftverskiAlati.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../latex/Uvod.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../latex/Uvod.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ROS Controller App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Plugins/External/Newtonsoft.Json.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/ImageSubscriber.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Control.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Control.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PgmReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/AOT/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.XML.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Assemblies/Windows/Newtonsoft.Json.dll.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/Documentation/Json Net for Unity 2.0.1.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/JsonDotNet201Source.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/JsonDotNet201Source.zip.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JsonDotNet/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +52,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PGM.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PGM.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MapRobotPositioner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovementButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/UnitySubscriber.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/ed/21c7b757/MapMetaData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/729714E0-BC99-4C1F-81B1-C847F126EDE8/02/6f9914f1/OccupancyGrid.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RosSharp/Scripts/RosBridgeClient/RosCommuncation/RosConnector.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MultiRobotControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraSwitch.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -148,10 +121,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8276">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8276" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -192,6 +165,7 @@
       <workItem from="1609357383643" duration="641000" />
       <workItem from="1609604514663" duration="618000" />
       <workItem from="1609605968314" duration="2942000" />
+      <workItem from="1609678562917" duration="1259000" />
     </task>
     <servers />
   </component>

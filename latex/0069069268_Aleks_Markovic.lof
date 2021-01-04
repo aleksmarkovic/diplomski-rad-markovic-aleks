@@ -2,11 +2,14 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Unity Editor\relax }}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Unity Editor\relax }}{8}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{12}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{14}{figure.caption.7}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Model robota u Unity-ju\relax }}{15}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{13}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Model robota u Unity-ju\relax }}{15}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{20}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RQT graf sustava\relax }}{21}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{26}{figure.caption.11}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{26}{figure.caption.12}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{30}{figure.caption.12}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{30}{figure.caption.13}%

@@ -7,7 +7,7 @@
 
 \qquad Drugi korak jest Unity. Pod Unity se misli na Editor i njegove standalone te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Znaèi da koju god aplikaciju se pokreæe, moæi æe se spojiti na navedeni robotski sustav.
 
-\qquad Izmeðu navedena dva koraka, nalazi se ROS\#, most koji spaja ROS i Unity. ROS\# pomoæu RosBridgeClient-a (pojasnit ROSBRIDGECLIENT) otvara vezu izmeðu njih. Isti radi na temelju pretplate i izdavanja poruka na ROS teme (topic). Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
+\qquad Izmeðu navedena dva koraka, nalazi se ROS\#, most koji spaja ROS i Unity. ROS\# pomoæu RosBridgeClient-a otvara vezu izmeðu njih. Isti radi na temelju pretplate i izdavanja poruka na ROS teme (topic). Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
 
 \qquad Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
 \begin{itemize}
@@ -33,27 +33,19 @@
 \begin{itemize}
 	\item IP adresa - polje za unos IP adrese ROS-a, tj. robota. IP adresu, ako je nepromjenjiva, je dovoljno upisati jednom jer se sprema pomoæu Unity znaèajke \emph{PlayerPrefs} koja služi za spremanje igraèevih (korisnièkih) postavka.
 	\item Broj robota - opcionalno polje u sluèaju da ima više robota u simulaciji.
-	\item Prefix robota - opcionalno polje u sluèaju da ima više robota u simulaciji. Pod prefix se podrazumijeva prefix ROS tema ispred teme robota. Npr. postoji simulacija s više Turtlebot-ova gdje svaki Turtlebot ima svoje ROS teme kojeg su inaèe istog naziva, njima je potrebno dodati prefix ispred naziva ROS teme da bi se znalo na kojeg Turtlebot-a se ta ROS tema odnosi (slika \ref{fig:multirobotexample}). Prefix je potrebno definirati u glavnoj \emph{launch} datoteci simulacije. (PRILOG ??)
+	\item Prefiks robota - opcionalno polje u sluèaju da postoji više robota u simulaciji. 
 \end{itemize}
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[height=8cm,width=16cm,keepaspectratio=true]{multiRobotExample}
-		\caption{Primjer ROS tema s više robota}
-		\label{fig:multirobotexample}
-	\end{center}
-\end{figure}
 
 \emph{Connect} gumb vodi na glavnu scenu gdje se vrši spajanje na ROS i gdje zapoèinje sva interakcija. Sljedeæe æe se navesti svi elementi (objekti) u glavnoj sceni i èemu služe.
 
 \subsection{Ros Connector}
 
-\qquad Na glavnoj sceni najbitniji element, tj. objekt, jest \textbf{RosConnector} koji prvobitno služi za otvaranje veze prema ROS-u. Osim toga, njegova druga glavna uloga jest sadržavanje svih skripta kojima je zadaæa pretplata ili izdavanje poruka na ROS temu. \textbf{RosConnector} sadrži sljedeæe relevantne skripte:istovremeno
+\qquad Na glavnoj sceni najbitniji element, tj. objekt, jest \textbf{RosConnector} koji prvobitno služi za otvaranje veze prema ROS-u. Osim toga, njegova druga glavna uloga jest sadržavanje svih skripta kojima je zadaæa pretplata ili izdavanje poruka na ROS temu. \textbf{RosConnector} sadrži sljedeæe relevantne skripte:
 \begin{itemize}
 	\item \emph{Image Subscriber} koji se pretplaæuje na jednu ROS temu kamere, u ovom sluèaju se koristi \emph{/camera/rgb/image\_raw/compressed}.
 	\item \emph{Laser Scan Subscriber} koji se pretplaæuje na ROS temu laserskog skena (\emph{/scan}). 
 	\item \emph{Map Subscriber} koji se pretplaæuje na ROS temu \emph{/map} koju izdaje èvor \emph{slam\_gmapping}. 
-	\item \emph{Odometry Subscriber} koji se pretplaæuje na temu \emph{/odom} i dohvaæa odometrijske podatke robota. Dobivene podatke skripta koristi za ažuriranje odometrijskih podataka robotskog modela u Unity prostoru.
+	\item \emph{Odometry Subscriber} koji se pretplaæuje na temu \emph{/odom} i dohvaæa odometrijske podatke robota.
 	\item \emph{Joystick Publisher} izdaje poruke na \emph{/joy} ROS temu, koja služi kao joystick kontrola robota.
 	\item \emph{Twist Publisher Static} uèitava ulaz gumbova na glavnoj sceni za upravljanje smjerom robota. Isti izdaje poruke na \emph{/cmd\_vel} ROS temi koja upravlja linearnom i kutnom brzinom robota.
 \end{itemize}
@@ -91,7 +83,7 @@ Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi po
 
 \subsection{Multi Robot Control}
 
-\qquad Navedeni objekt služi samo za pokretanje prethodno navedene skripte koja omoguæuje prikaz više robota odjednom.
+\qquad Navedeni objekt služi samo za pokretanje skripte koja omoguæuje prikaz kamera dva robota odjednom.
 \clearpage
 
 \section{Znaèajke i moguænosti rješenja}
@@ -125,21 +117,57 @@ Proces crtanja mape u Unity-ju je sljedeæi:
 
 Korištena metoda mapiranja je \emph{SLAM (Simultana Lokalizacija i Mapiranje) gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je kreator prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. mape.
 
+Ispunjavanje novog polja boja u petlji je vrlo ne optimiziran pristup. U aplikaciji se osjeæao trzaj u izvršavanju tijekom izrade mape, pa se kao rješenje na to izvršavanje funkcije koja sadrži petlju izvršava kao novi \emph{Task} koji u C\# oznaèuje asinkronu operaciju na novoj dretvi. Time se drastièno smanjio trzaj u aplikaciji.
+
 \subsection{Upravljanje}
 
 \qquad Upravljanje robotom se može vršiti na dva naèina: 
 \begin{itemize}
-	\item Korištenjem gumbova na suèelju - Svaki gumb inkrementira ili dekrementira brzinu za definirani korak. Trenutno definirani korak za linearnu brzinu iznosti 0.05, a za kutnu 0.02. Svakom promjenom se na \emph{cmd\_vel} ROS temi šalje poruka tipa \emph{geometry\_msgs/Twist} s novom brzinom. Poruka sadrži Vector3 tip varijable za linearnu i kutnu brzinu.
-	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Manager-a}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu (ONDA GRE U TWIST BLABLA). Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
+	\item Korištenjem gumbova na suèelju - Svaki gumb inkrementira ili dekrementira brzinu za definirani korak. Trenutno definirani korak za linearnu brzinu iznosti 0.05, a za kutnu 0.02. Svakom promjenom se na \emph{/cmd\_vel} ROS temi šalje poruka tipa \emph{geometry\_msgs/Twist} s novom brzinom. Poruka sadrži Vector3 tip varijable za linearnu i kutnu brzinu. \emph{/cmd\_vel} ROS tema proslijeðuje naredbe brzine samom robotu.
+	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Manager-a}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu. Nakon toga ROS\# èvor \emph{joy\_to\_twist} pretvara poruke \emph{/joy} ROS teme u poruke tipa \emph{geometry\_msgs/Twist} te i šalje na ROS temu \emph{/cmd\_vel}. Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
 \end{itemize}
 
-\begin{lstlisting}
-#include <stdio.h>
+Samo se jedna od navedenih metoda može koristiti odjednom iz razloga što obe metode šalju poruke na istu ROS temu (\emph{/cmd\_vel}) pa æe u sluèaju korištenja obe metode, metoda joysticka ili tipka premostiti metodu gumbova. 
 
-int main(int argc, char ** argv)
-{
-printf("Hello world!\n");
-return 0;
-}
+Povratna informacija s \emph{/odom} ROS teme se koristi za ažuriranje odometrijskih podataka robotskog modela u Unity prostoru.
+
+\subsection{Prikaz s više robota}
+
+\qquad U svrhu istraživanja, omoguæeno je da se mogu prikazivati slike kamera u simulaciji gdje postoje dva robota iste vrste. Kao primjer je uzeta i adaptirana Turtlebot3 simulacija s više robota.
+
+U poèetnom izborniku potrebno je upisati prefiks ROS tema ispred teme robota. Npr. postoji simulacija s više Turtlebot-ova gdje svaki Turtlebot ima svoje ROS teme koje su inaèe istog naziva, njima je potrebno dodati prefiks ispred naziva ROS teme da bi se znalo na kojeg Turtlebot-a se ta ROS tema odnosi (slika \ref{fig:multirobotexample}). Prefiks je potrebno definirati u glavnoj \emph{launch} datoteci simulacije kao što je u sljedeæem isjeèku XML koda gdje je prefiks string \emph{tb} u \emph{default} svojstvu argumenata. \\
+
+\begin{lstlisting}
+<launch>
+	<arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+	<arg name="first_tb3"  default="tb1"/>
+	<arg name="second_tb3" default="tb2"/>
+</launch>
 \end{lstlisting}
+
+Ova je funkcija napravljena na naèin da u sceni postoji dodatni neaktivni \emph{RosConnector} i model robota, koji se ovisno o ulazu na glavnom izborniku ukljuèuje. Pri pretplaæivanju pojedinaènog robota na ROS teme, u glavnoj se ROS\# \emph{Unity Subscriber} skripti provjerava broj robota te se u ovom sluèaju dodaje spomenuti prefiks u ROS temu.
+
+Pri pokretanju i spajanju na simulaciju, prijašnje navedenim gumbom moguæe je mijenjati pogled s jednog robota na drugi. U ovoj se simulaciji roboti kreæu sami te su ostale funkcije onemoguæene.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=8cm,width=16cm,keepaspectratio=true]{multiRobotExample}
+		\caption{Primjer ROS tema s više robota}
+		\label{fig:multirobotexample}
+	\end{center}
+\end{figure}
+
+\subsection{RQT graf sustava}
+
+\qquad Na slici \ref{fig:rqtgraph} prikazan je cjelovit RQT graf sustava. \emph{rqt\_graph} je grafièki alat za prikaz ROS grafa pokrenutog sustava/aplikacije. U njemu se vidu poveznice izmeðu pokrenutih ROS tema i èvorova.
+
+U grafu je vidljivo da sve ROS teme s povratnim informacijama idu u \emph{/ros\_websocket} a iz njega odlaze poruke u ROS teme za upravljanje robotom.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=8cm,width=16cm,keepaspectratio=true]{rqtGraph}
+		\caption{RQT graf sustava}
+		\label{fig:rqtgraph}
+	\end{center}
+\end{figure}
 

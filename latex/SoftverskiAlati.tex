@@ -44,9 +44,12 @@ Sve to na najnovijoj tada dostupnoj LTS verziji Linux Ubuntu operacijskog sustav
 \end{table}
 
 \section{Unity}
-\qquad Unity je cross-platform (multi-platformsko) razvojno okruženje, primarno za razvijanje raèunalnih igra. Sveukupni razvoj Unity razvojnog okruženja radi amerièka korporacija Unity Technologies. Takoðer, sam softver je besplatan za edukacijske i osobne svrhe te komercijalne svrhe do 100.000 amerièkih dolara prihoda. Postoji veliki izbor besplatnih i ne besplatnih paketa koji se može koristiti za ubrzati i olakšati odreðene zadatke, a to se sve nalazi na tzv. "Unity Asset Store". \cite{unityassetstore}
+\qquad Unity je cross-platform (multi-platformsko) razvojno okruženje, primarno za razvijanje raèunalnih igara. Sveukupni razvoj Unity razvojnog okruženja radi amerièka korporacija Unity Technologies. Takoðer, sam softver je besplatan za edukacijske i osobne svrhe te komercijalne svrhe do 100.000 amerièkih dolara prihoda. Postoji veliki izbor besplatnih i ne besplatnih paketa koji se može koristiti za ubrzati i olakšati odreðene zadatke, a to se sve nalazi na tzv. "Unity Asset Store". \cite{unityassetstore}
 
-\qquad Unity LTS (Long Term Support) verzija se u tekuæoj godini dovrši za prošlu - Unity 2019. LTS je došao sredinom 2020. godine, a nova, 2020. verzija je veæ dostupna i ona se postepeno nadograðuje. LTS verzija se svakog tjedna ažurira novim zakrpama.
+Unity LTS (Long Term Support) verzija se u tekuæoj godini dovrši za prošlu - Unity 2019. LTS je došao sredinom 2020. godine, a nova, 2020. verzija je veæ dostupna i ona se postepeno nadograðuje. LTS verzija se svakog tjedna ažurira novim zakrpama.
+
+U sluèaju da se želi izgraditi aplikaciju za drugu platformu, potrebno je imati instaliran Unity alat za željenu platformu. U sluèaju da je to Windows, Linux ili Mac OS, tada je potrebno imati zasebnu instalaciju Unity-ja na željenom operacijskom sustavu da bi se mogla izgraditi aplikacija za taj sustav.
+
 \subsection{Editor}
 
 \qquad Unity Editor je glavni alat za razvoj (slika~\ref{fig:unityeditor}). U njemu se radi veæina razvoja oko vizualnih elemenata i interakcije izmeðu njih. Glavne komponente ureðivaèa su sljedeæe: 
@@ -66,8 +69,8 @@ Sve to na najnovijoj tada dostupnoj LTS verziji Linux Ubuntu operacijskog sustav
 		\label{fig:unityeditor}
 	\end{center}
 \end{figure}
-
 \newpage
+
 \subsection{Skripte}
 
 \qquad Unity takoðer svojim korisnicima omoguæava programiranje vlastitih (ili korištenje tuðih) skripta. Programiranje se vrši u C\# programskom jeziku, koji se izvršava na \textit{Mono} razvojnom okruženju. Takoðer, moguæe je skripte programirati u \textit{JavaScriptu}, ali je podrška lošija.
@@ -110,3 +113,8 @@ Sve to na najnovijoj tada dostupnoj LTS verziji Linux Ubuntu operacijskog sustav
 	\item ROS paketi korišteni od strane ROS\#-a.
 	\item Unity projekt koji sadrži primjer scenu te RosBridgeClient, Urdf i MessageGeneration ekstenzije za Unity.
 \end{itemize}
+
+\subsection{RosBridgeClient}
+
+\qquad RosBridgeClient za spajanje .NET baziranih aplikacija na ROS koristi \emph{rosbridge\_suite}. \emph{rosbridge\_suite} pruža ROS-u API funkcionalnost za programe koji su izvan ROS sustava. Isti koristi naredbe bazirane na JSON formatu. Transportni sloj je implementiran u \emph{rosbridge\_server} paketu koji pruža WebSocket poveznicu. \cite{rosbridgesuite} WebSocket je konstantna poveznica izmeðu klijenta i servera gdje se promet odvija u oba smjera te koristi TCP/IP protokol.
+
