@@ -1,16 +1,16 @@
 % !TeX encoding = windows-1250
 \chapter{Opis problema}
 
-\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i mapiranje okoline koristeæi Unity razvojni program. Glavna stavka ili problem navedenog zadatka jest komunikacija izmeðu ROS-a i Unity-ja. Komunikacija æe se odvijati pomoæu ROS\# knjižnice koja sadrži set alata za adaptaciju ROS-a Unity-ju.
+\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i mapiranje okoline koristeæi Unity razvojni program. Glavna stavka ili problem navedenog zadatka jest komunikacija izmeðu ROS-a i Unity-ja. Komunikacija æe se odvijati pomoæu ROS\# knjižnice koja sadrži set alata za adaptaciju i interakciju ROS-a s Unity-jem.
 
-\qquad Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti. Postoji ROS 1 i ROS 2 sustav. ROS 1 se i dalje razvija i rade se nove verzije svake godine, no ROS 2 ga polako zamjenjuje zbog novijih tehnologija i bogatijih znaèajka. Zakljuèno je ipak bolje trenutno odabrati ROS 1. Najveæi razlog za tu odluku stoji u tome što ROS\# paket trenutno službeno podržava samo ROS 1. Moguæe je ROS\# koristiti i sa ROS 2 sustavom, no potrebne su mnoge adaptacije koje nisu dokumentirane od strane službenih programera ROS\#-a pa je i vjerojatnost nailaženja na probleme i greške visoka.
+\qquad Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti, s obzirom da postoje dva sustava, odnosno ROS 1 i ROS 2 sustav.  ROS 1 sustav se i dalje razvija te se kontinuirano svake godine izraðuju nove verzije istog, dok ROS 2 sustav polako zamjenjuje ROS 1 sustav zbog novijih tehnologija i bogatijih znaèajka. Zakljuèno je ipak bolje trenutno odabrati ROS 1. Najveæi razlog za tu odluku stoji u tome što ROS\# paket trenutno službeno podržava samo ROS 1 sustav. Moguæe je ROS\# koristiti i sa ROS 2 sustavom, no potrebne su mnoge adaptacije koje nisu dokumentirane od strane službenih programera ROS\#-a pa je i vjerojatnost nailaženja na probleme i greške visoka. Sukladno navedenom koristit æe se ROS 1 sustav.
 
 \qquad Nakon instalacije potrebnih alata, potrebno je iste konfigurirati na naèin da se mogu koristiti sa ROS\# i Unity-jem. U to je ukljuèena i potreba da se ROS\# knjižnica uvede u Unity. Završetkom ovih osnovnih koraka omoguæeno je kretanje implementacije glavnog cilja - aplikacija za upravljanje robotom i mapiranje okoline. 
 
 \section{Unity i aplikacija}
-\qquad Jednom kad Unity sadrži funkcionalnu ROS\# knjižnicu, dobiva se pristup alatu za uvoženje URDF modela robota, što je ujedno i prvi korak u izradu konkretne aplikacije. Potrebno je uvesti model korištenog robota što ukljuèuje i njegove fizièke i motorièke karakteristike da bi se ga moglo ispravno prikazati i upravljati njime.
+\qquad Jednom kad Unity sadrži funkcionalnu ROS\# knjižnicu, dobiva se pristup alatu za uvoženje URDF modela robota, što je ujedno i prvi korak u izradu konkretne aplikacije. Potrebno je uvesti model korištenog robota što ukljuèuje i njegove fizièke i motorièke karakteristike kako bi se ga moglo ispravno prikazati u Unity-ju te upravljati istim.
 
-\qquad Pošto je Unity poznat kao dobar alat za razvijanje softvera za više platforma odjednom, ovim æe se putem to iskoristiti na naèin da se ciljna aplikacija napravi da bude kompatibilna za: 
+\qquad S obzirom da je Unity poznat kao dobar alat za razvijanje softvera za više platforma odjednom, isti æe se iskoristiti na naèin da se ciljna aplikacija napravi kako bi ista bila kompatibilna za:
 \begin{enumerate}
 	\item Linux Ubuntu - Na prvom mjestu se nalazi Ubuntu iz razloga što se cijeli rad radi na ovom operacijskom sustavu, prvobitno zbog ROS-a.
 	\item Android - Jedan od veæih zahtjeva danas je imati mobilnu aplikaciju. Posebno je to sluèaj za upravljanje nekim robotom iz razloga što je nošenje prijenosnog raèunala teže. Mobilna aplikacija za upravljanje robotom olakšava i poboljšava korisnièko iskustvo pri upravljanju robota.
@@ -18,5 +18,5 @@
 \end{enumerate}
 Mac OS aplikaciju je takoðer moguæe napraviti, no zbog tehnièke ogranièenosti preskoèit æe se.
 
-\qquad Pri izradi aplikacije za svaku platformu, potrebne su neke dorade da bi aplikacija radila na toj platformi. Zahvaljujuæi Unity-ju i Mono framework-u na kojem Unity radi (.NET Standard 2.0) navedene dorade su dovoljno sitne da je prelazak na drugu platformu relativno bezbolan.
+\qquad Pri izradi aplikacije za pojedinu platformu, potrebne su neke dorade da bi aplikacija radila na toj platformi. Zahvaljujuæi Unity-ju i Mono framework-u koji Unity koristi (.NET Standard 2.0) navedene dorade su dovoljno sitne da je prelazak na drugu platformu relativno bezbolan.
 \clearpage

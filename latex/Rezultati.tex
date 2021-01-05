@@ -3,7 +3,7 @@
 
 \section{Aplikacija}
 
-\qquad Uspješno su napravljene funkcionalne aplikacije za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava se vršilo na Linux Ubuntu operacijskom sustavu, a za ostale se platforme napravilo samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editor-u.
+\qquad Uspješno su napravljene funkcionalne aplikacije za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravilo se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editor-u.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -37,7 +37,7 @@ Unity podržava WebGL, pa je i to pokušano napraviti, ali neuspješno. Pretpostavk
 	\label{tab:pchardver}
 \end{table}
 
-Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje obojane sfere prikazuju podatke laserskog skena kojima je intenzitet boje sve jaèi što je robot bliže predmetu u prostoru, dok je podloga ispod robota i sfera izgenerirana mapa. Slika \ref{fig:win2} prikazuje pogled iz kamere robota - u ovom naèinu rada aplikacija bude najfluidnija zbog konstantnog dotoka informacija (slike) koja zahtjeva minimalno dodatno procesiranje sa strane aplikacije.
+Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje obojane sfere prikazuju podatke laserskog skena kojima je intenzitet boje sve jaèi što je robot bliže predmetu u prostoru, dok je podloga ispod robota i sfera generirana mapa. Slika \ref{fig:win2} prikazuje pogled iz kamere robota - u ovom naèinu rada aplikacija bude najfluidnija zbog konstantnog dotoka informacija (slike) koja zahtjeva minimalno dodatno procesiranje sa strane aplikacije.
 
 \newpage
 
@@ -60,9 +60,9 @@ Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje oboj
 
 \subsection{Android}
 
-\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi radila. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu je u igru došla metoda upravljanja gumbovima. Pošto spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se napravu gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je ta što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže 4GB RAM-a, Mali-G71 grafièkom karticom i procesorom s 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, pa su se potrudili dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
+\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi uspješno funkcionirala. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu se kao rješenje prikazala metoda upravljanja gumbovima. S obzirom da spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se napravu gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je ta što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže 4GB RAM-a, Mali-G71 grafièkom karticom i procesorom s 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, pa su se potrudili dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
 
-Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se vidu iste znaèajke kao kod raèunalnih verzija. 
+Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se vidi iste znaèajke kao kod raèunalnih verzija. 
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -81,7 +81,7 @@ Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ur
 \end{figure}
 \newpage
 
-Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureðaja, gdje se vidi kako elementi suèelja drže omjer i prilagoðavaju se ekranu. Potrebno je napomenuti i da se nije mijenjalo ništa na suèelju pri adaptaciji desktop i mobilne aplikacije veæ je to znaèajka Unity-ja da skalira i adaptira suèelje temeljem velièine ekrana, uz pretpostavku da su postavke dobro namještene od strane osobe koja je razvijala frontend u Unity-ju.
+Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureðaja, gdje se vidi kako elementi suèelja drže omjer i prilagoðavaju se ekranu. Potrebno je napomenuti i da se nije mijenjalo ništa na suèelju pri adaptaciji desktop i mobilne aplikacije veæ je to znaèajka Unity-ja koji skalira i adaptira suèelje temeljem velièine ekrana, uz pretpostavku da su postavke dobro namještene od strane osobe koja je razvijala frontend u Unity-ju.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -90,7 +90,7 @@ Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureð
 		\label{fig:a1}
 	\end{center}
 \end{figure}
-\newpage
+\clearpage
 
 \section{Više robotski prikaz}
 
@@ -107,7 +107,7 @@ Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureð
 
 \section{Problemi i poteškoæe}
 
-\qquad Tokom cijelog razvijanja sustava bilo je više problema i poteškoæa, od raznih inkompatibilnosti pa do nerada odreðenih elemenata, ali najbitnija bi bila dva problema u krajnjem rezultatu: performanse i pozicioniranje mape u Unity-ju.
+\qquad Tokom cijelog razvijanja sustava bilo je više problema i poteškoæa, od raznih inkompatibilnosti pa do ne funkcioniranja odreðenih elemenata, ali najbitnija bi bila dva problema u krajnjem rezultatu: performanse i pozicioniranje mape u Unity-ju.
 
 Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što kroz godine podrška za Linux verziju Unity-ja je postala dobra te napravljena je stabilna verzija, teško je ne primjetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linux-u više nije mogao pokrenuti, dok isti projekt u Windows-u je radio bez grešaka.
 
@@ -134,9 +134,9 @@ Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unat
 
 \subsection{Pozicioniranje mape u Unity-ju}
 
-\qquad Pozicioniranje mape u Unity-ju podrazumijeva na koji se naèin slika mape nacrta na \emph{Plane} objekt. Problem je što se je tu relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka i slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
+\qquad Pozicioniranje mape u Unity-ju podrazumijeva na koji se naèin slika mape nacrta na \emph{Plane} objekt. Problem ovdje je taj što se je relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka i slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
 
-Mapa se generira sukladno SLAM gmapping-u pa je ona veæinom toèna. No kad se pozicija mape poremeti, daljnjim skeniranjem (šetanjem) prostora ona se veæinom vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer se testiranjem utvrdilo da je pozicija robota toèna u Unity prostoru.
+Mapa se generira sukladno SLAM gmapping-u pa je ona veæinom toèna. No kad se pozicija mape poremeti, daljnjim skeniranjem (šetanjem) prostora ona se veæinom vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer, testiranjem se utvrdilo da je pozicija robota toèna u Unity prostoru.
 
 \begin{figure}
 	\centering	
