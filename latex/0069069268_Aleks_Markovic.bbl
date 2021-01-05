@@ -57,6 +57,13 @@ ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
   {, 03. sijecnja 2021.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{webassembly}
+\BIBentryALTinterwordspacing
+MDN. Webassembly. , s Interneta,
+  \url{https://developer.mozilla.org/en-US/docs/WebAssembly} {, 03. sijecnja
+  2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{netcoreinstall}
 \BIBentryALTinterwordspacing
 Microsoft. .net core instalacija. , s Interneta,

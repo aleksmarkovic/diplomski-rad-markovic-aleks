@@ -3,10 +3,149 @@
 
 \section{Aplikacija}
 
-\qquad Uspješno su napravljene funkcionalne aplikacije za sve željene platforme (Windows, Linux i Android).
+\qquad Uspješno su napravljene funkcionalne aplikacije za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava se vršilo na Linux Ubuntu operacijskom sustavu, a za ostale se platforme napravilo samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editor-u.
 
-\subsection{Windows i Linux}
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=12cm,width=16cm,keepaspectratio=true]{winUnity}
+		\caption{Aplikacija u Unity Editor-u}
+		\label{fig:winunity}
+	\end{center}
+\end{figure}
 
-\qquad Ove verzije aplikacije su iste po izgledu i funkcionalnostima pa æe se zato zajedno analizirati.
+Unity podržava WebGL, pa je i to pokušano napraviti, ali neuspješno. Pretpostavka ovog neuspjeha leži u tome što Unity WebGL koristi \emph{WebAssembly} tehnologiju, koja ne podržava uvijek sve module koje se želi koristiti. \emph{WebAssembly} je noviji tip koda koji se može izvršavati na modernim web preglednicima. Isti je low-level programski jezik slièan \emph{asembleru} u binarnom formatu koji se izvršava sa sliènim performansama kao u nativnoj aplikaciji. On omoguæuje aplikacije koje su napisanu u C-u, C++-u, C\#-u i Rust-u da se prekompajlaju i omoguæi im se izvršavanje na web-u \cite{webassembly}.
+
+\subsection{Linux i Windows}
+
+\qquad Linux i Windows desktop aplikacije su po izgledu iste, ali se razlikuju u performansama. Windows se pokazao najlošiji u izvedbi aplikacije, unatoè puno superiornijim hardverom. Linux Ubuntu u drugu ruku, unatoè što se na njemu izvršavala i simulacija, performanse nisu padale. U tablici \ref{tab:pchardver} vidljive su razlike u hardveru, gdje su Windows komponente, komponente stolnog raèunala pa su puno moænije te rade na višoj frekvenciji.
+
+\begin{table}[!htbp]
+	\scriptsize
+	\renewcommand{\arraystretch}{1.2}
+	\caption{Windows i Linux hardver raèunala}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Komponenta & Windows & Linux Ubuntu (prijenosno raèunalo)
+		\\ [0.5ex]
+		\hline \hline
+		CPU & Intel Core i7-10700 (8 jezgri, 16 dretvi) & Intel Core i7-9750H (6 jezgri, 12 dretvi) \\ [0.5ex] 
+		GPU & NVIDIA GeForce GTX 1660 6GB Super & NVIDIA GeForce RTX 2060 6GB mobile \\ [0.5ex]
+		RAM & 16GB XMP & 16GB \\ [0.5ex]
+		\hline
+	\end{tabular}
+	\label{tab:pchardver}
+\end{table}
+
+Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje obojane sfere prikazuju podatke laserskog skena kojima je intenzitet boje sve jaèi što je robot bliže predmetu u prostoru, dok je podloga ispod robota i sfera izgenerirana mapa. Slika \ref{fig:win2} prikazuje pogled iz kamere robota - u ovom naèinu rada aplikacija bude najfluidnija zbog konstantnog dotoka informacija (slike) koja zahtjeva minimalno dodatno procesiranje sa strane aplikacije.
+
+\newpage
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{laserscan}
+		\caption{Linux aplikacija - mapa, robot i laserski sken}
+		\label{fig:laserscan}
+	\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{win2}
+		\caption{Windows aplikacija - pogled iz kamere}
+		\label{fig:win2}
+	\end{center}
+\end{figure}
+
 
 \subsection{Android}
+
+\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi radila. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu je u igru došla metoda upravljanja gumbovima. Pošto spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se napravu gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je ta što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže 4GB RAM-a, Mali-G71 grafièkom karticom i procesorom s 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, pa su se potrudili dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
+
+Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se vidu iste znaèajke kao kod raèunalnih verzija. 
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{a2}
+		\caption{Mobilna aplikacija - mapa, robot i laserski sken}
+		\label{fig:a2}
+	\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{a3}
+		\caption{Mobilna aplikacija - pogled iz kamere}
+		\label{fig:a3}
+	\end{center}
+\end{figure}
+\newpage
+
+Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureðaja, gdje se vidi kako elementi suèelja drže omjer i prilagoðavaju se ekranu. Potrebno je napomenuti i da se nije mijenjalo ništa na suèelju pri adaptaciji desktop i mobilne aplikacije veæ je to znaèajka Unity-ja da skalira i adaptira suèelje temeljem velièine ekrana, uz pretpostavku da su postavke dobro namještene od strane osobe koja je razvijala frontend u Unity-ju.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{a1}
+		\caption{Mobilna aplikacija - okomita orijentacija ureðaja}
+		\label{fig:a1}
+	\end{center}
+\end{figure}
+\newpage
+
+\section{Više robotski prikaz}
+
+\qquad Na sljedeæoj slici, \ref{fig:linuxmulti}, prikazan je pogled s kamere jednog od dvaju robota u simulaciji. Znaèajka prikaza kamera s oba robota radi isto na svim platformama.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{linuxMulti}
+		\caption{Standalone aplikacija - simulacija s dva robota}
+		\label{fig:linuxmulti}
+	\end{center}
+\end{figure}
+\newpage
+
+\section{Problemi i poteškoæe}
+
+\qquad Tokom cijelog razvijanja sustava bilo je više problema i poteškoæa, od raznih inkompatibilnosti pa do nerada odreðenih elemenata, ali najbitnija bi bila dva problema u krajnjem rezultatu: performanse i pozicioniranje mape u Unity-ju.
+
+Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što kroz godine podrška za Linux verziju Unity-ja je postala dobra te napravljena je stabilna verzija, teško je ne primjetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linux-u više nije mogao pokrenuti, dok isti projekt u Windows-u je radio bez grešaka.
+
+\subsection{Performanse}
+
+\qquad Kako se veæ napomenulo, performanse u Windows operacijskom sustavu su najlošije, dok su u ostala dva operacijska sustava solidne, no nisu savršene. Analiza broja ažuriranja slike u sekundi (FPS-ova - Frames Per Second), upuæuje da nije problem u tome (tablica \ref{tab:fpscompare}). Moguæi problem bi bio u tome kako pojedina aplikacija procesira dobivene podatke zbog pretplaæivanja na ROS teme koje stalno šalju nove poruke, no procesiranje tih poruka vrši ROS\# i njegove skripte.
+
+\begin{table}[!htbp]
+	\scriptsize
+	\renewcommand{\arraystretch}{1.2}
+	\caption{FPS usporedba}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Android & Windows & Linux Ubuntu (prijenosno raèunalo)
+		\\ [0.5ex]
+		\hline \hline
+		10 - 100 & konstantno oko 99 & 100 - 1000 (integrirani ekran), manje od 100 uz vanjski monitor\\ [0.5ex]
+		\hline
+	\end{tabular}
+	\label{tab:fpscompare}
+\end{table}
+
+
+\subsection{Pozicioniranje mape u Unity-ju}
+
+\qquad Pozicioniranje mape u Unity-ju podrazumijeva na koji se naèin slika mape nacrta na \emph{Plane} objekt. Problem je što se je tu relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka i slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
+
+Mapa se generira sukladno SLAM gmapping-u pa je ona veæinom toèna. No kad se pozicija mape poremeti, daljnjim skeniranjem (šetanjem) prostora ona se veæinom vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer se testiranjem utvrdilo da je pozicija robota toèna u Unity prostoru.
+
+\begin{figure}
+	\centering	
+	\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map1}}\vspace{1cm}
+	\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map2}}\vspace{1cm}
+	\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map3}}\\
+	\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map4}}\vspace{1cm}
+	\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map5}}
+	\caption{Koraci mapiranja}
+	\label{fig:mappingsteps}
+\end{figure}
+

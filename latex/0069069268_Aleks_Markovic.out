@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter*.2}{Popis slika}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Popis tablica}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Uvod}{}% 3
-\BOOKMARK [0][-]{chapter.2}{Opis problema ??}{}% 4
+\BOOKMARK [0][-]{chapter.2}{Opis problema}{}% 4
 \BOOKMARK [1][-]{section.2.1}{Unity i aplikacija}{chapter.2}% 5
 \BOOKMARK [0][-]{chapter.3}{Programski alati}{}% 6
 \BOOKMARK [1][-]{section.3.1}{ROS}{chapter.3}% 7
@@ -27,11 +27,18 @@
 \BOOKMARK [2][-]{subsection.4.2.6}{RQT graf sustava}{section.4.2}% 27
 \BOOKMARK [0][-]{chapter.5}{Rezultati}{}% 28
 \BOOKMARK [1][-]{section.5.1}{Aplikacija}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Rezultati}{}% 30
-\BOOKMARK [0][-]{chapter*.10}{Bibliografija}{}% 31
-\BOOKMARK [0][-]{chapter*.10}{Pojmovnik}{}% 32
-\BOOKMARK [0][-]{chapter*.10}{Sa\236etak}{}% 33
-\BOOKMARK [0][-]{appendix.A}{Konfiguracija radne okoline}{}% 34
-\BOOKMARK [1][-]{section.A.1}{Dodatni koraci}{appendix.A}% 35
-\BOOKMARK [2][-]{subsection.A.1.1}{Uvoz URDF modela u Unity}{section.A.1}% 36
-\BOOKMARK [2][-]{subsection.A.1.2}{Dodatno}{section.A.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.1}{Linux i Windows}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.2}{Android}{section.5.1}% 31
+\BOOKMARK [1][-]{section.5.2}{Vi\235e robotski prikaz}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.3}{Problemi i pote\235koce}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.3.1}{Performanse}{section.5.3}% 34
+\BOOKMARK [2][-]{subsection.5.3.2}{Pozicioniranje mape u Unity-ju}{section.5.3}% 35
+\BOOKMARK [0][-]{chapter.6}{Zakljucak}{}% 36
+\BOOKMARK [0][-]{chapter*.20}{Bibliografija}{}% 37
+\BOOKMARK [0][-]{chapter*.20}{Sa\236etak}{}% 38
+\BOOKMARK [0][-]{appendix.A}{Konfiguracija radne okoline}{}% 39
+\BOOKMARK [1][-]{section.A.1}{Dodatni koraci}{appendix.A}% 40
+\BOOKMARK [2][-]{subsection.A.1.1}{Uvoz URDF modela u Unity}{section.A.1}% 41
+\BOOKMARK [2][-]{subsection.A.1.2}{Dodatno}{section.A.1}% 42
+\BOOKMARK [1][-]{section.A.2}{Glavna launch datoteka}{appendix.A}% 43
+\BOOKMARK [1][-]{section.A.3}{Ostalo}{appendix.A}% 44

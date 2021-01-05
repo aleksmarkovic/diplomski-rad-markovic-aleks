@@ -1,0 +1,30 @@
+% !TeX encoding = windows-1250
+
+\section{Glavna launch datoteka}
+
+\begin{lstlisting}
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+	<param name="port" value="9090"/>
+	</include>
+	<include file="$(find turtlebot3_slam)/launch/turtlebot3_slam.launch">
+	<param name="slam_methods" value="gmapping"/>
+	</include>
+	
+	<!-- One robot -->
+	<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch">
+	</include> 
+	
+	<!-- Multiple robots 	
+	<include file="$(find turtlebot3_gazebo)/launch/multi_turtlebot3.launch">
+	</include> -->	
+	
+	<node name="file_server" pkg="file_server" type="file_server" />
+	
+	<node name="joy_to_twist" pkg="gazebo_simulation_scene" type="joy_to_twist.py"/>
+	
+	<node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" />
+	
+	<node name="laserScanCorrector" pkg="gazebo_simulation_scene" type="laserScanCorrector.py" />
+</launch>
+\end{lstlisting}

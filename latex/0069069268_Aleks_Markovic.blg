@@ -6,6 +6,7 @@ A level-1 auxiliary file: RazradaProblema.aux
 A level-1 auxiliary file: SoftverskiAlati.aux
 A level-1 auxiliary file: Rjesenje.aux
 A level-1 auxiliary file: Rezultati.aux
+A level-1 auxiliary file: Zakljucak.aux
 A level-1 auxiliary file: Literatura.aux
 The style file: tex_aux/IEEEtranHR.bst
 A level-1 auxiliary file: KonfiguracijaRadneOkoline.aux
@@ -21,45 +22,45 @@ Warning--I didn't find a database entry for "percgit"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 11 entries,
+You've used 12 entries,
             4087 wiz_defined-function locations,
-            877 strings with 8558 characters,
-and the built_in function-call counts, 3997 in all, are:
-= -- 311
-> -- 41
+            882 strings with 8648 characters,
+and the built_in function-call counts, 4356 in all, are:
+= -- 340
+> -- 45
 < -- 0
-+ -- 21
-- -- 10
-* -- 106
-:= -- 772
-add.period$ -- 32
-call.type$ -- 11
-change.case$ -- 11
++ -- 23
+- -- 11
+* -- 114
+:= -- 841
+add.period$ -- 35
+call.type$ -- 12
+change.case$ -- 12
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 317
-empty$ -- 373
-format.name$ -- 10
-if$ -- 850
+cite$ -- 12
+duplicate$ -- 346
+empty$ -- 407
+format.name$ -- 11
+if$ -- 928
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 87
-newline$ -- 78
-num.names$ -- 10
-pop$ -- 264
+int.to.str$ -- 12
+missing$ -- 95
+newline$ -- 83
+num.names$ -- 11
+pop$ -- 288
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 303
+skip$ -- 331
 stack$ -- 0
-substring$ -- 22
-swap$ -- 173
+substring$ -- 24
+swap$ -- 189
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 11
+type$ -- 12
 warning$ -- 0
-while$ -- 10
-width$ -- 13
-write$ -- 131
+while$ -- 11
+width$ -- 14
+write$ -- 141
 (There was 1 warning)

@@ -2,11 +2,10 @@
 
 \input{tex_aux/rithesis_preamble}
 
-% pomocu \includeonly moze se kompajlirati samo odredjeno poglavlje, da se skrati vrijeme kompajliranja, dok se ne isprave pogreske u tom poglavlju npr.:
-
-%\includeonly{Poglavlje_1}
-
 \usepackage{listings}
+\usepackage{pdfpages}
+%\usepackage{pstricks}
+
 \lstset{frame=tb,
 	language=Java,
 	aboveskip=3mm,
@@ -50,12 +49,15 @@
 %	Ovo je posveta nekome
 %\end{dedication}
 
-\mentor{prof.dr.sc.~Kristijan Lenac}   % zamijeniti podacima o svojem mentoru
+\mentor{Izv. prof.dr.sc.~Kristijan Lenac}   % zamijeniti podacima o svojem mentoru
 \maketitleabstract
 
 % kreira mjesto za umetnuti stranicu s opisom zadatka - ne dirati
-\begin{assignmentpage}
-\end{assignmentpage}
+%\begin{assignmentpage}
+%\end{assignmentpage}
+
+
+\includepdf[noautoscale]{zadatak.pdf}
 
 % kreira mjesto za umetnuti stranicu s izjavom o samostalnoj izradbi zadatka - ne dirati
 \begin{honestystatementpage}
@@ -88,11 +90,11 @@
 %:::::::::: ukljucenje popisa kratica u tekst ::::::::
 % Blok linija koda ispod ovoga generira ukljucenje popisa kratica u tekstu. Za uporabu, vidjeti Upute.
 % Nije obavezno. Ako se ne zeli koristiti, onda ovaj blok staviti u komentar pomocu znaka %
-\printglossary[type=\acronymtype]
-\pagestyle{plain}
-\begin{glossary}{Longest string}
-	\input{Kratice}
-\end{glossary}
+%\printglossary[type=\acronymtype]
+%\pagestyle{plain}
+%\begin{glossary}{Longest string}%
+%	\input{Kratice}
+%\end{glossary}
 
 
 %:::::::::::: blok za definiranje Sazetka/Abstracta rada 
@@ -105,8 +107,10 @@
 % ispod \appendix zaglavlja pomocu \include dodati poglavlja s prilozima
 % ukoliko nemate priloga, ovaj blok linija staviti u komentar
 \appendix
-\include{KonfiguracijaRadneOkoline}  % dati neko suvislo ime umjesto ovoga
-%\include{Prilog_2}  % itd.
+\include{KonfiguracijaRadneOkoline}
+\include{Prilog2} 
+\include{Prilog3}  
+
 
 
 \end{document}

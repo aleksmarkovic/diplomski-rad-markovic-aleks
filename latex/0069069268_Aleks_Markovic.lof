@@ -2,14 +2,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Unity Editor\relax }}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Unity Editor\relax }}{9}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{13}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Model robota u Unity-ju\relax }}{15}{figure.caption.7}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{20}{figure.caption.8}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces RQT graf sustava\relax }}{21}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Model robota u Unity-ju\relax }}{16}{figure.caption.7}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{22}{figure.caption.8}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces RQT graf sustava\relax }}{22}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Aplikacija u Unity Editor-u\relax }}{23}{figure.caption.10}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Linux aplikacija - mapa, robot i laserski sken\relax }}{25}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Windows aplikacija - pogled iz kamere\relax }}{25}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Mobilna aplikacija - mapa, robot i laserski sken\relax }}{26}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Mobilna aplikacija - pogled iz kamere\relax }}{27}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Mobilna aplikacija - okomita orijentacija ure\IeC {\dj }aja\relax }}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Standalone aplikacija - simulacija s dva robota\relax }}{29}{figure.caption.17}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Koraci mapiranja\relax }}{31}{figure.caption.19}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{31}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{31}{subfigure.8.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{31}{subfigure.8.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{31}{subfigure.8.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{31}{subfigure.8.5}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{30}{figure.caption.12}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{30}{figure.caption.13}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{38}{figure.caption.22}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{38}{figure.caption.23}%
