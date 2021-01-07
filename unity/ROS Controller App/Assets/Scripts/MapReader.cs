@@ -11,6 +11,7 @@ namespace PGM
     public class MapReader : MonoBehaviour
     {
         public Image imageToUpdate;
+        public bool visualizeMap;
         
         private Texture2D texture;
         private Color[] mapColorArray;
@@ -73,6 +74,19 @@ namespace PGM
           {
               Debug.Log(e.Message);
           }
+        }
+
+        public void VisualizeMapOnOff()
+        {
+            visualizeMap = !visualizeMap;
+
+            if (!visualizeMap)
+            {
+                texture.Resize(0, 0);
+                texture.Apply();
+
+                GetComponent<Renderer>().material.mainTexture = texture;
+            }
         }
     }
 }

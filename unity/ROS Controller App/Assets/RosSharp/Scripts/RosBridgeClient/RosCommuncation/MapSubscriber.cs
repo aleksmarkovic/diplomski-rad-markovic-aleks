@@ -33,7 +33,10 @@ namespace RosSharp.RosBridgeClient
 
         protected override void ReceiveMessage(OccupancyGrid message)
         {
-            Task.Run(() => mapReader.VisualizeMap(message));
+            if (mapReader.visualizeMap)
+            {
+                Task.Run(() => mapReader.VisualizeMap(message));
+            }
         }
     }
 }
