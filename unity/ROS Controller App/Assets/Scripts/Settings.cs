@@ -21,6 +21,7 @@ public class Settings : MonoBehaviour
     [SerializeField] private InputField ipInputField;
     [SerializeField] private InputField prefixInputField;
     [SerializeField] private Button cameraButton;
+    [SerializeField] private Button mappingButton;
 
     private void Awake()
     {
@@ -34,13 +35,26 @@ public class Settings : MonoBehaviour
             DontDestroyOnLoad(this);
 
             cameraButton.onClick.AddListener(LoadControl);
+            mappingButton.onClick.AddListener(Load3DMapping);
+
             ipConfig = PlayerPrefs.GetString("ipConfig", "ws://192.168.8.101:9090");
         }
+    }
+
+    private void Start()
+    {
+        // Make the game run as fast as possible
+        Application.targetFrameRate = 300;
     }
 
     private void LoadControl()
     {
         SceneManager.LoadScene("Control");
+    }
+
+    private void Load3DMapping()
+    {
+        SceneManager.LoadScene("3d Mapping");
     }
 
     public void SaveHost()

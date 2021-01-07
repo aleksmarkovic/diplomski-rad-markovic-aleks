@@ -10,7 +10,6 @@ public class MovementButton : MonoBehaviour
 
     public void ButtonAction()
     {
-        Debug.Log(gameObject.name);
         switch (gameObject.name)
         {
             case "Up":
