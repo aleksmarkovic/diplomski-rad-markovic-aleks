@@ -21,11 +21,53 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{turtlebot}
+\BIBentryALTinterwordspacing
+IEEE. Turtlebot 3. , s Interneta,
+  \url{https://spectrum.ieee.org/automaton/robotics/robotics-hardware/review-robotis-turtlebot-3}
+  {, 07. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{inteljouleimg}
+\BIBentryALTinterwordspacing
+prirucnici.hr. Intel® joule 570x na popratnoj ploèi. , s Interneta,
+  \url{https://www.prirucnici.hr/intel/joule-570x-developer-kit/priru%C4%8Dnik}
+  {, 07. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{lds01}
+\BIBentryALTinterwordspacing
+Robotis. Lds-01. , s Interneta,
+  \url{https://www.robotis.co.uk/360-laser-distance-sensor-lds-01.html} {, 07.
+  sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{intelcameraimage}
+\BIBentryALTinterwordspacing
+Intel. Intel® realsense camera r200 slika i specifikacije. , s Interneta,
+  \url{https://software.intel.com/content/www/us/en/develop/articles/intel-realsense-data-ranges.html}
+  {, 07. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{rossharpgazebosim}
 \BIBentryALTinterwordspacing
 Siemens. Ros\# gazebo simulacija. , s Interneta,
   \url{https://github.com/siemens/ros-sharp/wiki/User_App_ROS_GazeboSimulationExample}
   {, 30. prosinca 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{inteljoule}
+\BIBentryALTinterwordspacing
+Intel. Intel® joule 570x. , s Interneta,
+  \url{https://ark.intel.com/content/www/us/en/ark/products/96414/intel-joule-570x-developer-kit.html}
+  {, 07. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{intelcamera}
+\BIBentryALTinterwordspacing
+------. Intel® realsense camera r200 specifikacije. , s Interneta,
+  \url{https://ark.intel.com/content/www/us/en/ark/products/92256/intel-realsense-camera-r200.html}
+  {, 07. sijecnja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rosurl}

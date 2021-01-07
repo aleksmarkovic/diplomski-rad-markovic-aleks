@@ -1,0 +1,52 @@
+% !TeX encoding = windows-1250
+\chapter{Specifikacije robota}
+
+\qquad U ovom se radu koristio trenutno najpopularniji svijetski robot za edukacijske svrhe - Turtlebot 3. Od svoje dvije glavne inaèice, Burger i Waffle, korišten je Waffle (slika \ref{fig:turtlebot}) zbog boljih moguænosti od kojih je najbitnija bila kamera. U prvoj fazi rada se koristio Waffle Pi, inaèica koja koristi Raspberry Pi kao ugraðeno raèunalo, ali se u drugoj fazi rada odluèilo koristiti obiènu verziju Waffle-a. Pi verzija koristi Raspberry Pi kameru koja nema 3D moguænosti dok obièna verzija koristi Intel® Joule™ 570x s Intel® Realsense™ R200 kamerom koja omoguæava 3D percepciju prostora. Obièna Waffle inaèica se više ne proizvodi iz razloga što je Intel prestao s proizvodnjom Intel Joule-a, no ostali Turtlebot-ovi su još uvijek ažurni.
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{turtlebot}
+		\caption{Turtlebot 3 - Waffle \cite{turtlebot}}
+		\label{fig:turtlebot}
+	\end{center}
+\end{figure}
+
+Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe: 
+\begin{enumerate}
+	\item Intel® Joule™ 570x ugraðeno raèunalo, koje služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:inteljoule}). Ovo se raèunalo vrti na Linux operacijskom sustavu, koji koristi 1.7GHz Atom T5700 procesor, 16 GB ugraðene memorije, 4 GB LPDDR4 RAM memorije, grafièkim procesorom Intel® HD Graphics: HDMI 1.4B i ugraðenim 802.11ac Wi-Fi modulom. \cite{inteljoule}
+	
+	\begin{figure}[!htbp]
+		\begin{center}
+			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{intelJoule}
+			\caption{Intel® Joule™ 570x na svojoj popratnoj ploèi \cite{inteljouleimg}}
+			\label{fig:inteljoule}
+		\end{center}
+	\end{figure}
+
+	\item Laserski skener LDS-01 (slika \ref{fig:lds01}) skenira prostor u 360 stupnjeva i moguæuje SLAM mapiranje i navigaciju. Maksimalni domet od 3,5 metra i brzina skeniranja od 300 okretaja po minuti èini ga prikladnim za Turtlebot-a. \cite{lds01}
+	
+	\clearpage
+	
+	\begin{figure}[!htbp]
+		\begin{center}
+			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{lds01}
+			\caption{LDS-01 laserski skener \cite{lds01}}
+			\label{fig:lds01}
+		\end{center}
+	\end{figure}
+
+	\item Intel® Realsense™ R200 kamera (slika \ref{fig:intelcamera}) sa znaèajkom 3D percepcije omoguæuje korištenje alata za izgradnju 3D mape. Njezine male dimenzije od samo 101.6mm x 9.6mm x 3.8mm omoguæuju montiranje na Turtlebot te mala rezolucija od 480 x 360 je prikladna za tekuæi prijenos slike zbog manjeg protoka podataka. \cite{intelcamera}
+			
+	\begin{figure}[!htbp]
+		\begin{center}
+			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{intelRealSense}
+			\caption{Intel® Realsense™ R200 kamera \cite{intelcameraimage}}
+			\label{fig:intelcamera}
+		\end{center}
+	\end{figure}
+
+	\clearpage
+	
+	\item Težinom od 1.8kg i velièinom 281mm x 306mm x 141mm dostiže brzinu od 0.26m/s s brzinom okretanja od 104.27 stupnjeva po sekundi.
+	\item S maksimalnom visinom penjanja od manje od deset centimetara ogranièen je na ravne, veæinom zatvorene prostore.
+\end{enumerate}

@@ -2,10 +2,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces ROS 1 i ROS 2 bitne razlike\relax }}{6}{table.caption.4}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces ROS 1 i ROS 2 bitne razlike\relax }}{10}{table.caption.8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Windows i Linux hardver ra\v cunala\relax }}{24}{table.caption.11}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces FPS usporedba\relax }}{30}{table.caption.18}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Windows i Linux hardver ra\v cunala\relax }}{28}{table.caption.15}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces FPS usporedba\relax }}{34}{table.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
