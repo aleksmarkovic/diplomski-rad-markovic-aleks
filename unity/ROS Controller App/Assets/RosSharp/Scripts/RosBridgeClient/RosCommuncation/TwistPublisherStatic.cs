@@ -26,16 +26,13 @@ namespace RosSharp.RosBridgeClient
         private double linearStep = 0.05;
         private double angularStep = 0.02;
 
-        private void Awake()
-        {
-            InitializeMessage();
-        }
         protected override void Start()
         {
             base.Start();
+            InitializeMessage();
         }
 
-        
+
         private void InitializeMessage()
         {
             message = new MessageTypes.Geometry.Twist
