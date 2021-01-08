@@ -1,9 +1,9 @@
 % !TeX encoding = windows-1250
 \chapter{Opis rješenja}
 
-\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente glavni dijelovi dijagrama.
+\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente i glavni dijelovi sustava.
 
-\qquad Prvi korak sustava jest pokretanje Gazebo simulacije u ROS-u gdje se simulira robota i njegovo okruženje. Alternativa u pravom svijetu bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
+\qquad Prvi korak sustava jest pokretanje Gazebo simulacije u ROSu gdje se simulira robota i njegovo okruženje. Alternativa u pravom svijetu bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
 
 \qquad Drugi korak jest Unity odnosno Editor i njegove standalone te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navedeni robotski sustav.
 
@@ -11,7 +11,7 @@
 
 \qquad Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
 \begin{enumerate}
-	\item Unity se pretplaæuje na ROS teme - povratne informacije, npr. odometrija, slika kamere, laserscan,
+	\item Unity se pretplaæuje na ROS teme - povratne informacije, npr. odometrija, slika kamere, laserski sken.
 	\item Unity izdaje nove poruke na ROS teme - kontrolne poruke, npr. upravljanje robotom.	
 \end{enumerate}
 
@@ -31,7 +31,7 @@
 \subsection{Meni}
 \qquad Napravljen je jednostavni inicijalni meni s nekoliko polja za upis:
 \begin{enumerate}
-	\item IP adresa - polje za unos IP adrese ROS-a, tj. robota. IP adresu, ako je nepromjenjiva, je dovoljno upisati jednom jer se sprema pomoæu Unity znaèajke \emph{PlayerPrefs} koja služi za spremanje igraèevih (korisnièkih) postavka.
+	\item IP adresa - polje za unos IP adrese ROS-a, tj. robota. IP adresu, ako je nepromjenjiva, dovoljno je upisati jednom jer se sprema pomoæu Unity znaèajke \emph{PlayerPrefs} koja služi za spremanje igraèevih (korisnièkih) postavka.
 	\item Prefiks robota - opcionalno polje u sluèaju da postoji više robota u simulaciji. 
 \end{enumerate}
 
@@ -57,7 +57,7 @@ Sljedeæe æe se navesti svi elementi (objekti) u sceni 1 te èemu služe.
 
 \subsection{Plane}
 
-\qquad Plane je 3D objekt koji služi kao podloga (pod ili teren) robotu. Bez podloge bi se trebala iskljuèiti svojstvo gravitacije u Unity-ju, no na taj naèin se može podloga iskoristiti za projekciju generirane mape okoline robota. Na naèin kada stavimo prikaz scene iznad navedenog objekta i robota, dobiva se efekt robota koji ide kroz mapu koja se paralelno izraðuje.
+\qquad Plane je 3D objekt koji služi kao podloga (pod ili teren) robotu. Bez podloge bi se trebalo iskljuèiti svojstvo gravitacije u Unityju, no na taj naèin se može podloga iskoristiti za projekciju generirane 2D mape okoline robota. Na naèin kada stavimo prikaz scene iznad navedenog objekta i robota, dobiva se efekt robota koji ide kroz mapu koja se paralelno izraðuje.
 
 \subsection{Model robota}
 
@@ -71,15 +71,15 @@ Sljedeæe æe se navesti svi elementi (objekti) u sceni 1 te èemu služe.
 	\end{center}
 \end{figure}
 
-Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi pomoænim skriptama ROS\#-a koje uèitavaju stanja kotaèa sa simulacije. 
+Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi pomoænim skriptama ROS\#a koje uèitavaju stanja kotaèa sa simulacije. 
 
 \subsection{Canvas}
 
-\qquad \textbf{Canvas} u Unity-ju je 2D objekt koji veæinom služi za slaganje grafièkih komponenta suèelja, npr. gumbovi, tekst ulazi i sl. Jedna od najveæih prednosti Canvas-a je responzivnost. Canvas-u se može definirati bazna rezolucija, koja se onda može skalirati ovisno o rezoluciji ureðaja gdje je aplikacija pokrenuta. Isto vrijedi za sve elemente u Canvas-u. Elementi se mogu "usidriti" u nekom kutu ekrana, mogu se širiti i smanjivati ovisno o rezoluciji, mijenjati poziciju ovisno o velièini ekrana i sl.
+\qquad \textbf{Canvas} u Unityju je 2D objekt koji veæinom služi za slaganje grafièkih komponenta suèelja, npr. gumbovi, tekst ulazi i sl. Jedna od najveæih prednosti Canvasa je responzivnost. Canvas-u se može definirati bazna rezolucija, koja se onda može skalirati ovisno o rezoluciji ureðaja gdje je aplikacija pokrenuta. Isto vrijedi za sve elemente u Canvasu. Elementi se mogu "usidriti" u nekom kutu ekrana, mogu se širiti i smanjivati ovisno o rezoluciji, mijenjati poziciju ovisno o velièini ekrana i sl.
 
-\qquad U ovoj aplikaciji Canvas se sastoji od sljedeæih elemenata:
+U ovoj aplikaciji Canvas se sastoji od sljedeæih elemenata:
 \begin{enumerate}
-	\item \emph{Camera Image} kao što ime govori, ovo je element Canvas-a gdje nam se prikazuje slika s kamere. Slika kamere se uèitava kao tekstura te ista preslikava kao \emph{Sprite} na navedeni element koji sadrži polje za sliku. Element je proširen po cijeloj dužini i širini Canvas-a, tako da se ovisno o rezoluciji ekrana skalira.
+	\item \emph{Camera Image} kao što ime govori, je element Canvasa gdje nam se prikazuje slika s kamere. Slika kamere uèitava se kao tekstura te se ista preslikava kao \emph{Sprite} (grafièki element u Unityju - slika) na navedeni element koji sadrži polje za sliku. Element je proširen po cijeloj dužini i širini Canvasa, tako da se ovisno o rezoluciji ekrana skalira.
 	\item \emph{Control} je objekt koji sadrži podobjekte koji su gumbovi za odreðivanje linearne i kutne brzine robota. 
 	\item \emph{Laserscan Button} je gumb koji ukljuèuje i iskljuèuje prikaz objekata generiranih laserskim skenom.
 	\item \emph{Camera Button} je gumb koji mjenja prikaz kamere (topografski prikaz mape i robota te prikaz u prvom licu s kamere robota).
@@ -103,30 +103,30 @@ Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi po
 
 \subsection{Kamere}
 
-\qquad U sceni postoje dvije kamere. Kamera u Unity-ju oznaèava kako se scena prikazuje. Ona može biti iz razlièitih kuteva, sa razlièitom širinom i dubinom snimanja, bilo kojom pozicijom snimanja i još mnogo postavka. Jedna æe kamera biti postavljena iznad 3D objekata, a druga æe biti namještena da snima Canvas - u ovom sluèaju pozicija kamere nije bitna jer fiksno snima 2D Canvas.
+\qquad U sceni postoje dvije kamere. Kamera u Unityju oznaèava kako se scena prikazuje. Ona može biti iz razlièitih kuteva, sa razlièitom širinom i dubinom snimanja, bilo kojom pozicijom snimanja i još mnogo postavka. Jedna æe kamera biti postavljena iznad 3D objekata, a druga æe biti namještena da snima Canvas - u ovom sluèaju pozicija kamere nije bitna jer fiksno snima 2D Canvas.
 
 Prikaz kamere iz prvog lica - Prva znaèajka na koju se nailazi prilikom pokretanja aplikacije je prikaz kamere iz prvog lica. Slika se u stvarnom vremenu dohvaæa sa robota te se kao tekstura postavlja na prijašnje navedenom Canvas objektu.
 
-Prikaz kamere iz ptièje perspektive - U ovoj se perspektivi prikazuje 3D model robota na 2D mapi koja se izraðuje s dobivenim podacima iz \emph{/map} ROS teme, gdje se izraðuje nova tekstura koja se precrtava na \emph{Plane} objekt. Takoðer su u ovoj perspektive vidljive sfere (takoðer 3D objekti) koji se crtaju shodno podacima iz \emph{/scan} ROS teme.
+Prikaz kamere iz ptièje perspektive - U ovoj se perspektivi prikazuje 3D model robota na 2D mapi koja se izraðuje s dobivenim podacima iz \emph{/map} ROS teme, gdje se izraðuje nova tekstura koja se precrtava na \emph{Plane} objekt. U ovoj su perspektivi takoðer vidljive sfere (takoðer 3D objekti) koji se crtaju shodno podacima iz \emph{/scan} ROS teme (laserskog skena).
 
 
 \subsection{Laserski sken}
 
-\qquad ROS teme laserskog skena šalju poruke formata \emph{sensor\_msgs/LaserScan} u kojem se nalazi više vrsta podataka, ali je u ovom sluèaju bitno float32 polje \emph{ranges}. Problem je što ovo polje zna sadržavati beskonaène brojeve te tada ROS\# izbacuje grešku i ne nastavlja s procesiranjem tog polja. Iz toga razloga je bilo potrebno napraviti ROS èvor koji æe èitati temu laserskog skena, ROS tema \emph{/scan}, filtrirati podatke koji su beskonaèni te izdati novu ROS temu sa ispravljenim podacima. Dobiveni podaci se pomoæu ROS\# skripte \emph{Laser Scan Writer} i \emph{Laser Scan Visualizer} crtaju kao sfere u 3D prostoru oko robota. 
+\qquad ROS teme laserskog skena šalju poruke formata \emph{sensor\_msgs/LaserScan} u kojem se nalazi više vrsta podataka, ali je u ovom sluèaju bitno float32 polje \emph{ranges}. Problem je što ovo polje zna sadržavati beskonaène brojeve te tada ROS\# izbacuje grešku i ne nastavlja s procesiranjem tog polja. Iz tog razloga bilo je potrebno napraviti ROS èvor koji æe èitati temu laserskog skena, ROS tema \emph{/scan}, filtrirati podatke koji su beskonaèni te izdati novu ROS temu sa ispravljenim podacima. Dobiveni podaci se pomoæu ROS\# skripte \emph{Laser Scan Writer} i \emph{Laser Scan Visualizer} crtaju kao sfere u 3D prostoru oko robota. 
 
 \subsection{2D mapiranje}
 
-\qquad 2D mapiranje u Unity-ju se vrši na naèin da se uèitavaju podaci iz ROS tema \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina mape te int8 polje podataka u kojem se nalazi podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
-Proces crtanja mape u Unity-ju je sljedeæi:
+\qquad 2D mapiranje u Unityju se vrši na naèin da se uèitavaju podaci iz ROS tema \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina mape te int8 polje podataka u kojem se nalaze podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
+Proces crtanja mape u Unityju je sljedeæi:
 \begin{enumerate}
 	\item Uèitava se dužina i širina mape.
-	\item Inicijalizira se nova varijable za mapu koja æe biti tipa \emph{Color} i biti æe iste duljine kao i polje podataka iz \emph{/map} teme.
+	\item Inicijalizira se nova varijabla za mapu koja æe biti tipa \emph{Color} i biti æe iste duljine kao i polje podataka iz \emph{/map} teme.
 	\item Iterira se po tom dobivenom polju podataka te se ovisno o dobivenom podatku u novoinicijalizirano polje boja dodaje nova definirana boja.
 	\item Nakon iteriranja je potrebno postaviti zastavicu (flag) u \emph{true} koja predstavlja da je potrebno nacrtati novu mapu na suèelju.
-	\item Unity funkcija \emph{Update} koja se izvršava svako osvježavanje ekrana, provjerava navedenu zastavicu i izraðuje novu teksturu na temelju definiranog polja boja, dužine i širine mape te se ista nova tekstura sprema na glavnu teksturu \emph{Renderer} komponente na \emph{Plane} objektu. 
+	\item Unity funkcija \emph{Update()} koja se izvršava svako osvježavanje ekrana, provjerava navedenu zastavicu i izraðuje novu teksturu na temelju definiranog polja boja, dužine i širine mape te se nova tekstura sprema na glavnu teksturu \emph{Renderer} komponente na \emph{Plane} objektu. 
 \end{enumerate}
 
-Korištena metoda mapiranja je \emph{SLAM (Simultana Lokalizacija i Mapiranje) gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je kreator prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. mape. Mapa se ažurira u intervalu od 4 sekunde.
+Korištena metoda mapiranja je \emph{SLAM (Simultana Lokalizacija i Mapiranje) gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je stvoritelj prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. mape. Mapa se ažurira u intervalu od 4 sekunde.
 
 Ispunjavanje novog polja boja u petlji je vrlo ne optimiziran pristup. U aplikaciji se osjeæao trzaj u izvršavanju tijekom izrade mape, pa se kao rješenje na to izvršavanje funkcije koja sadrži petlju izvršava kao novi \emph{Task} koji u C\# oznaèuje asinkronu operaciju na novoj dretvi. Time se drastièno smanjio trzaj u aplikaciji.
 
@@ -134,8 +134,8 @@ Ispunjavanje novog polja boja u petlji je vrlo ne optimiziran pristup. U aplikac
 
 \qquad Upravljanje robotom se može vršiti na dva naèina: 
 \begin{itemize}
-	\item Korištenjem gumbova na suèelju - Svaki gumb inkrementira ili dekrementira brzinu za definirani korak. Trenutno definirani korak za linearnu brzinu iznosti 0.05, a za kutnu 0.02. Svakom promjenom se na \emph{/cmd\_vel} ROS temi šalje poruka tipa \emph{geometry\_msgs/Twist} s novom brzinom. Poruka sadrži Vector3 tip varijable za linearnu i kutnu brzinu. \emph{/cmd\_vel} ROS tema proslijeðuje naredbe brzine samom robotu.
-	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Manager-a}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu. Nakon toga ROS\# èvor \emph{joy\_to\_twist} pretvara poruke \emph{/joy} ROS teme u poruke formata \emph{geometry\_msgs/Twist} te i šalje na ROS temu \emph{/cmd\_vel}. Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
+	\item Korištenjem gumbova na suèelju - Svaki gumb inkrementira ili dekrementira brzinu za definirani korak. Trenutno definirani korak za linearnu brzinu iznosi 0.05, a za kutnu 0.02. Svakom promjenom se na \emph{/cmd\_vel} ROS temi šalje poruka tipa \emph{geometry\_msgs/Twist} s novom brzinom. Poruka sadrži Vector3 tip varijable za linearnu i kutnu brzinu. \emph{/cmd\_vel} ROS tema proslijeðuje naredbe brzine samom robotu.
+	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Managera}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu. Nakon toga ROS\# èvor \emph{joy\_to\_twist} pretvara poruke \emph{/joy} ROS teme u poruke formata \emph{geometry\_msgs/Twist} te šalje na ROS temu \emph{/cmd\_vel}. Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
 \end{itemize}
 
 Samo se jedna od navedenih metoda može koristiti odjednom iz razloga što obe metode šalju poruke na istu ROS temu (\emph{/cmd\_vel}) pa æe u sluèaju korištenja obe metode, metoda joysticka ili tipka premostiti metodu gumbova. 
@@ -144,9 +144,9 @@ Povratna informacija s \emph{/odom} ROS teme se koristi za ažuriranje odometrijs
 
 \subsection{Prikaz s više robota}
 
-\qquad U svrhu istraživanja, omoguæeno je da se mogu prikazivati slike kamera u simulaciji gdje postoje dva robota iste vrste. Kao primjer je uzeta i adaptirana Turtlebot3 simulacija s više robota.
+\qquad U svrhu istraživanja, omoguæeno je da se mogu prikazivati slike kamera u simulaciji gdje postoje dva robota iste vrste. Kao primjer je uzeta i adaptirana Turtlebot 3 simulacija s više robota.
 
-U poèetnom izborniku potrebno je upisati prefiks ROS tema ispred teme robota, npr. postoji simulacija s više Turtlebot-ova gdje svaki Turtlebot ima svoje ROS teme koje su inaèe istog naziva, njima je potrebno dodati prefiks ispred naziva ROS teme da bi se znalo na kojeg Turtlebot-a se ta ROS tema odnosi (slika \ref{fig:multirobotexample}). Prefiks je potrebno definirati u glavnoj \emph{launch} datoteci simulacije kao što je u sljedeæem isjeèku XML koda gdje je prefiks string \emph{tb} u \emph{default} svojstvu argumenata. \\
+U poèetnom izborniku potrebno je upisati prefiks ROS tema ispred teme robota, npr. postoji simulacija s više Turtlebotova gdje svaki Turtlebot ima svoje ROS teme koje su inaèe istog naziva, njima je potrebno dodati prefiks ispred naziva ROS teme da bi se znalo na kojeg Turtlebota se ta ROS tema odnosi (slika \ref{fig:multirobotexample}). Prefiks je potrebno definirati u glavnoj \emph{launch} datoteci simulacije kao što je u sljedeæem isjeèku XML koda gdje je prefiks string \emph{tb} u \emph{default} svojstvu argumenata. \\
 
 \begin{lstlisting}
 <launch>
@@ -174,9 +174,9 @@ Pri pokretanju i spajanju na simulaciju, prijašnje navedenim gumbom moguæe je mi
 
 \qquad Za izradu podataka 3D mape korišten je \emph{octomap\_mapping} koji izraðuje 3D mrežu popunjenosti (eng. 3D occupancy grid). Navedena metoda se koristi pokretajuæi \emph{octomap\_server} èvor koji omoguæava inkrementalno izgraðivanje i spremanje mape te distribuira mapu ostalim èvorovima preko svojih ROS tema. \cite{octomap}
 
-\qquad Analizom dostupnih \emph{octomap} èvorova odluèeno je da bi najprikladniji èvor za Unity bio \emph{/octomap\_point\_cloud\_centers} koji šalje poruke formata \emph{sensor\_msgs/PointCloud2}. PointCloud2 je prikladan format za Unity iz razloga što sadrži kolekciju N-dimenzionalnih toèaka, u tom sluèaju 3 dimenzije (x, y, z). Navedeni èvor objavljuje toèke u stvorenoj 3D mapi napravljenoj od strane \emph{octomap} alata. Naime, odabrani èvor je potrebno procesirati da bi se iz njega dobilo x, y, z toèke. U tom cilju potrebno je napraviti dodatni èvor koji se pretplaæuje na odabrani èvor, procesira podatke te ih procesirane objavljuje u novi èvor na kojega æe se Unity pretplaæivati. Za procesiranje podataka korištena je gotova funkcija za tu svrhu iz \emph{ros\_numpy} knjižnice koja adaptira poznati Python-ov \emph{numpy} za ROS, \emph{point\_cloud2.pointcloud2\_to\_array}, no dobiveno polje podataka nije moguæe objaviti bez da postoji ROS poruka tog formata. U tu svrhu napravljene su dvije nove ROS poruke, \emph{CustomPointCloud} i \emph{CustomPointCloudMsg}.
+\qquad Analizom dostupnih \emph{octomap} èvorova odluèeno je da bi najprikladniji èvor za Unity bio \emph{/octomap\_point\_cloud\_centers} koji šalje poruke formata \emph{sensor\_msgs/PointCloud2}. PointCloud2 je prikladan format za Unity iz razloga što sadrži kolekciju N-dimenzionalnih toèaka, u tom sluèaju 3 dimenzije (x, y, z). Navedeni èvor objavljuje toèke u stvorenoj 3D mapi napravljenoj od strane \emph{octomap} alata. Naime, odabrani èvor je potrebno procesirati da bi se iz njega dobilo x, y, z toèke. U tom cilju potrebno je napraviti dodatni èvor koji se pretplaæuje na odabrani èvor, procesira podatke te ih procesirane objavljuje u novi èvor na kojega æe se Unity pretplaæivati. Za procesiranje podataka korištena je gotova funkcija za tu svrhu iz \emph{ros\_numpy} knjižnice koja adaptira poznati Pythonov \emph{numpy} za ROS, \emph{point\_cloud2.pointcloud2\_to\_array}. Dobiveno polje podataka nije moguæe objaviti bez da postoji ROS poruka tog formata. U tu svrhu napravljene su dvije nove ROS poruke, \emph{CustomPointCloud} i \emph{CustomPointCloudMsg}.
 
-\emph{CustomPointCloud} sadrži toèke x, y, z u float32 formatu dok \emph{CustomPointCloudMsg} sadrži polje \emph{CustomPointCloud} poruka. Kombiniranjem dvije poruke jedini je naèin za napraviti intuitivni format podataka za lakše naknadno procesiranje u Unity-ju.
+\emph{CustomPointCloud} sadrži toèke (x, y, z) u float32 formatu dok \emph{CustomPointCloudMsg} sadrži polje \emph{CustomPointCloud} poruka. Kombiniranjem dvije poruke jedini je naèin za napraviti intuitivni format podataka za lakše naknadno procesiranje u Unityju.
 
 Imajuæi na raspolaganju prilagoðene ROS poruke za potrebe ovog rada sada je moguæe u prijašnje navedenom novom èvoru napraviti novu poruku formata \emph{CustomPointCloudMsg} u kojem æe se spremiti sve toèke u 3-dimenzionalnom prostoru te objavljivati na novi èvor \emph{/octomap\_point\_cloud\_centers\_filtered}.
 
@@ -186,7 +186,7 @@ U aplikaciji se vrši klasiènu pretplatu na novi èvor \emph{/octomap\_point\_clou
 
 \begin{enumerate}
 	\item Pri primitku nove poruke, pokreæe se funkcija za stvaranje objekata u sceni koji æe reprezentirati dobivene toèke 3D mape.
-	\item Petljom prolazimo kroz sve dobivene toèke. Za svaku toèku stvara se kocku kojoj se dodijeljuje velièina i x, y, z pozicija u Unity prostoru.
+	\item Petljom prolazimo kroz sve dobivene toèke. Za svaku toèku stvara se kocku kojoj se dodijeljuje velièina i (x, y, z) pozicija u Unity prostoru.
 	\item Primitkom nove poruke, ponovno se pokreæe funkcija za stvaranje objekata (ažuriranje mape) samo ako je prijašnje pozivanje funkcije gotovo.
 \end{enumerate}
 Ovim koracima stvara se 3D mapa u Unity aplikaciji.

@@ -1,7 +1,7 @@
 % !TeX encoding = windows-1250
 \chapter{Specifikacije robota}
 
-\qquad U ovom se radu koristio trenutno najpopularniji svijetski robot za edukacijske svrhe - Turtlebot 3. Od svoje dvije glavne inaèice, Burger i Waffle, korišten je Waffle (slika \ref{fig:turtlebot}) zbog boljih moguænosti od kojih je najbitnija bila kamera. U prvoj fazi rada se koristio Waffle Pi, inaèica koja koristi Raspberry Pi kao ugraðeno raèunalo, ali se u drugoj fazi rada odluèilo koristiti obiènu verziju Waffle-a. Pi verzija koristi Raspberry Pi kameru koja nema 3D moguænosti dok obièna verzija koristi Intel® Joule™ 570x s Intel® Realsense™ R200 kamerom koja omoguæava 3D percepciju prostora. Obièna Waffle inaèica se više ne proizvodi iz razloga što je Intel prestao s proizvodnjom Intel Joule-a, no ostali Turtlebot-ovi su još uvijek ažurni.
+\qquad U ovom se radu koristio trenutno najpopularniji svijetski robot za edukacijske svrhe - Turtlebot 3. Od svoje dvije glavne inaèice, Burger i Waffle, korišten je Waffle (slika \ref{fig:turtlebot}) zbog boljih moguænosti od kojih je najbitnija bila kamera. U prvoj fazi rada se koristio Waffle Pi, inaèica koja koristi Raspberry Pi kao ugraðeno raèunalo, ali se u drugoj fazi rada odluèilo koristiti obiènu verziju Wafflea. Pi verzija koristi Raspberry Pi kameru koja nema 3D moguænosti dok obièna verzija koristi Intel® Joule™ 570x s Intel® Realsense™ R200 kamerom koja omoguæava 3D percepciju prostora. Obièna Waffle inaèica se više ne proizvodi iz razloga što je Intel prestao s proizvodnjom Intel Joulea, no ostali Turtlebotovi su još uvijek ažurni.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -13,7 +13,7 @@
 
 Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe: 
 \begin{enumerate}
-	\item Raspberry Pi 3 model B, koje služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:rpi}). Raspberry Pi se izvršava na Linux operacijskom sustavu, ima èetverojezgreni 1.2GHz Broadcom BCM2837 64-bitni procesor, 1 GB RAM memorije i ugraðenim Wi-Fi i bluetooth modulom. \cite{rpi}
+	\item Raspberry Pi 3 model B, koje služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:rpi}). Raspberry Pi se izvršava na Linux operacijskom sustavu, ima èetverojezgreni 1.2GHz Broadcom BCM2837 64-bitni procesor, 1 GB RAM memorije i ugraðeni Wi-Fi i bluetooth modul. \cite{rpi}
 	
 	\begin{figure}[!htbp]
 		\begin{center}
@@ -37,7 +37,7 @@ Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe:
 		\end{center}
 	\end{figure}
 	
-	\item Laserski skener LDS-01 (slika \ref{fig:lds01}) skenira prostor u 360 stupnjeva i moguæuje SLAM mapiranje i navigaciju. Maksimalni domet od 3,5 metra i brzina skeniranja od 300 okretaja po minuti èini ga prikladnim za Turtlebot-a. \cite{lds01}
+	\item Laserski skener LDS-01 (slika \ref{fig:lds01}) skenira prostor u 360 stupnjeva i omoguæuje SLAM mapiranje i navigaciju. Maksimalni domet od 3,5 metra i brzina skeniranja od 300 okretaja po minuti èini ga prikladnim za Turtlebota. \cite{lds01}
 	
 	
 	
