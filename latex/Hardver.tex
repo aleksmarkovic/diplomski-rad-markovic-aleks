@@ -13,7 +13,21 @@
 
 Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe: 
 \begin{enumerate}
-	\item Intel® Joule™ 570x ugraðeno raèunalo, koje služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:inteljoule}). Ovo se raèunalo vrti na Linux operacijskom sustavu, koji koristi 1.7GHz Atom T5700 procesor, 16 GB ugraðene memorije, 4 GB LPDDR4 RAM memorije, grafièkim procesorom Intel® HD Graphics: HDMI 1.4B i ugraðenim 802.11ac Wi-Fi modulom. \cite{inteljoule}
+	\item Raspberry Pi 3 model B, koje služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:rpi}). Raspberry Pi se izvršava na Linux operacijskom sustavu, ima èetverojezgreni 1.2GHz Broadcom BCM2837 64-bitni procesor, 1 GB RAM memorije i ugraðenim Wi-Fi i bluetooth modulom. \cite{rpi}
+	
+	\begin{figure}[!htbp]
+		\begin{center}
+			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{rpi}
+			\caption{Raspberry Pi 3 Model B \cite{rpi}}
+			\label{fig:rpi}
+		\end{center}
+	\end{figure}
+	
+	ili
+	
+	Intel® Joule™ 570x ugraðeno raèunalo, koje takoðer služi za pokretanje ROS sustava i svih ROS znaèajki (slika \ref{fig:inteljoule}). Ovo se raèunalo takoðer izvršava na Linux operacijskom sustavu, koristi èetverojezgreni 1.7GHz Atom T5700 procesor, 16 GB ugraðene memorije, 4 GB LPDDR4 RAM memorije, grafièkim procesorom Intel® HD Graphics: HDMI 1.4B i ugraðenim 802.11ac Wi-Fi modulom. \cite{inteljoule}
+	
+	\clearpage
 	
 	\begin{figure}[!htbp]
 		\begin{center}
@@ -22,10 +36,10 @@ Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe:
 			\label{fig:inteljoule}
 		\end{center}
 	\end{figure}
-
+	
 	\item Laserski skener LDS-01 (slika \ref{fig:lds01}) skenira prostor u 360 stupnjeva i moguæuje SLAM mapiranje i navigaciju. Maksimalni domet od 3,5 metra i brzina skeniranja od 300 okretaja po minuti èini ga prikladnim za Turtlebot-a. \cite{lds01}
 	
-	\clearpage
+	
 	
 	\begin{figure}[!htbp]
 		\begin{center}
@@ -35,8 +49,8 @@ Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe:
 		\end{center}
 	\end{figure}
 
-	\item Intel® Realsense™ R200 kamera (slika \ref{fig:intelcamera}) sa znaèajkom 3D percepcije omoguæuje korištenje alata za izgradnju 3D mape. Njezine male dimenzije od samo 101.6mm x 9.6mm x 3.8mm omoguæuju montiranje na Turtlebot te mala rezolucija od 480 x 360 je prikladna za tekuæi prijenos slike zbog manjeg protoka podataka. \cite{intelcamera}
-			
+	\item Intel® Realsense™ R200 kamera (slika \ref{fig:intelcamera}) sa znaèajkom 3D percepcije omoguæuje korištenje alata za izgradnju 3D mape. Njezine male dimenzije od samo 101.6mm x 9.6mm x 3.8mm omoguæuju montiranje na Turtlebot te mala dubinska rezolucija od 480 x 360 je prikladna za tekuæi prijenos slike zbog manjeg protoka podataka. \cite{intelcamera}
+	
 	\begin{figure}[!htbp]
 		\begin{center}
 			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{intelRealSense}
@@ -45,7 +59,20 @@ Bitne karakteristike korištenog modela Turtlebot-a su sljedeæe:
 		\end{center}
 	\end{figure}
 
-	\clearpage
+	ili
+	
+	Raspberry Pi kamera modul v2 (slika \ref{fig:rpicam}) koji se koristi u paru s Raspberry Pi ugradbenim raèunalom. Ova kamera je još manja od Intelove s kvadratnom velièinom od 25 x 24 x 9 mm. Navedena kamera ne podržava 3D percepciju no njezinih 8 megapiksela èini ju odliènom za ostale edukacijske svrhe. \cite{rpi}
+	 
+	
+	\begin{figure}[!htbp]
+		\begin{center}
+			\includegraphics[height=6cm,width=8cm,keepaspectratio=true]{rpiCam}
+			\caption{Raspberry Pi kamera modul v2 \cite{rpi}}
+			\label{fig:rpicam}
+		\end{center}
+	\end{figure}
+
+
 	
 	\item Težinom od 1.8kg i velièinom 281mm x 306mm x 141mm dostiže brzinu od 0.26m/s s brzinom okretanja od 104.27 stupnjeva po sekundi.
 	\item S maksimalnom visinom penjanja od manje od deset centimetara ogranièen je na ravne, veæinom zatvorene prostore.

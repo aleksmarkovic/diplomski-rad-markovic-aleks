@@ -5,7 +5,7 @@
 
 \qquad Prvi korak sustava jest pokretanje Gazebo simulacije u ROS-u gdje se simulira robota i njegovo okruženje. Alternativa u pravom svijetu bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
 
-\qquad Drugi korak jest Unity odnosno Editor i njegove standalone te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navdeni robotski sustav.
+\qquad Drugi korak jest Unity odnosno Editor i njegove standalone te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navedeni robotski sustav.
 
 \qquad ROS\# paket, odnosno most koji spaja ROS i Unity pomoæu RosBridgeClient-a otvara vezu izmeðu prethodno navedena dva koraka, a koji funkcionira na temelju pretplate i izdavanja poruka na ROS teme (eng. topic). Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
 
@@ -35,11 +35,17 @@
 	\item Prefiks robota - opcionalno polje u sluèaju da postoji više robota u simulaciji. 
 \end{enumerate}
 
-Gumb \emph{Connect} vodi na glavnu scenu gdje se vrši spajanje na ROS i gdje zapoèinje sva interakcija. Sljedeæe æe se navesti svi elementi (objekti) u glavnoj sceni i èemu služe.
+Postoje i dva gumba gdje svaki vodi na jednu scenu gdje je implementirana neka znaèajka. Na svakoj od ovih scena se vrši spajanje na ROS i zapoèinje interakcija:
+\begin{enumerate}
+	\item Gumb koji vodi na scenu (dalje u tekstu scena 1) gdje je implementirana kontrola robota, pogled u prvom licu s kamere, 2D mapiranje i prikaz podataka laserskog skena.
+	\item Gumb koji vodi na scenu (dalje u tekstu scena 2) gdje se vrši 3D mapiranje prostora.
+\end{enumerate}
+
+Sljedeæe æe se navesti svi elementi (objekti) u sceni 1 te èemu služe.
 
 \subsection{Ros Connector}
 
-\qquad Na glavnoj sceni najbitniji element, tj. objekt, jest \textbf{RosConnector} koji prvobitno služi za otvaranje veze prema ROS-u, ali i za sadržavanje svih skripta kojima je zadaæa pretplata ili izdavanje poruka na ROS temu. \textbf{RosConnector} sadrži sljedeæe relevantne skripte:
+\qquad Na sceni 1 najbitniji element, tj. objekt, jest \textbf{RosConnector} koji prvobitno služi za otvaranje veze prema ROS-u, ali i za sadržavanje svih skripta kojima je zadaæa pretplata ili izdavanje poruka na ROS temu. \textbf{RosConnector} sadrži sljedeæe relevantne skripte:
 \begin{enumerate}
 	\item \emph{Image Subscriber} koji se pretplaæuje na jednu ROS temu kamere, u ovom sluèaju se koristi \emph{/camera/rgb/image\_raw/compressed}.
 	\item \emph{Laser Scan Subscriber} koji se pretplaæuje na ROS temu laserskog skena (\emph{/scan}). 
@@ -77,13 +83,19 @@ Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi po
 	\item \emph{Control} je objekt koji sadrži podobjekte koji su gumbovi za odreðivanje linearne i kutne brzine robota. 
 	\item \emph{Laserscan Button} je gumb koji ukljuèuje i iskljuèuje prikaz objekata generiranih laserskim skenom.
 	\item \emph{Camera Button} je gumb koji mjenja prikaz kamere (topografski prikaz mape i robota te prikaz u prvom licu s kamere robota).
+	\item \emph{2D Map Button} je gumb koji ukljuèuje i iskljuèuje crtanje i prikaz 2D mape na \emph{Plane} objekt.
 	\item \emph{Switch Robot Camera} mjenja prikaz kamere u prvom licu na drugog robota (u sluèaju da ima više robota u simulaciji). Ako u simulaciji postoji samo jedan robot, tada je taj gumb iskljuèen.
+	\item \emph{FPS} koji prikazuje trenutni FPS (broj ažuriranja slike u sekundi) u sceni.
 \end{enumerate}
 
 \subsection{Multi Robot Control}
 
 \qquad \emph{Multi Robot Control} objekt služi samo za pokretanje skripte koja omoguæuje prikaz kamera dva robota odjednom.
 \clearpage
+
+\subsection{Scena 2}
+
+\qquad Scena 2 sadrži iste elemente kao scena 1 osim što od Canvas gumbova ima samo \emph{Control}, \emph{FPS} i novi \emph{3D Map Button} koji služi za aktiviranje i deaktiviranje crtanja 3D objekata u sceni - 3D mape.
 
 \section{Znaèajke i moguænosti rješenja}
 
@@ -102,9 +114,9 @@ Prikaz kamere iz ptièje perspektive - U ovoj se perspektivi prikazuje 3D model r
 
 \qquad ROS teme laserskog skena šalju poruke formata \emph{sensor\_msgs/LaserScan} u kojem se nalazi više vrsta podataka, ali je u ovom sluèaju bitno float32 polje \emph{ranges}. Problem je što ovo polje zna sadržavati beskonaène brojeve te tada ROS\# izbacuje grešku i ne nastavlja s procesiranjem tog polja. Iz toga razloga je bilo potrebno napraviti ROS èvor koji æe èitati temu laserskog skena, ROS tema \emph{/scan}, filtrirati podatke koji su beskonaèni te izdati novu ROS temu sa ispravljenim podacima. Dobiveni podaci se pomoæu ROS\# skripte \emph{Laser Scan Writer} i \emph{Laser Scan Visualizer} crtaju kao sfere u 3D prostoru oko robota. 
 
-\subsection{Mapiranje}
+\subsection{2D mapiranje}
 
-\qquad Mapiranje u Unity-ju se vrši na naèin da se uèitavaju podaci iz ROS tema \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina mape te int8 polje podataka u kojem se nalazi podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
+\qquad 2D mapiranje u Unity-ju se vrši na naèin da se uèitavaju podaci iz ROS tema \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina mape te int8 polje podataka u kojem se nalazi podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
 Proces crtanja mape u Unity-ju je sljedeæi:
 \begin{enumerate}
 	\item Uèitava se dužina i širina mape.
@@ -155,6 +167,29 @@ Pri pokretanju i spajanju na simulaciju, prijašnje navedenim gumbom moguæe je mi
 		\label{fig:multirobotexample}
 	\end{center}
 \end{figure}
+
+\clearpage
+
+\subsection{3D mapiranje}
+
+\qquad Za izradu podataka 3D mape korišten je \emph{octomap\_mapping} koji izraðuje 3D mrežu popunjenosti (eng. 3D occupancy grid). Navedena metoda se koristi pokretajuæi \emph{octomap\_server} èvor koji omoguæava inkrementalno izgraðivanje i spremanje mape te distribuira mapu ostalim èvorovima preko svojih ROS tema. \cite{octomap}
+
+\qquad Analizom dostupnih \emph{octomap} èvorova odluèeno je da bi najprikladniji èvor za Unity bio \emph{/octomap\_point\_cloud\_centers} koji šalje poruke formata \emph{sensor\_msgs/PointCloud2}. PointCloud2 je prikladan format za Unity iz razloga što sadrži kolekciju N-dimenzionalnih toèaka, u tom sluèaju 3 dimenzije (x, y, z). Navedeni èvor objavljuje toèke u stvorenoj 3D mapi napravljenoj od strane \emph{octomap} alata. Naime, odabrani èvor je potrebno procesirati da bi se iz njega dobilo x, y, z toèke. U tom cilju potrebno je napraviti dodatni èvor koji se pretplaæuje na odabrani èvor, procesira podatke te ih procesirane objavljuje u novi èvor na kojega æe se Unity pretplaæivati. Za procesiranje podataka korištena je gotova funkcija za tu svrhu iz \emph{ros\_numpy} knjižnice koja adaptira poznati Python-ov \emph{numpy} za ROS, \emph{point\_cloud2.pointcloud2\_to\_array}, no dobiveno polje podataka nije moguæe objaviti bez da postoji ROS poruka tog formata. U tu svrhu napravljene su dvije nove ROS poruke, \emph{CustomPointCloud} i \emph{CustomPointCloudMsg}.
+
+\emph{CustomPointCloud} sadrži toèke x, y, z u float32 formatu dok \emph{CustomPointCloudMsg} sadrži polje \emph{CustomPointCloud} poruka. Kombiniranjem dvije poruke jedini je naèin za napraviti intuitivni format podataka za lakše naknadno procesiranje u Unity-ju.
+
+Imajuæi na raspolaganju prilagoðene ROS poruke za potrebe ovog rada sada je moguæe u prijašnje navedenom novom èvoru napraviti novu poruku formata \emph{CustomPointCloudMsg} u kojem æe se spremiti sve toèke u 3-dimenzionalnom prostoru te objavljivati na novi èvor \emph{/octomap\_point\_cloud\_centers\_filtered}.
+
+Sljedeæe je potrebno izmijeniti ROS\# knjižnicu, tj. dodati nove ROS poruke jer inaèe Unity nebi mogao primati poruke stvorenog èvora. U ROS\# .NET projekt dodaju se dvije nove klase u mapu \emph{MessageTypes} koje implementiraju isti format podataka kao stvorene ROS poruke. Projekt treba ponovno izgraditi te izmijenjene .dll datoteke dodati u Unity projekt.
+
+U aplikaciji se vrši klasiènu pretplatu na novi èvor \emph{/octomap\_point\_cloud\_centers\_filtered} te dobivene poruke spremamo u novostvoreni format. Stvaranje i prikaz 3D mape se vrši na sljedeæi naèin:
+
+\begin{enumerate}
+	\item Pri primitku nove poruke, pokreæe se funkcija za stvaranje objekata u sceni koji æe reprezentirati dobivene toèke 3D mape.
+	\item Petljom prolazimo kroz sve dobivene toèke. Za svaku toèku stvara se kocku kojoj se dodijeljuje velièina i x, y, z pozicija u Unity prostoru.
+	\item Primitkom nove poruke, ponovno se pokreæe funkcija za stvaranje objekata (ažuriranje mape) samo ako je prijašnje pozivanje funkcije gotovo.
+\end{enumerate}
+Ovim koracima stvara se 3D mapa u Unity aplikaciji.
 
 \subsection{RQT graf sustava}
 

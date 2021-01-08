@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  7 JAN 2021 13:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  8 JAN 2021 18:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,7 +761,7 @@ Non-PDF special ignored!
 
 
 ]
-<zadatak.pdf, id=195, 614.77684pt x 845.07724pt>
+<zadatak.pdf, id=204, 614.77684pt x 845.07724pt>
 File: zadatak.pdf Graphic file (type pdf)
 <use zadatak.pdf>
 Package pdftex.def Info: zadatak.pdf  used on input line 59.
@@ -770,7 +770,7 @@ File: zadatak.pdf Graphic file (type pdf)
 <use zadatak.pdf>
 Package pdftex.def Info: zadatak.pdf  used on input line 59.
 (pdftex.def)             Requested size: 614.77533pt x 845.07518pt.
-<zadatak.pdf, id=198, page=1, 614.77684pt x 845.07724pt>
+<zadatak.pdf, id=207, page=1, 614.77684pt x 845.07724pt>
 File: zadatak.pdf Graphic file (type pdf)
 <use zadatak.pdf, page 1>
 Package pdftex.def Info: zadatak.pdf , page1 used on input line 59.
@@ -835,14 +835,23 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \tf@toc=\write7
 \openout7 = `0069069268_Aleks_Markovic.toc'.
 
- [8] (./0069069268_Aleks_Markovic.lof)
+ [8] (./0069069268_Aleks_Markovic.lof
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]  
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]  
+ []
+
+[9
+
+])
 \tf@lof=\write8
 \openout8 = `0069069268_Aleks_Markovic.lof'.
 
- [9
-
-] [10]
-(./0069069268_Aleks_Markovic.lot)
+ [10] (./0069069268_Aleks_Markovic.lot)
 \tf@lot=\write9
 \openout9 = `0069069268_Aleks_Markovic.lot'.
 
@@ -876,7 +885,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./Hardver.tex
 Poglavlje 3.
-<slike/turtlebot.png, id=362, 513.92pt x 343.2825pt>
+<slike/turtlebot.png, id=385, 513.92pt x 343.2825pt>
 File: slike/turtlebot.png Graphic file (type png)
 <use slike/turtlebot.png>
 Package pdftex.def Info: slike/turtlebot.png  used on input line 8.
@@ -887,71 +896,79 @@ Package pdftex.def Info: slike/turtlebot.png  used on input line 8.
 
 
  <./slike/turtlebot.png>]
-<slike/intelJoule.jpeg, id=373, 376.40625pt x 376.40625pt>
+<slike/rpi.png, id=396, 602.25pt x 401.5pt>
+File: slike/rpi.png Graphic file (type png)
+<use slike/rpi.png>
+Package pdftex.def Info: slike/rpi.png  used on input line 20.
+(pdftex.def)             Requested size: 227.62596pt x 151.75064pt.
+ [5 <./slike/rpi.png (PNG copy)>]
+<slike/intelJoule.jpeg, id=407, 376.40625pt x 376.40625pt>
 File: slike/intelJoule.jpeg Graphic file (type jpg)
 <use slike/intelJoule.jpeg>
-Package pdftex.def Info: slike/intelJoule.jpeg  used on input line 20.
+Package pdftex.def Info: slike/intelJoule.jpeg  used on input line 34.
 (pdftex.def)             Requested size: 170.71947pt x 170.71947pt.
- [5 <./slike/intelJoule.jpeg>]
-<slike/lds01.jpeg, id=385, 501.875pt x 501.875pt>
+<slike/lds01.jpeg, id=412, 501.875pt x 501.875pt>
 File: slike/lds01.jpeg Graphic file (type jpg)
 <use slike/lds01.jpeg>
-Package pdftex.def Info: slike/lds01.jpeg  used on input line 32.
+Package pdftex.def Info: slike/lds01.jpeg  used on input line 46.
 (pdftex.def)             Requested size: 170.71947pt x 170.71947pt.
 
-Overfull \hbox (14.61708pt too wide) in paragraph at lines 38--39
+Overfull \hbox (14.61708pt too wide) in paragraph at lines 52--53
 []\OT1/cmr/m/n/12 Intel\TS1/cmr/m/n/12 ® \OT1/cmr/m/n/12 Re-al-sense\TS1/cmr/m/
-n/12 — \OT1/cmr/m/n/12 R200 ka-mera (slika [][]3.4[][]) sa zna^^Tcajkom 3D per-
+n/12 — \OT1/cmr/m/n/12 R200 ka-mera (slika [][]3.5[][]) sa zna^^Tcajkom 3D per-
 cep-cije omogu^^Scuje
  []
 
 
-Overfull \hbox (5.90205pt too wide) in paragraph at lines 38--39
+Overfull \hbox (5.90205pt too wide) in paragraph at lines 52--53
 \OT1/cmr/m/n/12 kori^^Tstenje alata za iz-grad-nju 3D mape. Nje-zine male di-me
 n-zije od samo 101.6mm
  []
 
-<slike/intelRealSense.png, id=390, 301.125pt x 236.885pt>
+<slike/intelRealSense.png, id=417, 301.125pt x 236.885pt>
 File: slike/intelRealSense.png Graphic file (type png)
 <use slike/intelRealSense.png>
-Package pdftex.def Info: slike/intelRealSense.png  used on input line 42.
+Package pdftex.def Info: slike/intelRealSense.png  used on input line 56.
 (pdftex.def)             Requested size: 217.01659pt x 170.71971pt.
 [6
 
- <./slike/lds01.jpeg> <./slike/intelRealSense.png>]) [7
-
-]
+ <./slike/intelJoule.jpeg> <./slike/lds01.jpeg>]
+<slike/rpiCam.jpeg, id=428, 347.79938pt x 242.40562pt>
+File: slike/rpiCam.jpeg Graphic file (type jpg)
+<use slike/rpiCam.jpeg>
+Package pdftex.def Info: slike/rpiCam.jpeg  used on input line 69.
+(pdftex.def)             Requested size: 227.62186pt x 158.64552pt.
+ [7 <./slike/intelRealSense.png> <./slike/rpiCam.jpeg>]) [8]
 \openout2 = `SoftverskiAlati.aux'.
 
-
-(./SoftverskiAlati.tex
+ (./SoftverskiAlati.tex
 Poglavlje 4.
-[8
+[9
 
 
 
-] [9
+] [10
 
-] [10] [11
+] [11] [12
 
 ]
-Overfull \hbox (21.45226pt too wide) in paragraph at lines 65--66
+Overfull \hbox (21.45226pt too wide) in paragraph at lines 68--69
 []\OT1/cmr/m/n/12 Ostalo - Meni traka u ko-joj se mogu pris-tu-piti svim os-ta-
 lim pos-tav-kama (uklju^^Tcuju^^Sci
  []
 
-<slike/unitySS.png, id=438, 1726.45pt x 1349.04pt>
+<slike/unitySS.png, id=476, 1726.45pt x 1349.04pt>
 File: slike/unitySS.png Graphic file (type png)
 <use slike/unitySS.png>
-Package pdftex.def Info: slike/unitySS.png  used on input line 69.
+Package pdftex.def Info: slike/unitySS.png  used on input line 72.
 (pdftex.def)             Requested size: 436.93283pt x 341.41727pt.
 
-Overfull \hbox (6.93283pt too wide) in paragraph at lines 69--70
+Overfull \hbox (6.93283pt too wide) in paragraph at lines 72--73
  [] 
  []
 
-[12]
-Overfull \hbox (3.3705pt too wide) in paragraph at lines 78--79
+[13]
+Overfull \hbox (3.3705pt too wide) in paragraph at lines 81--82
  \OT1/cmr/m/n/12 Unity tako[]der svo-jim ko-ris-ni-cima omogu^^Scava pro-gra-mi
 -ra-nje vlas-ti-tih ili kori^^Tstenje
  []
@@ -959,8 +976,8 @@ Overfull \hbox (3.3705pt too wide) in paragraph at lines 78--79
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <./slike/unitySS.png>]
-Overfull \hbox (6.5732pt too wide) in paragraph at lines 87--88
+ [14 <./slike/unitySS.png>]
+Overfull \hbox (6.5732pt too wide) in paragraph at lines 90--91
 [][]\OT1/cmr/m/n/12 Cita^^Tc knji^^Tznica - omogu^^Scuje nam u^^Tcitavanje vanj
 -skih pro-gram-skih knji^^Tznica. 
  []
@@ -968,14 +985,14 @@ Overfull \hbox (6.5732pt too wide) in paragraph at lines 87--88
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-[15]
-Overfull \hbox (6.3427pt too wide) in paragraph at lines 110--111
+ [15]
+[16]
+Overfull \hbox (6.3427pt too wide) in paragraph at lines 113--114
  \OT1/cmr/m/n/12 ROS# je set pro-gram-skih knji^^Tznica i alata otvo-re-nog kod
 a u C#-u koja omogu^^Scuje
  []
 
-) [16
+) [17
 
 ]
 \openout2 = `Rjesenje.aux'.
@@ -988,100 +1005,119 @@ Overfull \hbox (0.35815pt too wide) in paragraph at lines 10--11
 RosBridgeClient-
  []
 
-[17
+[18
 
 
 
 ]
-<slike/diagram.png, id=485, 659.46375pt x 536.0025pt>
+<slike/diagram.png, id=522, 659.46375pt x 536.0025pt>
 File: slike/diagram.png Graphic file (type png)
 <use slike/diagram.png>
 Package pdftex.def Info: slike/diagram.png  used on input line 20.
 (pdftex.def)             Requested size: 420.07301pt x 341.42921pt.
- [18 <./slike/diagram.png>]
+ [19 <./slike/diagram.png>]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 27.
 
+[20
 
-Overfull \hbox (37.85078pt too wide) in paragraph at lines 46--47
+]
+Overfull \hbox (37.85078pt too wide) in paragraph at lines 52--53
 []\OT1/cmr/m/it/12 Map Sub-s-cri-ber \OT1/cmr/m/n/12 koji se pret-pla^^Scuje na
  ROS temu \OT1/cmr/m/it/12 /map \OT1/cmr/m/n/12 koju iz-daje ^^Tcvor \OT1/cmr/m
 /it/12 slam[]gmapping\OT1/cmr/m/n/12 . 
  []
 
-[19
-
-]
-<slike/robotModel.png, id=506, 704.6325pt x 261.97874pt>
+<slike/robotModel.png, id=542, 704.6325pt x 261.97874pt>
 File: slike/robotModel.png Graphic file (type png)
 <use slike/robotModel.png>
-Package pdftex.def Info: slike/robotModel.png  used on input line 62.
+Package pdftex.def Info: slike/robotModel.png  used on input line 68.
 (pdftex.def)             Requested size: 398.33315pt x 148.0982pt.
- [20 <./slike/robotModel.png>] [21]
+[21]
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+ [22 <./slike/robotModel.png>] [23]
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 88.
+(hyperref)                removing `\textasciicaron' on input line 100.
 
-[22
+[24
 
 ]
-Overfull \hbox (3.07573pt too wide) in paragraph at lines 117--118
+Overfull \hbox (3.07573pt too wide) in paragraph at lines 129--130
 []\OT1/cmr/m/n/12 Kori^^Tstena me-toda ma-pi-ra-nja je \OT1/cmr/m/it/12 SLAM (S
 i-mul-tana Lo-ka-li-za-cija i Ma-pi-ra-nje) gmap-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-Overfull \hbox (21.44807pt too wide) in paragraph at lines 126--127
+[25]
+Overfull \hbox (21.44807pt too wide) in paragraph at lines 138--139
 \OT1/cmr/m/it/12 joy[]to[]twist \OT1/cmr/m/n/12 pre-tvara po-ruke \OT1/cmr/m/it
 /12 /joy \OT1/cmr/m/n/12 ROS teme u po-ruke for-mata \OT1/cmr/m/it/12 ge-ome-tr
 y[]msgs/Twist
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[24]
+[26]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-141.
+153.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<slike/multiRobotExample.png, id=540, 612.2875pt x 432.61626pt>
+<slike/multiRobotExample.png, id=587, 612.2875pt x 432.61626pt>
 File: slike/multiRobotExample.png Graphic file (type png)
 <use slike/multiRobotExample.png>
-Package pdftex.def Info: slike/multiRobotExample.png  used on input line 153.
+Package pdftex.def Info: slike/multiRobotExample.png  used on input line 165.
 (pdftex.def)             Requested size: 322.15646pt x 227.62202pt.
+ [27] [28 <./slike/multiRobotExample.png>]
+Overfull \hbox (34.6988pt too wide) in paragraph at lines 177--178
+\OT1/cmr/m/n/12 Unity bio \OT1/cmr/m/it/12 /oc-to-map[]point[]cloud[]centers \O
+T1/cmr/m/n/12 koji ^^Tsalje po-ruke for-mata \OT1/cmr/m/it/12 sen-sor[]msgs/Poi
+ntCloud2\OT1/cmr/m/n/12 .
+ []
 
-Overfull \hbox (8.57547pt too wide) in paragraph at lines 163--164
+
+Overfull \hbox (20.04256pt too wide) in paragraph at lines 177--178
+\OT1/cmr/m/n/12 Po-in-t-Cloud2 je prik-la-dan for-mat za Unity iz raz-loga ^^Ts
+to sadr^^Tzi ko-lek-ciju N-dimenzionalnih
+ []
+
+
+Overfull \hbox (26.16101pt too wide) in paragraph at lines 185--186
+[]\OT1/cmr/m/n/12 U apli-ka-ciji se vr^^Tsi klasi^^Tcnu pret-platu na novi ^^Tc
+vor \OT1/cmr/m/it/12 /oc-to-map[]point[]cloud[]centers[]filtered
+ []
+
+[29
+
+]
+Overfull \hbox (8.57547pt too wide) in paragraph at lines 198--199
 []\OT1/cmr/m/n/12 U grafu je vid-ljivo da sve ROS teme s po-vrat-nim in-for-ma-
 ci-jama idu u \OT1/cmr/m/it/12 /ros[]websocket
  []
 
-<slike/rqtGraph.png, id=542, 2853.66125pt x 778.91pt>
+<slike/rqtGraph.png, id=611, 1907.125pt x 595.22375pt>
 File: slike/rqtGraph.png Graphic file (type png)
 <use slike/rqtGraph.png>
-Package pdftex.def Info: slike/rqtGraph.png  used on input line 167.
-(pdftex.def)             Requested size: 455.24529pt x 124.2597pt.
+Package pdftex.def Info: slike/rqtGraph.png  used on input line 202.
+(pdftex.def)             Requested size: 455.24582pt x 142.08461pt.
 
-Overfull \hbox (25.24529pt too wide) in paragraph at lines 167--168
+Overfull \hbox (25.24582pt too wide) in paragraph at lines 202--203
  [] 
  []
 
-) [25] [26 <./slike/multiRobotExample.png> <./slike/rqtGraph.png>]
+) [30 <./slike/rqtGraph.png>]
 \openout2 = `Rezultati.aux'.
 
-
-(./Rezultati.tex
+ (./Rezultati.tex
 Poglavlje 6.
-<slike/winUnity.png, id=561, 2588.92218pt x 1051.67906pt>
+<slike/winUnity.png, id=620, 2588.92218pt x 1051.67906pt>
 File: slike/winUnity.png Graphic file (type png)
 <use slike/winUnity.png>
 Package pdftex.def Info: slike/winUnity.png  used on input line 10.
@@ -1091,76 +1127,108 @@ Overfull \hbox (25.24088pt too wide) in paragraph at lines 10--11
  [] 
  []
 
-[27
+[31
 
 
 
- <./slike/winUnity.png>] [28]
-<slike/laserscan.png, id=576, 1029.8475pt x 810.02625pt>
+] [32 <./slike/winUnity.png>]
+<slike/laserscan.png, id=635, 1029.8475pt x 810.02625pt>
 File: slike/laserscan.png Graphic file (type png)
 <use slike/laserscan.png>
-Package pdftex.def Info: slike/laserscan.png  used on input line 46.
+Package pdftex.def Info: slike/laserscan.png  used on input line 47.
 (pdftex.def)             Requested size: 284.52107pt x 223.78996pt.
-<slike/win2.png, id=577, 769.37437pt x 599.23875pt>
+<slike/win2.png, id=636, 769.37437pt x 599.23875pt>
 File: slike/win2.png Graphic file (type png)
 <use slike/win2.png>
-Package pdftex.def Info: slike/win2.png  used on input line 54.
+Package pdftex.def Info: slike/win2.png  used on input line 55.
 (pdftex.def)             Requested size: 284.53493pt x 221.61429pt.
- [29 <./slike/laserscan.png> <./slike/win2.png>]
-<slike/a2.jpg, id=584, 2228.325pt x 1084.05pt>
+ [33 <./slike/laserscan.png>] [34 <./slike/win2.png>]
+<slike/a2.jpg, id=647, 2228.325pt x 1084.05pt>
 File: slike/a2.jpg Graphic file (type jpg)
 <use slike/a2.jpg>
-Package pdftex.def Info: slike/a2.jpg  used on input line 69.
+Package pdftex.def Info: slike/a2.jpg  used on input line 71.
 (pdftex.def)             Requested size: 284.5242pt x 138.41718pt.
-<slike/a3.jpg, id=585, 2228.325pt x 1084.05pt>
+<slike/a3.jpg, id=648, 2228.325pt x 1084.05pt>
 File: slike/a3.jpg Graphic file (type jpg)
 <use slike/a3.jpg>
-Package pdftex.def Info: slike/a3.jpg  used on input line 77.
+Package pdftex.def Info: slike/a3.jpg  used on input line 79.
 (pdftex.def)             Requested size: 284.5242pt x 138.41718pt.
- [30 <./slike/a2.jpg>]
-<slike/a1.jpg, id=591, 1084.05pt x 2228.325pt>
+ [35
+
+ <./slike/a2.jpg>]
+<slike/a1.jpg, id=654, 1084.05pt x 2228.325pt>
 File: slike/a1.jpg Graphic file (type jpg)
 <use slike/a1.jpg>
-Package pdftex.def Info: slike/a1.jpg  used on input line 88.
+Package pdftex.def Info: slike/a1.jpg  used on input line 90.
 (pdftex.def)             Requested size: 138.41718pt x 284.5242pt.
- [31 <./slike/a3.jpg>] [32 <./slike/a1.jpg>]
-<slike/linuxMulti.png, id=602, 1028.84375pt x 813.0375pt>
+ [36 <./slike/a3.jpg>] [37 <./slike/a1.jpg>]
+<slike/linuxMulti.png, id=664, 1028.84375pt x 813.0375pt>
 File: slike/linuxMulti.png Graphic file (type png)
 <use slike/linuxMulti.png>
-Package pdftex.def Info: slike/linuxMulti.png  used on input line 101.
+Package pdftex.def Info: slike/linuxMulti.png  used on input line 103.
 (pdftex.def)             Requested size: 284.52634pt x 224.8452pt.
- [33
 
- <./slike/linuxMulti.png>] [34
+[38
 
-]
-<slike/map1.png, id=613, 1024.82875pt x 806.01125pt>
+ <./slike/linuxMulti.png>]
+Overfull \hbox (3.55803pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/12 Ana-liza broja a^^Tzuriranja slike u se-kundi (FPS-ova - Fra-me
+s Per Se-cond), upu^^Scuje
+ []
+
+<slike/map1.png, id=672, 1024.82875pt x 806.01125pt>
 File: slike/map1.png Graphic file (type png)
 <use slike/map1.png>
-Package pdftex.def Info: slike/map1.png  used on input line 143.
+Package pdftex.def Info: slike/map1.png  used on input line 146.
 (pdftex.def)             Requested size: 140.33333pt x 110.36876pt.
-<slike/map2.png, id=614, 1024.82875pt x 806.01125pt>
+<slike/map2.png, id=673, 1024.82875pt x 806.01125pt>
 File: slike/map2.png Graphic file (type png)
 <use slike/map2.png>
-Package pdftex.def Info: slike/map2.png  used on input line 144.
+Package pdftex.def Info: slike/map2.png  used on input line 147.
 (pdftex.def)             Requested size: 140.33333pt x 110.36876pt.
-<slike/map3.png, id=615, 1024.82875pt x 808.01875pt>
+<slike/map3.png, id=674, 1024.82875pt x 808.01875pt>
 File: slike/map3.png Graphic file (type png)
 <use slike/map3.png>
-Package pdftex.def Info: slike/map3.png  used on input line 145.
+Package pdftex.def Info: slike/map3.png  used on input line 148.
 (pdftex.def)             Requested size: 140.33333pt x 110.64365pt.
-<slike/map4.png, id=616, 1025.8325pt x 809.0225pt>
+<slike/map4.png, id=675, 1025.8325pt x 809.0225pt>
 File: slike/map4.png Graphic file (type png)
 <use slike/map4.png>
-Package pdftex.def Info: slike/map4.png  used on input line 146.
+Package pdftex.def Info: slike/map4.png  used on input line 149.
 (pdftex.def)             Requested size: 140.33333pt x 110.67pt.
-<slike/map5.png, id=617, 1022.82124pt x 804.00375pt>
+<slike/map5.png, id=676, 1022.82124pt x 804.00375pt>
 File: slike/map5.png Graphic file (type png)
 <use slike/map5.png>
-Package pdftex.def Info: slike/map5.png  used on input line 147.
+Package pdftex.def Info: slike/map5.png  used on input line 150.
 (pdftex.def)             Requested size: 140.33333pt x 110.30243pt.
-) [35 <./slike/map1.png> <./slike/map2.png> <./slike/map3.png> <./slike/map4.pn
+[39
+
+] [40 <./slike/map1.png> <./slike/map2.png> <./slike/map3.png> <./slike/map4.pn
 g> <./slike/map5.png>]
+<slike/3d1.png, id=696, 1714.15407pt x 741.52031pt>
+File: slike/3d1.png Graphic file (type png)
+<use slike/3d1.png>
+Package pdftex.def Info: slike/3d1.png  used on input line 165.
+(pdftex.def)             Requested size: 455.2426pt x 196.9319pt.
+
+Overfull \hbox (25.2426pt too wide) in paragraph at lines 165--166
+ [] 
+ []
+
+<slike/3d2.png, id=697, 845.40843pt x 712.16063pt>
+File: slike/3d2.png Graphic file (type png)
+<use slike/3d2.png>
+Package pdftex.def Info: slike/3d2.png  used on input line 173.
+(pdftex.def)             Requested size: 398.3353pt x 335.55228pt.
+[41 <./slike/3d1.png>] [42 <./slike/3d2.png>]
+Underfull \vbox (badness 7777) has occurred while \output is active []
+
+ [43
+
+]
+[44]) [45
+
+]
 \openout2 = `Zakljucak.aux'.
 
  (./Zakljucak.tex
@@ -1170,30 +1238,34 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 2.
 
-) [36
+
+Underfull \vbox (badness 2189) has occurred while \output is active []
+
+ [46
 
 
 
-]
+])
+[47]
 \openout2 = `Literatura.aux'.
 
  (./Literatura.tex (./0069069268_Aleks_Markovic.bbl
-Underfull \hbox (badness 1466) in paragraph at lines 40--44
+Underfull \hbox (badness 1466) in paragraph at lines 47--51
 []\OT1/cmr/m/n/12 Robotis. Lds-01. , s In-ter-neta, [][]$https : / / www . robo
 tis . co . uk /
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 68--72
+Underfull \hbox (badness 1484) in paragraph at lines 75--79
 []\OT1/cmr/m/n/12 ------. In-tel\TS1/cmr/m/n/12 ® \OT1/cmr/m/n/12 re-al-sense c
 a-mera r200 spe-ci-fi-ka-cije. , s
  []
 
-[37
+[48
 
 
 
-])) [38] (./Sazetak.tex) [39
+])) [49] (./Sazetak.tex) [50
 
 
 ]
@@ -1210,7 +1282,7 @@ ti upute na slu^^Tzbenim
 
 Underfull \vbox (badness 2828) has occurred while \output is active []
 
- [40
+ [51
 
 
 ]
@@ -1220,36 +1292,36 @@ Overfull \hbox (21.90671pt too wide) in paragraph at lines 25--26
  []
 
 
-LaTeX Warning: Citation `percgit' on page 41 undefined on input line 29.
+LaTeX Warning: Citation `percgit' on page 52 undefined on input line 29.
 
-[41]
+[52]
 Overfull \hbox (7.2385pt too wide) in paragraph at lines 43--44
 [] \OT1/cmr/m/n/12 Osim ure[]divanja ro-bot-skih vri-jed-nosti, po-trebno je i 
 ure-diti i ar-gu-ment \OT1/cmr/m/it/12 urdf[]file
  []
 
-<slike/URDFImportLaunch.png, id=708, 1119.18124pt x 418.56375pt>
+<slike/URDFImportLaunch.png, id=815, 1119.18124pt x 418.56375pt>
 File: slike/URDFImportLaunch.png Graphic file (type png)
 <use slike/URDFImportLaunch.png>
 Package pdftex.def Info: slike/URDFImportLaunch.png  used on input line 47.
 (pdftex.def)             Requested size: 341.42664pt x 127.69049pt.
-[42]
-<slike/URDFImport.png, id=715, 499.8675pt x 421.575pt>
+[53]
+<slike/URDFImport.png, id=822, 499.8675pt x 421.575pt>
 File: slike/URDFImport.png Graphic file (type png)
 <use slike/URDFImport.png>
 Package pdftex.def Info: slike/URDFImport.png  used on input line 59.
 (pdftex.def)             Requested size: 202.42233pt x 170.71764pt.
- [43 <./slike/URDFImportLaunch.png> <./slike/URDFImport.png>]) [44]
+ [54 <./slike/URDFImportLaunch.png> <./slike/URDFImport.png>]) [55]
 \openout2 = `Prilog2.aux'.
 
 
-(./Prilog2.tex) [45
+(./Prilog2.tex) [56
 
 
 ]
 \openout2 = `Prilog3.aux'.
 
- (./Prilog3.tex) [46
+ (./Prilog3.tex) [57
 
 
 ]
@@ -1268,7 +1340,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
 Package rerunfilecheck Info: File `0069069268_Aleks_Markovic.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: D1241BCF1DA6B25119882CBE187CAF05;2744.
+(rerunfilecheck)             Checksum: 2578B4B79AC19942DBF7E4DFA0867AA4;2890.
 
 
 LaTeX Warning: There were undefined references.
@@ -1276,13 +1348,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
  ) 
 Here is how much of TeX's memory you used:
- 18339 strings out of 481239
- 298432 string characters out of 5920377
+ 18419 strings out of 481239
+ 299319 string characters out of 5920377
  827614 words of memory out of 5000000
- 32905 multiletter control sequences out of 15000+600000
+ 32948 multiletter control sequences out of 15000+600000
  542688 words of font info for 62 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 54i,18n,91p,1180b,1411s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,18n,91p,1182b,1411s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-d
@@ -1296,10 +1368,10 @@ cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
 hare/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sftt1095.pfb>
-Output written on 0069069268_Aleks_Markovic.pdf (57 pages, 11515979 bytes).
+Output written on 0069069268_Aleks_Markovic.pdf (68 pages, 12090737 bytes).
 PDF statistics:
- 858 PDF objects out of 1000 (max. 8388607)
- 742 compressed objects within 8 object streams
- 235 named destinations out of 1000 (max. 500000)
- 496 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 972 PDF objects out of 1000 (max. 8388607)
+ 838 compressed objects within 9 object streams
+ 272 named destinations out of 1000 (max. 500000)
+ 532 words of extra memory for PDF output out of 10000 (max. 10000000)
 

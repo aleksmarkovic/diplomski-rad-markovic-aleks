@@ -28,6 +28,13 @@ IEEE. Turtlebot 3. , s Interneta,
   {, 07. sijecnja 2021.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rpi}
+\BIBentryALTinterwordspacing
+raspberrypi.org. Raspberry pi. , s Interneta,
+  \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/} {, 08.
+  sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{inteljouleimg}
 \BIBentryALTinterwordspacing
 prirucnici.hr. Intel® joule 570x na popratnoj ploèi. , s Interneta,
@@ -97,6 +104,12 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
 \BIBentryALTinterwordspacing
 ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
   {, 03. sijecnja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{octomap}
+\BIBentryALTinterwordspacing
+------. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server}
+  {, 07. sijecnja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{webassembly}
