@@ -7,6 +7,8 @@ public class FpsCounter : MonoBehaviour
 {
     private Text text;
 
+    public static int Fps;
+
     private void Awake()
     {
         text = gameObject.GetComponent<Text>();
@@ -16,7 +18,7 @@ public class FpsCounter : MonoBehaviour
     {
         var current = 0;
         current = (int)(1f / Time.unscaledDeltaTime);
-        var fps = (int)current;
-        text.text = "FPS: " + fps.ToString();
+        Fps = (int)current;
+        text.text = "FPS: " + Fps.ToString();
     }
 }
