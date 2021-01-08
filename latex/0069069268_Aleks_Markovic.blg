@@ -3,6 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: 0069069268_Aleks_Markovic.aux
 A level-1 auxiliary file: Uvod.aux
 A level-1 auxiliary file: RazradaProblema.aux
+A level-1 auxiliary file: Hardver.aux
 A level-1 auxiliary file: SoftverskiAlati.aux
 A level-1 auxiliary file: Rjesenje.aux
 A level-1 auxiliary file: Rezultati.aux
@@ -10,6 +11,8 @@ A level-1 auxiliary file: Zakljucak.aux
 A level-1 auxiliary file: Literatura.aux
 The style file: tex_aux/IEEEtranHR.bst
 A level-1 auxiliary file: KonfiguracijaRadneOkoline.aux
+A level-1 auxiliary file: Prilog2.aux
+A level-1 auxiliary file: Prilog3.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -22,45 +25,45 @@ Warning--I didn't find a database entry for "percgit"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 12 entries,
+You've used 18 entries,
             4087 wiz_defined-function locations,
-            882 strings with 8648 characters,
-and the built_in function-call counts, 4356 in all, are:
-= -- 340
-> -- 45
+            907 strings with 9453 characters,
+and the built_in function-call counts, 6510 in all, are:
+= -- 514
+> -- 69
 < -- 0
-+ -- 23
-- -- 11
-* -- 114
-:= -- 841
-add.period$ -- 35
-call.type$ -- 12
-change.case$ -- 12
++ -- 35
+- -- 17
+* -- 162
+:= -- 1254
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 346
-empty$ -- 407
-format.name$ -- 11
-if$ -- 928
+cite$ -- 18
+duplicate$ -- 520
+empty$ -- 611
+format.name$ -- 17
+if$ -- 1397
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 95
-newline$ -- 83
-num.names$ -- 11
-pop$ -- 288
+int.to.str$ -- 18
+missing$ -- 143
+newline$ -- 113
+num.names$ -- 17
+pop$ -- 432
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 331
+skip$ -- 499
 stack$ -- 0
-substring$ -- 24
-swap$ -- 189
+substring$ -- 36
+swap$ -- 285
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
+type$ -- 18
 warning$ -- 0
-while$ -- 11
-width$ -- 14
-write$ -- 141
+while$ -- 17
+width$ -- 20
+write$ -- 201
 (There was 1 warning)
