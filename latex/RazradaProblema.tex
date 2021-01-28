@@ -1,11 +1,23 @@
 % !TeX encoding = windows-1250
 \chapter{Opis problema}
 
-\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i mapiranje okoline koristeæi Unity razvojni program. Glavna stavka ili problem navedenog zadatka jest komunikacija i razmjena podataka izmeðu ROSa i Unityja. Komunikacija æe se odvijati pomoæu ROS\# knjižnice koja sadrži set alata za adaptaciju i interakciju ROSa s Unityjem. 
+\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i mapiranje okoline koristeæi Unity razvojni program. Jedna od bitnih stavki u navedenom zadatku jest komunikacija i razmjena podataka izmeðu ROSa i Unityja. U tu svrhu koristit æe se ROS\# knjižnica koja sadrži set alata za adaptaciju i interakciju ROSa s Unityjem.
 
-ROS\# je odabran iz razloga što on veæinski rješava problem komunikacije izmeðu ROSa i Unitya, no ne sasvim. Za kompleksnije stvari kao što je mapiranje, potrebno je proširiti moguænosti ROS\#a na naèin da se omoguæi intuitivno i efikasno èitanje ROS poruka. Takoðer treba rješiti problem kako iskoristiti i prikazati dobivene podatke u Unity ekosustavu. 
+\section{ROS\#}
+
+\qquad ROS\# je odabran iz razloga što on veæinski rješava problem komunikacije izmeðu ROSa i Unitya, no ne sasvim. Za kompleksnije stvari kao što je mapiranje, potrebno je proširiti moguænosti ROS\#a na naèin da se omoguæi intuitivno i efikasno èitanje ROS poruka. Takoðer treba rješiti problem kako iskoristiti i prikazati dobivene podatke u Unity ekosustavu. 
 
 Nakon instalacije potrebnih alata, potrebno je iste konfigurirati na naèin da se mogu koristiti sa ROS\#om i Unityjem. U to je ukljuèena i potreba da se ROS\# knjižnica uvede u Unity. Završetkom ovih osnovnih koraka omoguæeno je kretanje s implementacijom glavnog cilja - razvoj aplikacije za upravljanje robotom i mapiranje okoline. 
+
+\subsection{Alternativni alati}
+
+\qquad Uz ROS\# postoje još dva potencijalna alata koji služe za istu svrhu:
+\begin{enumerate}
+	\item \textbf{Unity Robotics Hub} - Službeni Unity alat koji se razvija od strane tvrtke \emph{Unity Technologies}. Navedeni alat je manje popularan od ROS\# alata no ubrzano raste. Dijelovi Unity Robotics Huba su proizašli iz ROS\#a, a to su alat za uvoz URDF modela i TCP konektor koji su dodatno modificirani od strane Unityja. Iako navedeni alat još nije dostigao ROS\# po moguænostima i popularnosti, aktivno se razvija i izraðuju nove inaèice pa bi u skoroj buduænosti mogao postati vodeæi alat za spajanje ROSa i Unityja. \cite{unityroboticshub}
+	\item \textbf{Unity ROS} - Alat razvijen od strane privatne osobe koji je zadnje ažuriran prije tri godine te nije doživio veliku popularnost i korištenje od strane ROS i Unity zajednice. Razlog toga jest loša podrška i limitirane funkcionalnosti alata. \cite{unityros}
+\end{enumerate}
+
+Iako svi navedeni alati imaju slièni temelj za uspostavljanje komunikacije izmeðu ROSa i Unityja, ROS\# i dalje vodi na ljestvici popularnosti svojom fleksibilnošæu, veæim moguænostima te podrškom zajednice i programera.
 
 
 \section{Unity i aplikacija}

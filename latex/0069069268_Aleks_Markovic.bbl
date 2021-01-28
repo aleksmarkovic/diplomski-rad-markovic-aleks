@@ -25,35 +25,35 @@
 \BIBentryALTinterwordspacing
 IEEE. Turtlebot 3. , s Interneta,
   \url{https://spectrum.ieee.org/automaton/robotics/robotics-hardware/review-robotis-turtlebot-3}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rpi}
 \BIBentryALTinterwordspacing
 raspberrypi.org. Raspberry pi. , s Interneta,
   \url{https://www.raspberrypi.org/products/raspberry-pi-3-model-b/} {, 08.
-  sijecnja 2021.}
+  sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{inteljouleimg}
 \BIBentryALTinterwordspacing
 prirucnici.hr. Intel® joule 570x na popratnoj ploèi. , s Interneta,
   \url{https://www.prirucnici.hr/intel/joule-570x-developer-kit/priru%C4%8Dnik}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{lds01}
 \BIBentryALTinterwordspacing
 Robotis. Lds-01. , s Interneta,
   \url{https://www.robotis.co.uk/360-laser-distance-sensor-lds-01.html} {, 07.
-  sijecnja 2021.}
+  sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{intelcameraimage}
 \BIBentryALTinterwordspacing
 Intel. Intel® realsense camera r200 slika i specifikacije. , s Interneta,
   \url{https://software.intel.com/content/www/us/en/develop/articles/intel-realsense-data-ranges.html}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rossharpgazebosim}
@@ -63,18 +63,31 @@ Siemens. Ros\# gazebo simulacija. , s Interneta,
   {, 30. prosinca 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{unityroboticshub}
+\BIBentryALTinterwordspacing
+U.~Technologies. Unity robotics hub. , s Interneta,
+  \url{https://github.com/Unity-Technologies/Unity-Robotics-Hub} {, 28.
+  sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{unityros}
+\BIBentryALTinterwordspacing
+M.~Jenkin. Unity ros. , s Interneta,
+  \url{https://github.com/michaeljenkin/unityros} {, 28. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{inteljoule}
 \BIBentryALTinterwordspacing
 Intel. Intel® joule 570x. , s Interneta,
   \url{https://ark.intel.com/content/www/us/en/ark/products/96414/intel-joule-570x-developer-kit.html}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{intelcamera}
 \BIBentryALTinterwordspacing
 ------. Intel® realsense camera r200 specifikacije. , s Interneta,
   \url{https://ark.intel.com/content/www/us/en/ark/products/92256/intel-realsense-camera-r200.html}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rosurl}
@@ -103,19 +116,19 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
 \bibitem{rosbridgesuite}
 \BIBentryALTinterwordspacing
 ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
-  {, 03. sijecnja 2021.}
+  {, 03. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{octomap}
 \BIBentryALTinterwordspacing
 ------. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server}
-  {, 07. sijecnja 2021.}
+  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{webassembly}
 \BIBentryALTinterwordspacing
 MDN. Webassembly. , s Interneta,
-  \url{https://developer.mozilla.org/en-US/docs/WebAssembly} {, 03. sijecnja
+  \url{https://developer.mozilla.org/en-US/docs/WebAssembly} {, 03. sijeènja
   2021.}
 \BIBentrySTDinterwordspacing
 

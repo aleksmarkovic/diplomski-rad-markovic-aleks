@@ -2,50 +2,52 @@
 \contentsline {chapter}{Popis slika}{ix}{chapter*.2}%
 \contentsline {chapter}{Popis tablica}{xi}{chapter*.3}%
 \contentsline {chapter}{\numberline {1}Uvod}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Opis problema}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Unity i aplikacija}{2}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Pogled s kamere}{4}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Upravljanje robotom}{4}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Mapiranje}{5}{subsection.2.1.3}%
-\contentsline {chapter}{\numberline {3}Specifikacije robota}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Programski alati}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}ROS}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Unity}{14}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Editor}{14}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Skripte}{16}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}ROS\#}{19}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}RosBridgeClient}{19}{subsection.4.3.1}%
-\contentsline {chapter}{\numberline {5}Opis rje\v senja}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Opis su\v celja i Unity objekata}{23}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Meni}{23}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Ros Connector}{23}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Plane}{24}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Model robota}{24}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Canvas}{24}{subsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.1.6}Multi Robot Control}{26}{subsection.5.1.6}%
-\contentsline {subsection}{\numberline {5.1.7}Scena 2}{27}{subsection.5.1.7}%
-\contentsline {section}{\numberline {5.2}Zna\v cajke i mogu\'cnosti rje\v senja}{27}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Kamere}{27}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Laserski sken}{28}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}2D mapiranje}{28}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Upravljanje}{29}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Prikaz s vi\v se robota}{30}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}3D mapiranje}{32}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}RQT graf sustava}{33}{subsection.5.2.7}%
-\contentsline {chapter}{\numberline {6}Rezultati}{34}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Faza 1 (Waffle Pi)}{35}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Linux i Windows}{35}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Android}{38}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Vi\v se robotski prikaz}{41}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Problemi i pote\v sko\'ce}{42}{subsection.6.1.4}%
-\contentsline {section}{\numberline {6.2}Faza 2 (Waffle)}{43}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Problemi i pote\v sko\'ce}{46}{subsection.6.2.1}%
-\contentsline {chapter}{\numberline {7}Zaklju\v cak}{49}{chapter.7}%
-\contentsline {chapter}{Bibliografija}{51}{chapter*.29}%
-\contentsline {chapter}{Sa\v zetak}{53}{chapter*.29}%
-\contentsline {chapter}{\numberline {A}Konfiguracija radne okoline}{54}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Dodatni koraci}{55}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Uvoz URDF modela u Unity}{56}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Dodatno}{58}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Glavna launch datoteka}{59}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Ostalo}{60}{section.A.3}%
+\contentsline {chapter}{\numberline {2}Opis problema}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}ROS\#}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Alternativni alati}{4}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Unity i aplikacija}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Pogled s kamere}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Upravljanje robotom}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Mapiranje}{6}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Specifikacije robota}{8}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Programski alati}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}ROS}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Unity}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Editor}{16}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Skripte}{18}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}ROS\#}{21}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}RosBridgeClient}{21}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}Opis rje\v senja}{22}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Opis su\v celja i Unity objekata}{25}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Meni}{25}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Ros Connector}{25}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Plane}{26}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Model robota}{26}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Canvas}{26}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}Multi Robot Control}{28}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}Scena 2}{29}{subsection.5.1.7}%
+\contentsline {section}{\numberline {5.2}Zna\v cajke i mogu\'cnosti rje\v senja}{29}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Kamere}{29}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Laserski sken}{30}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}2D mapiranje}{30}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Upravljanje}{31}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Prikaz s vi\v se robota}{32}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}3D mapiranje}{34}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}RQT graf sustava}{35}{subsection.5.2.7}%
+\contentsline {chapter}{\numberline {6}Rezultati}{36}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Faza 1 (Waffle Pi)}{37}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Linux i Windows}{37}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Android}{40}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Vi\v se robotski prikaz}{43}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Problemi i pote\v sko\'ce}{44}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Faza 2 (Waffle)}{46}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Problemi i pote\v sko\'ce}{48}{subsection.6.2.1}%
+\contentsline {chapter}{\numberline {7}Zaklju\v cak}{52}{chapter.7}%
+\contentsline {chapter}{Bibliografija}{54}{chapter*.29}%
+\contentsline {chapter}{Sa\v zetak}{56}{chapter*.29}%
+\contentsline {chapter}{\numberline {A}Konfiguracija radne okoline}{57}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Dodatni koraci}{58}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Uvoz URDF modela u Unity}{59}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Dodatno}{61}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Glavna launch datoteka}{62}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Ostalo}{63}{section.A.3}%

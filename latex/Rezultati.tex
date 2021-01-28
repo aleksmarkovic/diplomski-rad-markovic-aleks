@@ -1,9 +1,9 @@
 % !TeX encoding = windows-1250
 \chapter{Rezultati}
 
-\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D mapiranje. Faza 2 je iskljuèivo 3D mapiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što je crtanje i prikaz 3D mape resursno zahtjevnije, ali ovom podijelom je i sam prikaz uredniji.
+\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D mapiranje. Faza 2 je iskljuèivo 3D mapiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što je stvaranje i prikaz 3D mape resursno zahtjevnije, ali ovom podijelom je i sam prikaz uredniji.
 
-Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravilo se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editor-u.
+Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravilo se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editoru.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -13,7 +13,7 @@ Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Window
 	\end{center}
 \end{figure}
 
-Unity podržava WebGL, pa je i to pokušano napraviti, ali neuspješno. Pretpostavka ovog neuspjeha leži u tome što Unity WebGL koristi \emph{WebAssembly} tehnologiju, koja ne podržava uvijek sve module koje se želi koristiti. \emph{WebAssembly} je noviji tip koda koji se može izvršavati na modernim web preglednicima. Isti je low-level programski jezik slièan \emph{asembleru} u binarnom formatu koji se izvršava sa sliènim performansama kao u nativnoj aplikaciji. On omoguæuje aplikacije koje su napisane u Cu, C++u, C\#u i Rustu da se prekompajlaju i omoguæi im se izvršavanje na web pregledniku \cite{webassembly}.
+Unity podržava  i WebGL,  ali pokušaj izrade aplikacije za tu platformu bio je neuspješan. Pretpostavka ovog neuspjeha leži u tome što Unity WebGL koristi \emph{WebAssembly} tehnologiju, koja ne podržava uvijek sve module koje se želi koristiti. \emph{WebAssembly} je noviji tip koda koji se može izvršavati na modernim web preglednicima. Isti je low-level programski jezik slièan \emph{asembleru} u binarnom formatu koji se izvršava sa sliènim performansama kao u nativnoj aplikaciji. On omoguæuje aplikacije koje su napisane u Cu, C++u, C\#u i Rustu da se prekompajlaju i omoguæi im se izvršavanje na web pregledniku \cite{webassembly}.
 
 \section{Faza 1 (Waffle Pi)}
 
@@ -45,7 +45,7 @@ Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje oboj
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{laserscan}
-		\caption{Windows aplikacija - mapa, robot i laserski sken}
+		\caption{Windows aplikacija - 2D mapa, robot i laserski sken}
 		\label{fig:laserscan}
 	\end{center}
 \end{figure}
@@ -53,7 +53,7 @@ Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje oboj
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{win2}
-		\caption{Windows aplikacija - pogled iz kamere}
+		\caption{Windows aplikacija - prikaz iz kamere}
 		\label{fig:win2}
 	\end{center}
 \end{figure}
@@ -62,14 +62,14 @@ Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje oboj
 
 \subsection{Android}
 
-\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi uspješno funkcionirala. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu se kao rješenje prikazala metoda upravljanja gumbovima. S obzirom da spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se napravu gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je ta što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže 4GB RAMa, Mali-G71 grafièkim procesorom i procesorom s 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, pa su se potrudili dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
+\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi uspješno funkcionirala. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu se kao rješenje prikazala metoda upravljanja gumbovima. S obzirom da spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se naprave gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je to što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže s 4GB RAMa, Mali-G71 grafièkim procesorom i procesorom od 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, stoga su dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
 
 Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se vidi iste znaèajke kao kod raèunalnih verzija. 
 
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{a2}
-		\caption{Mobilna aplikacija - mapa, robot i laserski sken}
+		\caption{Mobilna aplikacija - prikaz s kamere}
 		\label{fig:a2}
 	\end{center}
 \end{figure}
@@ -77,7 +77,7 @@ Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ur
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{a3}
-		\caption{Mobilna aplikacija - pogled iz kamere}
+		\caption{Mobilna aplikacija - 2D mapa, robot i laserski sken}
 		\label{fig:a3}
 	\end{center}
 \end{figure}
@@ -96,7 +96,7 @@ Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureð
 
 \subsection{Više robotski prikaz}
 
-\qquad Na sljedeæoj slici, \ref{fig:linuxmulti}, prikazan je pogled s kamere jednog od dvaju robota u simulaciji. Znaèajka prikaza kamera s oba robota radi isto na svim platformama.
+\qquad Na sljedeæoj slici, \ref{fig:linuxmulti}, prikazan je prikaz s kamere jednog od dvaju robota u simulaciji. Znaèajka prikaza kamera s oba robota radi isto na svim platformama.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -111,7 +111,7 @@ Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureð
 
 \qquad Tokom cijelog razvijanja faze 1 sustava bilo je više problema i poteškoæa, od raznih inkompatibilnosti pa do ne funkcioniranja odreðenih elemenata, ali najbitnija bi bila dva problema u krajnjem rezultatu: performanse i pozicioniranje mape u Unityju.
 
-Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što kroz godine podrška za Linux verziju Unityja je postala dobra te napravljena je stabilna verzija, teško je ne primjetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linuxu više nije mogao pokrenuti, dok isti projekt u Windowsu je radio bez grešaka.
+Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što je kroz godine podrška za Linux verziju Unityja postala dobra te napravljena je stabilna verzija, teško je ne primjetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linuxu više nije mogao pokrenuti, dok isti projekt u Windowsu je radio bez grešaka.
 
 \begin{enumerate}
 	\item \textbf{Performanse}
@@ -134,12 +134,11 @@ Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unat
 		\label{tab:fpscompare}
 	\end{table}
 	
-	\item \textbf{Pozicioniranje mape u Unity-ju}
+	\item \textbf{Pozicioniranje mape u Unityju}
 	
-	Pozicioniranje mape u Unity-ju podrazumijeva na koji se naèin slika mape nacrta na \emph{Plane} objekt. Problem ovdje je taj što se je relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka i slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
+	Pozicioniranje mape u Unityju podrazumijeva na koji se naèin slika mape nacrta na \emph{Plane} objekt, gdje se je relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka te slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
 	
-	Mapa se generira sukladno SLAM gmapping-u pa je ona veæinom toèna. No kad se pozicija mape poremeti, daljnjim skeniranjem (šetanjem) prostora ona se veæinom vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer, testiranjem se utvrdilo da je pozicija robota toèna u Unity prostoru.
-	
+	Mapa se generira sukladno SLAM gmappingu pa je ona veæinom toèna. No kad se pozicija mape poremeti, daljnjim skeniranjem (šetanjem) prostora ona se u veæini sluèajeva vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer, testiranjem se utvrdilo da je pozicija robota toèna u Unity prostoru.	
 	
 	\begin{figure}
 		\centering	
@@ -152,13 +151,13 @@ Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unat
 		\label{fig:mappingsteps}
 	\end{figure}
 \end{enumerate}
-
+\clearpage
 
 \section{Faza 2 (Waffle)}
 
 \qquad U ovoj je fazi promjena modela robota bila potrebna iz razloga što je bilo obavezno imati kameru koja ima sposobnost 3D percepcije. Bitno je navesti da su sve znaèajke iz faze 1, gdje je korišten drugi hardver, funkcionalne i na hardveru faze 2 pa se iz tog razloga neæe ponovno navesti.
 
-Cilj ove faze bila je izrada 3D mape. Na slikama \ref{fig:3d1} i \ref{fig:3d2} prikazana je 3D mapa prostora u Unity Editoru. Slobodno šetanje po mapi moguæe je samo u Editoru, dok u standalone aplikacijama kamera slijedi robota.
+Cilj ove faze bila je izrada 3D mape. Na slikama \ref{fig:3d1} i \ref{fig:3d2} prikazana je 3D mapa prostora u Unity Editoru. Slobodno šetanje po mapi moguæe je samo u Editoru, dok u samostalnim aplikacijama kamera slijedi robota.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -184,8 +183,8 @@ Cilj ove faze bila je izrada 3D mape. Na slikama \ref{fig:3d1} i \ref{fig:3d2} p
 
 \begin{enumerate}
 	\item Sluèaj 1 - Generiranje objekata sukladno dobivenim podacima. U ovom se sluèaju svakim dobivenim skupom podataka generirao novi skup objekata koji su saèinjavali 3D mapu. Navedeni pristup nije bio optimiziran te se svakim pokretanjem funkcije za generiranje mape stvorio novi skup objekata koji je sadržavao nove toèke i toèke prijašnje poruke. To je u kratkom broju ažuriranja zablokiralo aplikaciju zbog masovnog broja objekata u sceni i velikog skupa podataka kroz koje se trebalo iterirati.
-	\item Sluèaj 2 - Još jedna moguænost bila je napraviti collider. Collider u Unityju omoguæuje fizièka svojstva objekta tj. njegovo sudaranje s drugim objektom. Ideja je bila detektirati sudar dvaju objekata ako se nalaze na istoj toèki u 3D prostoru i jednog od njih uništiti. Problem ovog rješenja jest taj da je uništavanje u Unityju skupa operacija, pogotovo ako je u pitanju puno objekata.
-	\item Sluèaj 3 - Generiranje nove 3D mape svakim novim skupom podataka. Ovaj pristup je imao bolje performanse od prijašnjih jer se prijašnja mapa brisala pozivanjem funkcije za uništavanje objekata samo jednom na objektu roditelja, ali je svako ponovno generiranje bilo loše vizualno rješenje (nestajanje nekoliko tisuæa objekata odjednom pa generiranje novih nekoliko tisuæa objekata). Osim toga, kada bi 3D mapa sadržavala puno toèaka, dogodilo bi se znaèajno zamrzavanje aplikacije u trenutku ponovnog generiranja.
+	\item Sluèaj 2 - Jedna moguænost bila je napraviti collider. Collider u Unityju omoguæuje fizièka svojstva objekta tj. njegovo sudaranje s drugim objektom. Ideja je bila detektirati sudar dvaju objekata ako se nalaze na istoj toèki u 3D prostoru i jednog od njih uništiti. Problem ovog rješenja jest taj što je uništavanje u Unityju skupa operacija, pogotovo ako je u pitanju puno objekata.
+	\item Sluèaj 3 - Generiranje nove 3D mape svakim novim skupom podataka. Ovaj pristup imao je bolje performanse od prijašnjih jer se prijašnja mapa brisala pozivanjem funkcije za uništavanje objekata samo jednom na objektu koji je sadržavao sve toèke (objekt roditelj), ali je svako ponovno generiranje bilo loše vizualno rješenje (nestajanje nekoliko tisuæa objekata odjednom pa generiranje novih nekoliko tisuæa objekata). Osim toga, kada bi 3D mapa sadržavala puno toèaka, dogodilo bi se znaèajno zamrzavanje aplikacije u trenutku ponovnog generiranja.
 	\item Sluèaj 4 - Generiranje mape u novoj dretvi. Ova je ideja nemoguæa zbog Unityja iz razloga što isti ne dopušta generiranje ni rad s objektima u zasebnoj dretvi, veæ samo u glavnoj.
 	\item Sluèaj 5 - Zadnja ideja pred rješenjem implementirala je spremanje generiranih objekata u listu gdje bi se u sljedeæem ažuriranju mape usporeðivalo novodobivene podatke s listom te bi se podudarnosti ignorirale a nove toèke iskoristilo za generiranje novih objekata i dodavanje istih u istu listu. Ideja je dobra, no kako lista raste, provjeravanje postaje vrlo skupa operacija.
 \end{enumerate}
@@ -193,10 +192,10 @@ Cilj ove faze bila je izrada 3D mape. Na slikama \ref{fig:3d1} i \ref{fig:3d2} p
 Konaèno rješenje kombinacija je sluèaja 4 i 5 i podijeljeno je u nekoliko funkcija:
 \begin{enumerate}
 	\item Asinkrona funkcija \emph{MapPrep()} - Pokreæe sljedeæe dvije funkcije.
-	\item Funkcija provjere postojeæih toèaka \emph{CheckExistingPoints()} - Provjerava listu postojeæih imena generiranih objekata s novo dobivenim podacima. Ime se generira konkatenacijom stringova x, y i z koordinata toèke što osigurava toènost usporedbe. Pri detekciji nove toèke ista se stavlja u novu listu koja sadrži podatke prijašnje navedenog prilagoðenog formata \emph{CustomPointCloud}.
-	\item Funkcija za generiranje novih objekata u prostoru \emph{Create3DMap()} odnosno ažuriranje map - Generira nove objekte u prostoru po koordinatama u novoj listi koja sadrži samo nove toèke i dodaje imena novih objekata u priladnu listu.
+	\item Funkcija provjere postojeæih toèaka \emph{CheckExistingPoints()} - Provjerava listu postojeæih imena generiranih objekata s novo dobivenim podacima. Ime se generira konkatenacijom stringova x, y i z koordinata toèke što osigurava jedinstvenost i toènost usporedbe. Pri detekciji nove toèke ista se stavlja u novu listu koja sadrži podatke prijašnje navedenog prilagoðenog formata \emph{CustomPointCloud}.
+	\item Funkcija za generiranje novih objekata u prostoru \emph{Create3DMap()} odnosno ažuriranje mape - generira nove objekte u prostoru po koordinatama u novoj listi koja sadrži samo nove toèke. Takoðer dodaje imena novih objekata u prikladnu listu.
 \end{enumerate}
-Primitkom nove poruke (samo u sluèaju da je prijašnja iteracija tj. generiranje mape gotovo) poziva se asinkrona funkcija \emph{MapPrep()} u kojoj se poziva novi C\# \emph{Task} koji pokreæe funkciju \emph{CheckExistingPoints()}. Izvršavanje navedene funkcije se uspješno odraðuje u novoj dretvi jer navedena funkcija ne radi ništa s Unity objektima. Kraj izvršavanja zadatka se isèekuje C\# \emph{await} naredbom koja služi za èekanje kraja izvršavanja asinkronih funkcija te se nakon toga pokreæe \emph{Create3DMap()} koja generira nove objekte.
+Primitkom nove poruke (samo u sluèaju da je prijašnja iteracija tj. generiranje mape gotovo) poziva se asinkrona funkcija \emph{MapPrep()} u kojoj se poziva novi C\# \emph{Task} koji pokreæe funkciju \emph{CheckExistingPoints()}. Izvršavanje navedene funkcije se uspješno odraðuje u novoj dretvi jer navedena funkcija ne radi ništa s Unity objektima. Kraj izvršavanja zadatka se išèekuje C\# \emph{await} naredbom koja služi za èekanje kraja izvršavanja asinkronih funkcija te se nakon toga pokreæe \emph{Create3DMap()} koja generira nove objekte.
 
 Na taj se naèin drastièno poboljšalo performanse aplikacije pri generiranju 3D mape. Provjera liste generiranih objekata se izvršava bez ikakvog utjecaja na performanse zbog izvršavanja u novoj dretvi, a utjecaj generiranja novih objekata na performanse je minimiziran iz razloga što se pri svakoj iteraciji generira relativno mali broj objekata odjednom. 
 
@@ -220,6 +219,6 @@ U sluèaju velike mape, performanse polako opadaju zbog velikog broja objekata u 
 	\label{tab:fpscompare2}
 \end{table}
 
-Još jedan problem povezan je s Android verzijom aplikacije. U sceni 3D mapiranja gubi se moguænost upravljanja robotom bez obzira na istu logiku kao u prvoj sceni. Analizom zapisnika grešaka utvrdilo se da je problem povezan sa ROS\# knjižnicom jer se pogreška prikazuje u baznom i veæ korištenom programskom kodu. Greška ukazuje na to da se komponenta koja je zadužena za pretplatu na ROS temu \emph{/cmd\_vel} kojoj je svrha primanje naredba za upravljanje robotom ne inicijalizira ispravno.
+Još jedan problem povezan je s Android verzijom aplikacije. U sceni 3D mapiranja gubi se moguænost upravljanja robotom bez obzira na istu programsku logiku kao u prvoj sceni. Analizom zapisnika grešaka utvrdilo se da je problem povezan sa ROS\# knjižnicom jer se pogreška prikazuje u baznom i veæ korištenom programskom kodu. Greška ukazuje na to da se komponenta koja je zadužena za pretplatu na ROS temu \emph{/cmd\_vel} kojoj je svrha primanje naredba za upravljanje robotom ne inicijalizira ispravno.
 
 Zadnji bitan problem za naglasiti u ovoj fazi jest promjena hardvera tj. promjena kamere. Slika kamere ima vidno jako nisko ažuriranje slika u sekundi (ispod 10). Problem nije u Unity aplikaciji jer se isti problem javlja i pri uèitavanju slike u RVizu (RViz je ROS alat za 3D vizualizaciju. U njemu se može èitati i vizualizirati sve ROS teme: odometrija, kamera, mapiranje i sl.). Iako su postavke kamere iste kao kod Raspberry kamere (ista rezolucija, isti broj ažuriranja slike u sekundi) i boljim ugradbenim raèunalom, rješenje za ovaj problem se nije uspjelo pronaæi.
