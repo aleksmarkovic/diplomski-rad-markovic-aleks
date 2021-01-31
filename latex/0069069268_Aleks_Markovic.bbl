@@ -73,7 +73,32 @@ U.~Technologies. Unity robotics hub. , s Interneta,
 \bibitem{unityros}
 \BIBentryALTinterwordspacing
 M.~Jenkin. Unity ros. , s Interneta,
-  \url{https://github.com/michaeljenkin/unityros} {, 28. sijeènja 2021.}
+  \url{https://github.com/michaeljenkin/unityros} {, 31. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{roscontrol}
+\BIBentryALTinterwordspacing
+ROS.org. Upravljanje robotom. , s Interneta,
+  \url{http://wiki.ros.org/robotican/Tutorials/Command you robot with simple
+  motion commands} {, 29. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{octomap}
+\BIBentryALTinterwordspacing
+ROS. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server} {,
+  07. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{octree}
+\BIBentryALTinterwordspacing
+Wikipedia. Octree. , s Interneta,  \url{https://en.wikipedia.org/wiki/Octree}
+  {, 31. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rtabmap}
+\BIBentryALTinterwordspacing
+Introlab. Rtab-map. , s Interneta,  \url{http://introlab.github.io/rtabmap/} {,
+  31. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{inteljoule}
@@ -117,12 +142,6 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
 \BIBentryALTinterwordspacing
 ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
   {, 03. sijeènja 2021.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{octomap}
-\BIBentryALTinterwordspacing
-------. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server}
-  {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{webassembly}

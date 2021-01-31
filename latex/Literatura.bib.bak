@@ -152,11 +152,32 @@
   note   = {{, 28. sijeènja 2021.}},
 }
 
+@Electronic{roscontrol,
+  author = {ROS.org},
+  title  = {Upravljanje robotom},
+  url    = {http://wiki.ros.org/robotican/Tutorials/Command you robot with simple motion commands},
+  note   = {{, 29. sijeènja 2021.}},
+}
+
+@Electronic{octomap,
+  author = {Octomap},
+  title  = {Octomap},
+  url    = {http://octomap.github.io/},
+  note   = {{, 28. sijeènja 2021.}},
+}
+
 @Electronic{unityros,
   author = {Michael Jenkin},
   title  = {Unity ROS},
   url    = {https://github.com/michaeljenkin/unityros},
-  note   = {{, 28. sijeènja 2021.}},
+  note   = {{, 31. sijeènja 2021.}},
+}
+
+@Electronic{octree,
+  author = {Wikipedia},
+  title  = {Octree},
+  url    = {https://en.wikipedia.org/wiki/Octree},
+  note   = {{, 31. sijeènja 2021.}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

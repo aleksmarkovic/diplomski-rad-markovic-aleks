@@ -19,51 +19,55 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Literatura.bib
+Repeated entry---line 162 of file Literatura.bib
+ : @electronic{octomap
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "percgit"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 22 entries,
+You've used 25 entries,
             4087 wiz_defined-function locations,
-            923 strings with 9802 characters,
-and the built_in function-call counts, 7946 in all, are:
-= -- 630
-> -- 85
+            937 strings with 10081 characters,
+and the built_in function-call counts, 9023 in all, are:
+= -- 717
+> -- 97
 < -- 0
-+ -- 43
-- -- 21
-* -- 194
-:= -- 1529
-add.period$ -- 65
-call.type$ -- 22
-change.case$ -- 22
++ -- 49
+- -- 24
+* -- 218
+:= -- 1737
+add.period$ -- 74
+call.type$ -- 25
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 636
-empty$ -- 747
-format.name$ -- 21
-if$ -- 1710
+cite$ -- 25
+duplicate$ -- 723
+empty$ -- 849
+format.name$ -- 24
+if$ -- 1943
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 175
-newline$ -- 133
-num.names$ -- 21
-pop$ -- 528
+int.to.str$ -- 25
+missing$ -- 199
+newline$ -- 148
+num.names$ -- 24
+pop$ -- 600
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 611
+skip$ -- 695
 stack$ -- 0
-substring$ -- 44
-swap$ -- 349
+substring$ -- 50
+swap$ -- 397
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 22
+type$ -- 25
 warning$ -- 0
-while$ -- 21
-width$ -- 24
-write$ -- 241
-(There was 1 warning)
+while$ -- 24
+width$ -- 27
+write$ -- 271
+(There was 1 error message)
