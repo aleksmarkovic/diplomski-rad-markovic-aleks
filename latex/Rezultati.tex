@@ -1,7 +1,7 @@
 % !TeX encoding = windows-1250
 \chapter{Rezultati}
 
-\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D mapiranje. Faza 2 je iskljuèivo 3D mapiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što je stvaranje i prikaz 3D karte resursno zahtjevnije, ali ovom podijelom je i sam prikaz uredniji.
+\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D kartiranje. Faza 2 je iskljuèivo 3D kartiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što je stvaranje i prikaz 3D karte resursno zahtjevnije, ali ovom podijelom je i sam prikaz uredniji.
 
 Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravilo se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editoru.
 
@@ -147,7 +147,7 @@ Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unat
 		\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map3}}\\
 		\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map4}}\vspace{1cm}
 		\subfloat[]{\includegraphics[width=\dimexpr(\textwidth-15pt+3pt*2)/3\relax]{map5}}
-		\caption{Koraci mapiranja}
+		\caption{Koraci kartiranja}
 		\label{fig:mappingsteps}
 	\end{figure}
 \end{enumerate}
@@ -219,6 +219,6 @@ U sluèaju velike karte, performanse polako opadaju zbog velikog broja objekata u
 	\label{tab:fpscompare2}
 \end{table}
 
-Još jedan problem povezan je s Android verzijom aplikacije. U sceni 3D mapiranja gubi se moguænost upravljanja robotom bez obzira na istu programsku logiku kao u prvoj sceni. Analizom zapisnika grešaka utvrdilo se da je problem povezan sa ROS\# knjižnicom jer se pogreška prikazuje u baznom i veæ korištenom programskom kodu. Greška ukazuje na to da se komponenta koja je zadužena za pretplatu na ROS temu \emph{/cmd\_vel} kojoj je svrha primanje naredba za upravljanje robotom ne inicijalizira ispravno.
+Još jedan problem povezan je s Android verzijom aplikacije. U sceni 3D kartiranja gubi se moguænost upravljanja robotom bez obzira na istu programsku logiku kao u prvoj sceni. Analizom zapisnika grešaka utvrdilo se da je problem povezan sa ROS\# knjižnicom jer se pogreška prikazuje u baznom i veæ korištenom programskom kodu. Greška ukazuje na to da se komponenta koja je zadužena za pretplatu na ROS temu \emph{/cmd\_vel} kojoj je svrha primanje naredba za upravljanje robotom ne inicijalizira ispravno.
 
-Zadnji bitan problem za naglasiti u ovoj fazi jest promjena hardvera tj. promjena kamere. Slika kamere ima vidno jako nisko ažuriranje slika u sekundi (ispod 10). Problem nije u Unity aplikaciji jer se isti problem javlja i pri uèitavanju slike u RVizu (RViz je ROS alat za 3D vizualizaciju. U njemu se može èitati i vizualizirati sve ROS teme: odometrija, kamera, mapiranje i sl.). Iako su postavke kamere iste kao kod Raspberry kamere (ista rezolucija, isti broj ažuriranja slike u sekundi) i boljim ugradbenim raèunalom, rješenje za ovaj problem se nije uspjelo pronaæi.
+Zadnji bitan problem za naglasiti u ovoj fazi jest promjena hardvera tj. promjena kamere. Slika kamere ima vidno jako nisko ažuriranje slika u sekundi (ispod 10). Problem nije u Unity aplikaciji jer se isti problem javlja i pri uèitavanju slike u RVizu (RViz je ROS alat za 3D vizualizaciju. U njemu se može èitati i vizualizirati sve ROS teme: odometrija, kamera, kartiranje i sl.). Iako su postavke kamere iste kao kod Raspberry kamere (ista rezolucija, isti broj ažuriranja slike u sekundi) i boljim ugradbenim raèunalom, rješenje za ovaj problem se nije uspjelo pronaæi.

@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.2.2}{Unity i aplikacija}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.2.1}{Pogled s kamere}{section.2.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.2}{Upravljanje robotom}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.3}{Mapiranje}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{Kartiranje}{section.2.2}% 10
 \BOOKMARK [0][-]{chapter.3}{Specifikacije robota}{}% 11
 \BOOKMARK [0][-]{chapter.4}{Programski alati}{}% 12
 \BOOKMARK [1][-]{section.4.1}{ROS}{chapter.4}% 13
@@ -28,10 +28,10 @@
 \BOOKMARK [1][-]{section.5.2}{Znacajke i mogucnosti rje\235enja}{chapter.5}% 28
 \BOOKMARK [2][-]{subsection.5.2.1}{Kamere}{section.5.2}% 29
 \BOOKMARK [2][-]{subsection.5.2.2}{Laserski sken}{section.5.2}% 30
-\BOOKMARK [2][-]{subsection.5.2.3}{2D mapiranje}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.3}{2D kartiranje}{section.5.2}% 31
 \BOOKMARK [2][-]{subsection.5.2.4}{Upravljanje}{section.5.2}% 32
 \BOOKMARK [2][-]{subsection.5.2.5}{Prikaz s vi\235e robota}{section.5.2}% 33
-\BOOKMARK [2][-]{subsection.5.2.6}{3D mapiranje}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.6}{3D kartiranje}{section.5.2}% 34
 \BOOKMARK [2][-]{subsection.5.2.7}{RQT graf sustava}{section.5.2}% 35
 \BOOKMARK [0][-]{chapter.6}{Rezultati}{}% 36
 \BOOKMARK [1][-]{section.6.1}{Faza 1 \(Waffle Pi\)}{chapter.6}% 37

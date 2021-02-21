@@ -42,8 +42,8 @@ Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti, s obzirom
 
 Postoje i dva gumba gdje svaki vodi na jednu scenu gdje je implementirana neka znaèajka. Na svakoj od ovih scena se vrši spajanje na ROS i zapoèinje interakcija:
 \begin{enumerate}
-	\item Gumb koji vodi na scenu (dalje u tekstu scena 1) gdje je implementirana kontrola robota, pogled u prvom licu s kamere, 2D mapiranje i prikaz podataka laserskog skena.
-	\item Gumb koji vodi na scenu (dalje u tekstu scena 2) gdje se vrši 3D mapiranje prostora.
+	\item Gumb koji vodi na scenu (dalje u tekstu scena 1) gdje je implementirana kontrola robota, pogled u prvom licu s kamere, 2D kartiranje i prikaz podataka laserskog skena.
+	\item Gumb koji vodi na scenu (dalje u tekstu scena 2) gdje se vrši 3D kartiranje prostora.
 \end{enumerate}
 
 Sljedeæe æe se navesti svi elementi (objekti) u sceni 1 te èemu služe.
@@ -122,9 +122,9 @@ U poèetnoj fazi implementacije slike s kamere robota pokušano je postaviti sliku
 
 \qquad ROS teme laserskog skena šalju poruke formata \emph{sensor\_msgs/LaserScan} u kojem se nalazi više vrsta podataka, ali je u ovom sluèaju bitno float32 polje \emph{ranges}. Problem je što ovo polje zna sadržavati beskonaène brojeve te tada ROS\# izbacuje grešku i ne nastavlja s procesiranjem tog polja. Iz tog razloga bilo je potrebno napraviti ROS èvor koji æe èitati temu laserskog skena, \emph{/scan}, filtrirati podatke koji su beskonaèni te izdati novu ROS temu sa ispravljenim podacima. Dobiveni podaci se pomoæu ROS\# skripte \emph{Laser Scan Writer} i \emph{Laser Scan Visualizer} stvaraju kao sfere u 3D prostoru oko robota. 
 
-\subsection{2D mapiranje}
+\subsection{2D kartiranje}
 
-\qquad Pošto postoji mnoštvo SLAM metoda za 2D mapiranje, navesti æe se nekoliko njih koje su prikladne za Turtlebotove moguænosti:
+\qquad Pošto postoji mnoštvo SLAM metoda za 2D kartiranje, navesti æe se nekoliko njih koje su prikladne za Turtlebotove moguænosti:
 \begin{enumerate}
 	\item Cartographer	
 	\item Hector
@@ -134,7 +134,7 @@ U poèetnoj fazi implementacije slike s kamere robota pokušano je postaviti sliku
 
 Svi navedeni algoritmi koriste podatke 2D lidar senzora - laserski skener, kao glavni izvor podataka za izgradnju karata. Podatke laserskog skenera dobivaju pretplatom na ROS temu \emph{sensor\_msgs/LaserScan} koja sadrži polje podataka koje opisuje rezultirajuæi raspon u prostoru. Svaki element u polju oznaèava rezultat skeniranja u nekom smjeru, gdje inkrement smjera ovisi o specifikaciji senzora. Iz razloga što je najèešæe prisutan u edukacijske svrhe, u ovom æe se radu koristit \emph{gmapping} algoritam, koji svoju rezultirajuæu karti objaljuje na ROS temu \emph{/map}.
 
-2D mapiranje u Unityju se vrši na naèin da se uèitavaju podaci iz ROS teme \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina karte te int8 polje podataka u kojem se nalaze podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
+2D kartiranje u Unityju se vrši na naèin da se uèitavaju podaci iz ROS teme \emph{/map}. Ista šalje poruke tipa \emph{nav\_msgs/OccupancyGrid}. Najrelevantniji podaci ove teme su nam širina i dužina karte te int8 polje podataka u kojem se nalaze podaci vjerojatnosti u rasponu od 0 do 100 - vjerojatnost da je jedno skenirano polje zauzeto nekim objektom u prostoru. Kada se vjerojatnost ne može izraèunati, u polju podataka bude broj -1.
 Proces crtanja karte u Unityju je sljedeæi:
 \begin{enumerate}
 	\item Uèitava se dužina i širina karte.
@@ -144,7 +144,7 @@ Proces crtanja karte u Unityju je sljedeæi:
 	\item Unity funkcija \emph{Update()} koja se izvršava svako osvježavanje ekrana, provjerava navedenu zastavicu i izraðuje novu teksturu na temelju definiranog polja boja, dužine i širine karte. Nova se tekstura sprema na glavnu teksturu \emph{Renderer} komponente na \emph{Plane} objektu. 
 \end{enumerate}
 
-Korištena metoda mapiranja je \emph{SLAM gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je stvoritelj prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. karte. Karta se ažurira u intervalu od 4 sekunde.
+Korištena metoda kartiranja je \emph{SLAM gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je stvoritelj prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. karte. Karta se ažurira u intervalu od 4 sekunde.
 
 Ispunjavanje novog polja boja u petlji je vrlo loše optimiziran pristup. U aplikaciji se osjeæao trzaj u izvršavanju tijekom izrade karte, pa se kao rješenje na to izvršavanje funkcije koja sadrži petlju izvršava kao novi \emph{Task} koji u C\# oznaèuje asinkronu operaciju na novoj dretvi. Time se drastièno smanjio trzaj u aplikaciji.
 
@@ -188,9 +188,9 @@ Pri pokretanju i spajanju na simulaciju, prijašnje navedenim gumbom moguæe je mi
 
 \clearpage
 
-\subsection{3D mapiranje}
+\subsection{3D kartiranje}
 
-\qquad Pronašlo se dvije metode za 3D mapiranje koje su prikladne za manje budžetne robote i ROS:
+\qquad Pronašlo se dvije metode za 3D kartiranje koje su prikladne za manje budžetne robote i ROS:
 \begin{enumerate}
 	\item \textbf{Octomap} - Alat za izdradu potpunog 3D modela okoline koji implementira 3D mrežu zauzetosti. Karta se postepeno generira èitajuæi podatke s robotske kamere koja ima moguænost 3D percepcije (dubina prostora). \cite{octomap} Octomap koristi \emph{octree} stablastu strukturu podataka koja se koristi u svrhu prikazivanja 3D prostora, gdje svaki èvor sadrži toèno osam èvorova ispod sebe (opisani prostor se dijeli na osam dijelova). \cite{octree}
 	\item \textbf{RTAB-Map} - SLAM metoda koja provjerava koja je vjerojatnost da nova slika (podaci) dolaze iz prethodne lokacije ili neke nove lokacije. Pri prihvaæanju navedene hipoteze dodaje se novo ogranièenje u graf karte. Za izgraðivanje karte RTAB-Map koristi podatke formata \emph{Point Clouds} koje objavljuje kamera. \cite{rtabmap}
