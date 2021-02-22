@@ -29,45 +29,45 @@ Warning--I didn't find a database entry for "percgit"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 25 entries,
+You've used 26 entries,
             4087 wiz_defined-function locations,
-            937 strings with 10081 characters,
-and the built_in function-call counts, 9023 in all, are:
-= -- 717
-> -- 97
+            941 strings with 10134 characters,
+and the built_in function-call counts, 9382 in all, are:
+= -- 746
+> -- 101
 < -- 0
-+ -- 49
-- -- 24
-* -- 218
-:= -- 1737
-add.period$ -- 74
-call.type$ -- 25
-change.case$ -- 25
++ -- 51
+- -- 25
+* -- 226
+:= -- 1805
+add.period$ -- 77
+call.type$ -- 26
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 723
-empty$ -- 849
-format.name$ -- 24
-if$ -- 1943
+cite$ -- 26
+duplicate$ -- 752
+empty$ -- 883
+format.name$ -- 25
+if$ -- 2022
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 199
-newline$ -- 148
-num.names$ -- 24
-pop$ -- 600
+int.to.str$ -- 26
+missing$ -- 207
+newline$ -- 153
+num.names$ -- 25
+pop$ -- 624
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 695
+skip$ -- 723
 stack$ -- 0
-substring$ -- 50
-swap$ -- 397
+substring$ -- 52
+swap$ -- 413
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 25
+type$ -- 26
 warning$ -- 0
-while$ -- 24
-width$ -- 27
-write$ -- 271
+while$ -- 25
+width$ -- 28
+write$ -- 281
 (There was 1 error message)

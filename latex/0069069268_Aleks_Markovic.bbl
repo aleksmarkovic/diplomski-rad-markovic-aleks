@@ -63,6 +63,17 @@ Siemens. Ros\# gazebo simulacija. , s Interneta,
   {, 30. prosinca 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rosurl}
+\BIBentryALTinterwordspacing
+Ros službene stranice. , s Interneta,  \url{www.ros.org} {, 17. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{urdf}
+\BIBentryALTinterwordspacing
+ROS. Urdf. , s Interneta,  \url{http://wiki.ros.org/urdf} {, 31. sijeènja
+  2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{unityroboticshub}
 \BIBentryALTinterwordspacing
 U.~Technologies. Unity robotics hub. , s Interneta,
@@ -83,24 +94,6 @@ ROS.org. Upravljanje robotom. , s Interneta,
   motion commands} {, 29. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
-\bibitem{octomap}
-\BIBentryALTinterwordspacing
-ROS. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server} {,
-  07. sijeènja 2021.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{octree}
-\BIBentryALTinterwordspacing
-Wikipedia. Octree. , s Interneta,  \url{https://en.wikipedia.org/wiki/Octree}
-  {, 31. sijeènja 2021.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{rtabmap}
-\BIBentryALTinterwordspacing
-Introlab. Rtab-map. , s Interneta,  \url{http://introlab.github.io/rtabmap/} {,
-  31. sijeènja 2021.}
-\BIBentrySTDinterwordspacing
-
 \bibitem{inteljoule}
 \BIBentryALTinterwordspacing
 Intel. Intel® joule 570x. , s Interneta,
@@ -113,11 +106,6 @@ Intel. Intel® joule 570x. , s Interneta,
 ------. Intel® realsense camera r200 specifikacije. , s Interneta,
   \url{https://ark.intel.com/content/www/us/en/ark/products/92256/intel-realsense-camera-r200.html}
   {, 07. sijeènja 2021.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{rosurl}
-\BIBentryALTinterwordspacing
-Ros službene stranice. , s Interneta,  \url{www.ros.org} {, 17. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{unityassetstore}
@@ -142,6 +130,24 @@ Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
 \BIBentryALTinterwordspacing
 ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
   {, 03. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{octomap}
+\BIBentryALTinterwordspacing
+------. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server}
+  {, 07. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{octree}
+\BIBentryALTinterwordspacing
+Wikipedia. Octree. , s Interneta,  \url{https://en.wikipedia.org/wiki/Octree}
+  {, 22. veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rtabmap}
+\BIBentryALTinterwordspacing
+Introlab. Rtab-map. , s Interneta,  \url{http://introlab.github.io/rtabmap/} {,
+  31. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{webassembly}

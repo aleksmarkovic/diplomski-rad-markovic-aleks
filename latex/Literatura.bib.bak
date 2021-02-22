@@ -173,11 +173,18 @@
   note   = {{, 31. sijeènja 2021.}},
 }
 
+@Electronic{rtabmap,
+  author = {Introlab},
+  title  = {RTAB-Map},
+  url    = {http://introlab.github.io/rtabmap/},
+  note   = {{, 31. sijeènja 2021.}},
+}
+
 @Electronic{octree,
   author = {Wikipedia},
+  note   = {{, 31. sijeènja 2021.}},
   title  = {Octree},
   url    = {https://en.wikipedia.org/wiki/Octree},
-  note   = {{, 31. sijeènja 2021.}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
