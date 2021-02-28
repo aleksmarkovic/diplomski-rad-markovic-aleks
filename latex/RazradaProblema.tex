@@ -1,11 +1,11 @@
 % !TeX encoding = windows-1250
 \chapter{Opis problema}
 
-\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i kartiranje okoline koristeæi Unity razvojno okruženje. Jedna od bitnih stavki u navedenom zadatku jest komunikacija i razmjena podataka izmeðu ROSa i Unityja. U tu svrhu koristit æe se ROS\# knjižnica koja sadrži set alata za adaptaciju i interakciju ROSa s Unityjem.
+\qquad Cilj ovog rada je napraviti funkcionalnu aplikaciju za upravljanje robotom i kartiranje okoline koristeæi Unity razvojno okruženje. Jedna od bitnih stavki u navedenom zadatku jest komunikacija i razmjena podataka izmeðu ROSa i Unityja. Potrebno je pronaæi i testirati alat koji æe imati najbolje znaèajke za svrhu ovog rada. 
 
 \section{ROS\#}
 
-\qquad ROS\# je odabran iz razloga što on veæinski rješava problem komunikacije izmeðu ROSa i Unitya, no ne sasvim. Za kompleksnije stvari kao što je kartiranje, potrebno je proširiti moguænosti ROS\#a na naèin da se omoguæi intuitivno i efikasno èitanje ROS poruka. Takoðer treba rješiti problem kako iskoristiti i prikazati dobivene podatke u Unity ekosustavu. Velika prednost ROS\#a je što omoguæava ROS i Unity komunikaciju bez posebnih implementacijskih detalja, što znaèi da ga je dovoljno uvesti u Unity te upisati IP adresu gdje se ROS nalazi da bi se otvorila konekcija izmeðu ROSa i Unityja.
+\qquad ROS\# knjižnica sadrži set alata za adaptaciju i interakciju ROSa s Unityjem. Ista veæinski rješava problem komunikacije izmeðu ROSa i Unitya, no ne sasvim. Za kompleksnije stvari kao što je kartiranje, potrebno je proširiti moguænosti ROS\#a na naèin da se omoguæi intuitivno i efikasno èitanje ROS poruka. Takoðer treba rješiti problem kako iskoristiti i prikazati dobivene podatke u Unity ekosustavu. Velika prednost ROS\#a je što omoguæava ROS i Unity komunikaciju bez posebnih implementacijskih detalja, što znaèi da ga je dovoljno uvesti u Unity te upisati IP adresu gdje se ROS nalazi da bi se otvorila konekcija izmeðu ROSa i Unityja.
 
 Navedeni alat ima i moguænost uvoza URDF (eng. Unified Robot Description Format) modela robota u Unity i ujedno to je i jedini naèin za efikasno dobivanje modela robota u Unityju. URDF datoteka je pisana u XML formatu i opisuje model robota. \cite{urdf}
 

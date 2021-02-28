@@ -21,6 +21,9 @@ ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje prak
 ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. Takoðer ROS sadrži razne upravljaèke programe i algoritme, i sve je otvorenog koda - besplatno.\cite{rosurl}
 
 Nedavno je razvijen i novi ROS, ROS 2. Prva službena verzija izdana je krajem 2017. Iako je preporuèljivo koristiti tehnologije otporne na buduænost (future-proof), za ovaj rad odabran je ROS 1 iz razloga što neki od kritiènih alata za uspjeh rada nisu podržani na najnovijim verzijama ROSa 2. Unatoè tome što je ROS 2 više otporan na buduænost i noviji, ROS 1 se i dalje razvija te nova verzija izlazi svake godine. Neke od razlika izmeðu ROSa 1 i 2 navedene su u tablici \ref{tab:rosversions}.
+
+\clearpage
+
 \begin{table}[!htbp]
 	\scriptsize
 	\renewcommand{\arraystretch}{1.2}
@@ -44,7 +47,11 @@ Nedavno je razvijen i novi ROS, ROS 2. Prva službena verzija izdana je krajem 20
 	\label{tab:rosversions}
 \end{table}
 
-Za programiranje novih ROS èvorova koristio se Python programski jezik.
+Glavni naèin komunikacije kroz ROS vrši se putem ROS tema (eng. topic) \cite{rostopic}. ROS teme su \emph{"kanali"} putem kojih ROS èvorovi (eng. nodes) izmijenjuju podatke. ROS èvor je proces koji odraðuje odreðeni zadatak \cite{rosnode}. Èvor objavljuje podatke na odreðenu temu a drugi se èvor pretplaæuje na istu temu da bi dobivao objavljene podatke te jedna tema može imati više èvorova koji su pretplaæeni ili objavljuju na nju. Svaka ROS tema ima odreðeni tip podataka i može primati i slati podatke samo tog formata - ROS poruka. ROS poruka je jednostavni oblik strukture podataka s odreðenim tipovima varijabla (primitivni tipovi, polja primitivnih tipova i ugnježðeni tipovi podataka) \cite{rosmessage}.
+
+\emph{roslaunch} je ROS alat koji omoguæuje pokretanje više ROS èvorova odjednom iz \emph{.launch} datoteka XML formata \cite{roslaunch}. U njemu se mogu definirate sve potrebne stvari potrebne za pokretanje simulacije, npr. pokretanje i uèitavanje simuliranog okruženja, pokretanje potrebnih èvorova te definiranje potrebnih argumenata. \emph{roslaunch} automatski pokreæe i \emph{roscore} - ROS znaèajka koja služi kao jezgra svih ROS èvorova koja mora postojati da bi ROS èvorovi mogli komunicirati. \cite{roscore}
+
+Za programiranje novih ROS èvorova podržani su Python i C++ programski jezici.
 
 \clearpage
 
@@ -125,3 +132,16 @@ ROS\# je bio primarno razvijen za Windows operacijski sustav, ali se uspješno mo
 
 \qquad RosBridgeClient za spajanje .NET baziranih aplikacija na ROS koristi \emph{rosbridge\_suite}. \emph{rosbridge\_suite} pruža ROSu API funkcionalnost za programe koji su izvan ROS sustava. Isti koristi naredbe bazirane na JSON formatu. Transportni sloj je implementiran u \emph{rosbridge\_server} paketu koji pruža WebSocket poveznicu. \cite{rosbridgesuite} WebSocket je konstantna poveznica izmeðu klijenta i servera gdje se promet odvija u oba smjera te koristi TCP/IP protokol.
 
+\section{Gazebo}
+
+\qquad Gazebo je alat za 3D simulaciju robota i njegovog okruženja kojega se æe se u radu koristiti za pokretanje Turtlebot simulacije (slika \ref{fig:gazebo}). Neke od bitnijih znaèajki ovog alata su: realistièna fizika u simulaciji, napredna 3D grafika i efekti, stvaranje senzornih podataka, prikaz robotskih modela i slièno.  \cite{gazebosim}
+
+Gazebo simulaciju æe se pokretati \emph{roslaunch} naredbom nad datotekom ekstenzije \emph{.launch} koja sadrži potrebne parametre simulacije, od kojih je za Gazebo bitna lokacija \emph{.world} datoteke. \emph{World} datoteka opisuje model svijeta tj. okoline koja æe se simulirati. \cite{gazeboroslaunch}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=12cm,width=14cm,keepaspectratio=true]{gazebo}
+		\caption{Gazebo}
+		\label{fig:gazebo}
+	\end{center}
+\end{figure}

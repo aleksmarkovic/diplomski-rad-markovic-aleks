@@ -1,7 +1,7 @@
 % !TeX encoding = windows-1250
 \chapter{Opis rješenja}
 
-\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente i glavni dijelovi sustava.
+\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Zahtjevi aplikacije bili su omoguæiti upravljanje robotom i kartiranje okoline koristeæi Unitz Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente i glavni dijelovi sustava.
 
 Preduvjet koji treba biti ispunjen prije pokretanja sustava jest imati model robota u Unityju da prikaz i osjeæaj pri upravljanju budu kao u simulaciji. Jednom kad Unity sadrži funkcionalnu ROS\# knjižnicu, dobiva se pristup alatu za uvoženje URDF modela robota, što je ujedno i prvi korak u izradu konkretne aplikacije. Potrebno je uvesti model korištenog robota što ukljuèuje i njegove fizièke i motorièke karakteristike kako bi se ga moglo ispravno prikazati u Unityju te upravljati istim. U tu svrhu potrebno je pokrenuti \emph{publish\_description\_turtlebot.launch} datoteku koja je detaljnije opisana u Dodatku A ovog rada. Prije samog pokretanja ove \emph{launch} datoteke potrebno je navesti u kojem æe se ROS paketu i gdje unutar paketa pronaæi i uèitati URDF model željenog robota. Pokretanjem \emph{launch} datoteke uèitava se URDF model robota te se kroz \emph{file\_server} alat objavljuje kao ROS èvor kojega ROS\# URDF alat može proèitati i uvesti u Unity. 
 
@@ -9,7 +9,7 @@ Prvi korak sustava jest pokretanje Gazebo simulacije u ROSu gdje se simulira rob
  
 Drugi korak jest Unity odnosno Editor i njegove samostalne te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navedeni robotski sustav.
 
-ROS\# paket, odnosno most koji spaja ROS i Unity pomoæu RosBridgeClienta otvara vezu izmeðu prethodno navedena dva koraka, a koji funkcionira na temelju pretplate i izdavanja poruka na ROS teme (eng. topic). Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
+ROS\# paket, odnosno most koji spaja ROS i Unity pomoæu RosBridgeClienta otvara vezu izmeðu prethodno navedena dva koraka, a koji funkcionira na temelju pretplate i izdavanja poruka na ROS teme. Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
 
 Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
 \begin{enumerate}

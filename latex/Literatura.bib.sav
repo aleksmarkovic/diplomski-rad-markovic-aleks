@@ -187,11 +187,60 @@
   note   = {{, 31. sijeènja 2021.}},
 }
 
+@Electronic{gazebosim,
+  author = {Gazebo},
+  title  = {Gazebo},
+  url    = {http://gazebosim.org/},
+  note   = {{, 22. veljaèe 2021.}},
+}
+
+@Electronic{gazeboroslaunch,
+  author = {Gazebo},
+  title  = {Gazebo roslaunch},
+  url    = {http://gazebosim.org/tutorials?tut=ros_roslaunch},
+  note   = {{, 28. veljaèe 2021.}},
+}
+
 @Electronic{octree,
   author = {Wikipedia},
+  note   = {{, 28. veljaèe 2021.}},
   title  = {Octree},
   url    = {https://en.wikipedia.org/wiki/Octree},
-  note   = {{, 22. veljaèe 2021.}},
+}
+
+@Electronic{rosnode,
+  author = {ROS},
+  title  = {ROS èvorovi},
+  url    = {http://wiki.ros.org/Nodes},
+  note   = {{, 28. veljaèe 2021.}},
+}
+
+@Electronic{rostopic,
+  author = {ROS},
+  note   = {{, 28. veljaèe 2021.}},
+  title  = {ROS teme},
+  url    = {http://wiki.ros.org/Topics},
+}
+
+@Electronic{roscore,
+  author = {ROS},
+  title  = {ROS jezgra},
+  url    = {http://wiki.ros.org/roscore},
+  note   = {{, 28. veljaèe 2021.}},
+}
+
+@Electronic{rosmessage,
+  author = {ROS},
+  note   = {{, 28. veljaèe 2021.}},
+  title  = {ROS poruke},
+  url    = {http://wiki.ros.org/Messages},
+}
+
+@Electronic{roslaunch,
+  author = {ROS},
+  title  = {roslaunch},
+  url    = {http://wiki.ros.org/roslaunch},
+  note   = {{, 28. veljaèe 2021.}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}

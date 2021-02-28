@@ -10,28 +10,29 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi kamera modul v2 \cite {rpi}\relax }}{12}{figure.caption.9}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Unity Editor\relax }}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Gazebo\relax }}{23}{figure.caption.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{24}{figure.caption.12}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Model robota u Unity-ju\relax }}{28}{figure.caption.13}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{34}{figure.caption.14}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces RQT graf sustava\relax }}{37}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Dijagram sustava \cite {rossharpgazebosim}\relax }}{25}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Model robota u Unity-ju\relax }}{29}{figure.caption.14}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Primjer ROS tema s vi\v se robota\relax }}{35}{figure.caption.15}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces RQT graf sustava\relax }}{38}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Aplikacija u Unity Editoru\relax }}{39}{figure.caption.16}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Windows aplikacija - 2D karta, robot i laserski sken\relax }}{40}{figure.caption.18}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Windows aplikacija - prikaz iz kamere\relax }}{41}{figure.caption.19}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Mobilna aplikacija - prikaz s kamere\relax }}{42}{figure.caption.20}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Mobilna aplikacija - 2D karta, robot i laserski sken\relax }}{43}{figure.caption.21}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Mobilna aplikacija - okomita orijentacija ure\IeC {\dj }aja\relax }}{44}{figure.caption.22}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Linux aplikacija - simulacija s dva robota\relax }}{45}{figure.caption.23}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Koraci kartiranja\relax }}{47}{figure.caption.25}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{47}{subfigure.8.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{47}{subfigure.8.2}%
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{47}{subfigure.8.3}%
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{47}{subfigure.8.4}%
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{47}{subfigure.8.5}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Unity Editor - 3D karta\relax }}{48}{figure.caption.26}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Unity Editor - 3D karta (nastavak)\relax }}{49}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Aplikacija u Unity Editoru\relax }}{40}{figure.caption.17}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Windows aplikacija - 2D karta, robot i laserski sken\relax }}{41}{figure.caption.19}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Windows aplikacija - prikaz iz kamere\relax }}{42}{figure.caption.20}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Mobilna aplikacija - prikaz s kamere\relax }}{43}{figure.caption.21}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Mobilna aplikacija - 2D karta, robot i laserski sken\relax }}{44}{figure.caption.22}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Mobilna aplikacija - okomita orijentacija ure\IeC {\dj }aja\relax }}{45}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Linux aplikacija - simulacija s dva robota\relax }}{46}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Koraci kartiranja\relax }}{48}{figure.caption.26}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{48}{subfigure.8.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{48}{subfigure.8.2}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {}}}{48}{subfigure.8.3}%
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {}}}{48}{subfigure.8.4}%
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {}}}{48}{subfigure.8.5}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Unity Editor - 3D karta\relax }}{49}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Unity Editor - 3D karta (nastavak)\relax }}{50}{figure.caption.28}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{62}{figure.caption.31}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{62}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Launch datoteka za URDF uvoz\relax }}{64}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces URDF uvoz\relax }}{64}{figure.caption.33}%

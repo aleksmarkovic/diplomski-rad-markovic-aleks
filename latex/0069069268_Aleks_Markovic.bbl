@@ -108,6 +108,36 @@ Intel. Intel® joule 570x. , s Interneta,
   {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rostopic}
+\BIBentryALTinterwordspacing
+ROS. Ros teme. , s Interneta,  \url{http://wiki.ros.org/Topics} {, 28. veljaèe
+  2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rosnode}
+\BIBentryALTinterwordspacing
+------. Ros èvorovi. , s Interneta,  \url{http://wiki.ros.org/Nodes} {, 28.
+  veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rosmessage}
+\BIBentryALTinterwordspacing
+------. Ros poruke. , s Interneta,  \url{http://wiki.ros.org/Messages} {, 28.
+  veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{roslaunch}
+\BIBentryALTinterwordspacing
+------. roslaunch. , s Interneta,  \url{http://wiki.ros.org/roslaunch} {, 28.
+  veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{roscore}
+\BIBentryALTinterwordspacing
+------. Ros jezgra. , s Interneta,  \url{http://wiki.ros.org/roscore} {, 28.
+  veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{unityassetstore}
 \BIBentryALTinterwordspacing
 U.~Technologies. Unity asset store. , s Interneta,
@@ -132,16 +162,28 @@ ROS. Rosbridgesuite. , s Interneta,  \url{http://wiki.ros.org/rosbridge_suite}
   {, 03. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{gazebosim}
+\BIBentryALTinterwordspacing
+Gazebo. Gazebo. , s Interneta,  \url{http://gazebosim.org/} {, 22. veljaèe
+  2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{gazeboroslaunch}
+\BIBentryALTinterwordspacing
+------. Gazebo roslaunch. , s Interneta,
+  \url{http://gazebosim.org/tutorials?tut=ros_roslaunch} {, 28. veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{octomap}
 \BIBentryALTinterwordspacing
-------. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server}
-  {, 07. sijeènja 2021.}
+ROS. Octomap alat. , s Interneta,  \url{http://wiki.ros.org/octomap_server} {,
+  07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{octree}
 \BIBentryALTinterwordspacing
 Wikipedia. Octree. , s Interneta,  \url{https://en.wikipedia.org/wiki/Octree}
-  {, 22. veljaèe 2021.}
+  {, 28. veljaèe 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rtabmap}
