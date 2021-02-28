@@ -5,27 +5,6 @@
 
 Preduvjet koji treba biti ispunjen prije pokretanja sustava jest imati model robota u Unityju da prikaz i osjeæaj pri upravljanju budu kao u simulaciji. Jednom kad Unity sadrži funkcionalnu ROS\# knjižnicu, dobiva se pristup alatu za uvoženje URDF modela robota, što je ujedno i prvi korak u izradu konkretne aplikacije. Potrebno je uvesti model korištenog robota što ukljuèuje i njegove fizièke i motorièke karakteristike kako bi se ga moglo ispravno prikazati u Unityju te upravljati istim. U tu svrhu potrebno je pokrenuti \emph{publish\_description\_turtlebot.launch} datoteku koja je detaljnije opisana u Dodatku A ovog rada. Prije samog pokretanja ove \emph{launch} datoteke potrebno je navesti u kojem æe se ROS paketu i gdje unutar paketa pronaæi i uèitati URDF model željenog robota. Pokretanjem \emph{launch} datoteke uèitava se URDF model robota te se kroz \emph{file\_server} alat objavljuje kao ROS èvor kojega ROS\# URDF alat može proèitati i uvesti u Unity. 
 
-Prvi korak sustava jest pokretanje Gazebo simulacije u ROSu gdje se simulira robota i njegovo okruženje. Alternativa u pravom svijetu bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
- 
-Drugi korak jest Unity odnosno Editor i njegove samostalne te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navedeni robotski sustav.
-
-ROS\# paket, odnosno most koji spaja ROS i Unity pomoæu RosBridgeClienta otvara vezu izmeðu prethodno navedena dva koraka, a koji funkcionira na temelju pretplate i izdavanja poruka na ROS teme. Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
-
-Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
-\begin{enumerate}
-	\item Unity se pretplaæuje na ROS teme - povratne informacije, npr. odometrija, slika kamere, laserski sken.
-	\item Unity izdaje nove poruke na ROS teme - kontrolne poruke, npr. upravljanje robotom.	
-\end{enumerate}
-
-\begin{figure}[!htbp]
-	\begin{center}
-		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{diagram}
-		\caption{Dijagram sustava \cite{rossharpgazebosim}}
-		\label{fig:maindiagram}
-	\end{center}
-\end{figure}
-\clearpage
-
 Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti, s obzirom da postoje dva sustava, odnosno ROS 1 i ROS 2 sustav.  ROS 1 sustav se i dalje razvija te se kontinuirano svake godine izraðuju nove verzije istog, dok ROS 2 sustav polako zamjenjuje ROS 1 sustav zbog novijih tehnologija i bogatijih znaèajka. Zakljuèno je ipak bolje trenutno odabrati ROS 1. Najveæi razlog za tu odluku stoji u tome što ROS\# paket trenutno službeno podržava samo ROS 1 sustav. Moguæe je ROS\# koristiti i sa ROS 2 sustavom, no potrebne su mnoge adaptacije koje nisu dokumentirane od strane službenih programera ROS\#a pa je i vjerojatnost nailaženja na probleme i greške visoka. Sukladno navedenom koristit æe se ROS 1 sustav.
 \clearpage
 
@@ -228,3 +207,26 @@ U grafu je vidljivo da sve ROS teme s povratnim informacijama idu u \emph{/ros\_
 	\end{center}
 \end{figure}
 
+
+\section{Koraci pri korištenju}
+
+\qquad Prvi korak sustava jest pokretanje Gazebo simulacije u ROSu gdje se simulira robota i njegovo okruženje. Alternativa u pravom svijetu bi bila ista osim što ne bismo trebali pokretati Gazebo veæ pravog robota na kojemu se takoðer izvršava ROS.
+
+Drugi korak jest Unity odnosno Unity Editor i njegove samostalne te mobilne aplikacije koje su implementirane i adaptirane sa istom svrhom i moguænostima. Što znaèi da se može bilo koja aplikacija pokrenuti i spojiti na navedeni robotski sustav.
+
+ROS\# paket, odnosno most koji spaja ROS i Unity pomoæu RosBridgeClienta otvara vezu izmeðu prethodno navedena dva koraka, a koji funkcionira na temelju pretplate i izdavanja poruka na ROS teme. Jednom kad se veza otvorila, Unity se može pretplaæivati na ROS teme i izdavati nove poruke na ROS teme.
+
+Na slici \ref{fig:maindiagram} prikazan je glavni princip prethodno navedenih moguænosti:
+\begin{enumerate}
+	\item Unity se pretplaæuje na ROS teme - povratne informacije, npr. odometrija, slika kamere, laserski sken.
+	\item Unity izdaje nove poruke na ROS teme - kontrolne poruke, npr. upravljanje robotom.	
+\end{enumerate}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[height=10cm,width=10cm,keepaspectratio=true]{diagram}
+		\caption{Dijagram sustava \cite{rossharpgazebosim}}
+		\label{fig:maindiagram}
+	\end{center}
+\end{figure}
+\clearpage

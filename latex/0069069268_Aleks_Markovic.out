@@ -34,20 +34,21 @@
 \BOOKMARK [2][-]{subsection.5.2.5}{Prikaz s vi\235e robota}{section.5.2}% 34
 \BOOKMARK [2][-]{subsection.5.2.6}{3D kartiranje}{section.5.2}% 35
 \BOOKMARK [2][-]{subsection.5.2.7}{RQT graf sustava}{section.5.2}% 36
-\BOOKMARK [0][-]{chapter.6}{Rezultati}{}% 37
-\BOOKMARK [1][-]{section.6.1}{Faza 1 \(Waffle Pi\)}{chapter.6}% 38
-\BOOKMARK [2][-]{subsection.6.1.1}{Linux i Windows}{section.6.1}% 39
-\BOOKMARK [2][-]{subsection.6.1.2}{Android}{section.6.1}% 40
-\BOOKMARK [2][-]{subsection.6.1.3}{Vi\235e robotski prikaz}{section.6.1}% 41
-\BOOKMARK [2][-]{subsection.6.1.4}{Problemi i pote\235koce}{section.6.1}% 42
-\BOOKMARK [1][-]{section.6.2}{Faza 2 \(Waffle\)}{chapter.6}% 43
-\BOOKMARK [2][-]{subsection.6.2.1}{Problemi i pote\235koce}{section.6.2}% 44
-\BOOKMARK [0][-]{chapter.7}{Zakljucak}{}% 45
-\BOOKMARK [0][-]{chapter*.30}{Bibliografija}{}% 46
-\BOOKMARK [0][-]{chapter*.30}{Sa\236etak}{}% 47
-\BOOKMARK [0][-]{appendix.A}{Konfiguracija radne okoline}{}% 48
-\BOOKMARK [1][-]{section.A.1}{Dodatni koraci}{appendix.A}% 49
-\BOOKMARK [2][-]{subsection.A.1.1}{Uvoz URDF modela u Unity}{section.A.1}% 50
-\BOOKMARK [2][-]{subsection.A.1.2}{Dodatno}{section.A.1}% 51
-\BOOKMARK [1][-]{section.A.2}{Glavna launch datoteka}{appendix.A}% 52
-\BOOKMARK [1][-]{section.A.3}{Ostalo}{appendix.A}% 53
+\BOOKMARK [1][-]{section.5.3}{Koraci pri kori\235tenju}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Rezultati}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Faza 1 \(Waffle Pi\)}{chapter.6}% 39
+\BOOKMARK [2][-]{subsection.6.1.1}{Linux i Windows}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.2}{Android}{section.6.1}% 41
+\BOOKMARK [2][-]{subsection.6.1.3}{Vi\235e robotski prikaz}{section.6.1}% 42
+\BOOKMARK [2][-]{subsection.6.1.4}{Problemi i pote\235koce}{section.6.1}% 43
+\BOOKMARK [1][-]{section.6.2}{Faza 2 \(Waffle\)}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.2.1}{Problemi i pote\235koce}{section.6.2}% 45
+\BOOKMARK [0][-]{chapter.7}{Zakljucak}{}% 46
+\BOOKMARK [0][-]{chapter*.30}{Bibliografija}{}% 47
+\BOOKMARK [0][-]{chapter*.30}{Sa\236etak}{}% 48
+\BOOKMARK [0][-]{appendix.A}{Konfiguracija radne okoline}{}% 49
+\BOOKMARK [1][-]{section.A.1}{Dodatni koraci}{appendix.A}% 50
+\BOOKMARK [2][-]{subsection.A.1.1}{Uvoz URDF modela u Unity}{section.A.1}% 51
+\BOOKMARK [2][-]{subsection.A.1.2}{Dodatno}{section.A.1}% 52
+\BOOKMARK [1][-]{section.A.2}{Glavna launch datoteka}{appendix.A}% 53
+\BOOKMARK [1][-]{section.A.3}{Ostalo}{appendix.A}% 54
