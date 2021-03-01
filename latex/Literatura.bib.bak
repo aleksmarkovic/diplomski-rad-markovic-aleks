@@ -236,4 +236,11 @@
   url    = {http://wiki.ros.org/Messages},
 }
 
+@Electronic{roslaunch,
+  author = {ROS},
+  title  = {roslaunch},
+  url    = {http://wiki.ros.org/roslaunch},
+  note   = {{, 28. veljaèe 2021.}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}

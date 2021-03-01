@@ -63,6 +63,12 @@ Siemens. Ros\# gazebo simulacija. , s Interneta,
   {, 30. prosinca 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{unity}
+\BIBentryALTinterwordspacing
+U.~Technologies. Unity razvojno okruženje. , s Interneta,
+  \url{https://unity.com/products/unity-platform} {, 01. ožujka 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{rosurl}
 \BIBentryALTinterwordspacing
 Ros službene stranice. , s Interneta,  \url{www.ros.org} {, 17. rujna 2020.}
