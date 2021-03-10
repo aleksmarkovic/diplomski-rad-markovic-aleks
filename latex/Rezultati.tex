@@ -1,9 +1,9 @@
 % !TeX encoding = windows-1250
 \chapter{Rezultati}
 
-\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D kartiranje. Faza 2 je iskljuèivo 3D kartiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što je stvaranje i prikaz 3D karte resursno zahtjevnije, ali ovom podijelom je i sam prikaz uredniji.
+\qquad Implementacija se može podijeliti u 2 dijela, faza 1 i faza 2. Faza 1 podrazumijeva upravljanje Turtlebot Waffle Pi robotom, prikaz s kamera, prikaz podataka laserskog skena i 2D kartiranje. Faza 2 je iskljuèivo 3D kartiranje, uz upravljanje Turtlebot Waffle robota. Ona je zasebno implementirana u drugoj sceni iz razloga što su stvaranje i prikaz 3D karte resursno zahtjevniji, ali ovom podjelom je i sam prikaz uredniji.
 
-Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravilo se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editoru.
+Uspješno su implementirane znaèajke iz ove faze za sve željene platforme (Windows, Linux i Android). Razvijanje sveukupnog sustava vršilo se na Linux Ubuntu operacijskom sustavu, a za ostale platforme napravile su se samo potrebne promjene, izgraðivanje i testiranje aplikacije. Na slici \ref{fig:winunity} prikazana je aplikacija u Unity Editoru.
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -19,7 +19,7 @@ Unity podržava  i WebGL,  ali pokušaj izrade aplikacije za tu platformu bio je n
 
 \subsection{Linux i Windows}
 
-\qquad Linux i Windows desktop aplikacije su po izgledu iste, ali se razlikuju u performansama. Windows se pokazao najlošiji u izvedbi aplikacije, unatoè puno superiornijim hardverom. Linux Ubuntu u drugu ruku, unatoè što se na njemu izvršavala i simulacija, performanse nisu padale. U tablici \ref{tab:pchardver} vidljive su razlike u hardveru, gdje su Windows komponente, komponente stolnog raèunala pa su puno moænije te rade na višoj frekvenciji.
+\qquad Linux i Windows desktop aplikacije su po izgledu iste, ali se razlikuju u performansama. Windows se pokazao najlošiji u izvedbi aplikacije, unatoè superiornijim hardverom. Linux Ubuntu u drugu ruku, iako se na njemu izvršavala i simulacija, performanse nisu padale. U tablici \ref{tab:pchardver} vidljive su razlike u hardveru, gdje su Windows komponente, komponente stolnog raèunala, pa su puno moænije te rade na višoj frekvenciji.
 
 \begin{table}[!htbp]
 	\scriptsize
@@ -39,7 +39,7 @@ Unity podržava  i WebGL,  ali pokušaj izrade aplikacije za tu platformu bio je n
 	\label{tab:pchardver}
 \end{table}
 
-Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje obojane sfere prikazuju podatke laserskog skena kojima je intenzitet boje sve jaèi što je robot bliže predmetu u prostoru, dok je podloga ispod robota i sfera generirana karta. Slika \ref{fig:win2} prikazuje pogled iz kamere robota - u ovom naèinu rada aplikacija bude najfluidnija zbog konstantnog dotoka informacija (slike) koja zahtjeva minimalno dodatno procesiranje od strane aplikacije. Rezolucija slike koju ROS objavljuje iznosi 640 x 480 piksela.
+Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje obojane sfere prikazuju podatke laserskog skena kojima je intenzitet boje sve jaèi što je robot bliže predmetu u prostoru, dok je podloga ispod robota i sfera generirana karta. Slika \ref{fig:win2} prikazuje pogled iz kamere robota - u ovom naèinu rada aplikacija bude najfluidnija zbog konstantnog dotoka informacija (slike) koja zahtijeva minimalno dodatno procesiranje od strane aplikacije. Rezolucija slike koju ROS objavljuje iznosi 640 x 480 piksela.
 
 
 \begin{figure}[!htbp]
@@ -62,9 +62,9 @@ Na slici \ref{fig:laserscan} prikazan je pogled iznad objekata u sceni gdje oboj
 
 \subsection{Android}
 
-\qquad Android verzija aplikacije zahtjevala je dodatnu adaptaciju da bi uspješno funkcionirala. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtjevalo je novu vrstu upravljanja - tu se kao rješenje prikazala metoda upravljanja gumbovima. S obzirom da spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se naprave gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je to što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže s 4GB RAMa, Mali-G71 grafièkim procesorom i procesorom od 8 jezgri, 2 na 2.2GHz a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, stoga su dobro optimizirati proces izrade i izdavanja svojih produkata na mobilnim platformama.
+\qquad Android verzija aplikacije zahtijevala je dodatnu adaptaciju da bi uspješno funkcionirala. Preplate na ROS teme su radile bez dodatnih modifikacija, no upravljanje robotom tj. slanje poruka na ROS teme zahtijevalo je novu vrstu upravljanja - tu se kao rješenje prikazala metoda upravljanja gumbovima. S obzirom da spajanje tipkovnice na pametni telefon nije najbolje rješenje, donesena je odluka da se naprave gumbovi za upravljanje na samom grafièkom suèelju aplikacije. Još jedno moguæe rješenje bilo bi koristiti senzore mobilnog telefona tj. brzinomjer i žiroskop. Vrlo zanimljiva stvar kod Android verzije je to što radi bolje od Windows verzije, unatoè limitiranom hardveru. Aplikacija je testirana na Samsung Galaxy A8 ureðaju koji raspolaže s 4GB RAMa, Mali-G71 grafièkim procesorom i procesorom od 8 jezgri, 2 na 2.2GHz, a ostale na 1.6Ghz, što je neusporedivo s dva navedena raèunala. Razlog u dobrim performansima na mobilnom ureðaju leži u tome što se Unity jako usredotoèuje na razvoj mobilnih igara, stoga su dobro optimizirali proces izrade i izdavanja svojih produkata na mobilnim platformama.
 
-Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se vidi iste znaèajke kao kod raèunalnih verzija. 
+Na slikama \ref{fig:a2} i \ref{fig:a3} prikazane su snimke zaslona s mobilnog ureðaja, gdje se uoèavaju iste znaèajke kao kod raèunalnih verzija. 
 
 \begin{figure}[!htbp]
 	\begin{center}
@@ -111,12 +111,12 @@ Na slici \ref{fig:a1} prikazana je ista scena samo u okomitom radu mobilnog ureð
 
 \qquad Tokom cijelog razvijanja faze 1 sustava bilo je više problema i poteškoæa, od raznih inkompatibilnosti pa do ne funkcioniranja odreðenih elemenata, ali najbitnija bi bila dva problema u krajnjem rezultatu: performanse i pozicioniranje karte u Unityju.
 
-Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što je kroz godine podrška za Linux verziju Unityja postala dobra te napravljena je stabilna verzija, teško je ne primjetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linuxu više nije mogao pokrenuti, dok isti projekt u Windowsu je radio bez grešaka.
+Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unatoè tome što je kroz godine podrška za Linux verziju Unityja postala dobra te je napravljena stabilna verzija, teško je ne primijetiti poneke manjkavosti. Jedna od tih je sluèaj da u procesu implementiranja rješenja, projekt se u Linuxu više nije mogao pokrenuti, dok isti projekt u Windowsu je radio bez grešaka.
 
 \begin{enumerate}
 	\item \textbf{Performanse}
 	
-	Kako se veæ napomenulo, performanse u Windows operacijskom sustavu su najlošije, dok su u ostala dva operacijska sustava solidne, no nisu savršene. Analiza broja ažuriranja slike u sekundi (FPSova - Frames Per Second), upuæuje da nije problem u tome (tablica \ref{tab:fpscompare}). Moguæi problem bi bio u tome kako pojedina aplikacija procesira dobivene podatke zbog pretplaæivanja na ROS teme koje stalno šalju nove poruke, no procesiranje tih poruka vrši ROS\# i njegove skripte.
+	Kako se veæ napomenulo, performanse u Windows operacijskom sustavu su najlošije, dok su u ostala dva operacijska sustava solidne, no nisu savršene. Analiza broja ažuriranja slike u sekundi (FPS) upuæuje da nije problem u tome (tablica \ref{tab:fpscompare}). Moguæi problem bi bio u tome kako pojedina aplikacija procesira dobivene podatke zbog pretplaæivanja na ROS teme koje stalno šalju nove poruke, no procesiranje tih poruka vrši ROS\# i njegove skripte.
 	
 	\begin{table}[!htbp]
 		\scriptsize
@@ -138,7 +138,7 @@ Jedan od ostalih problema bio bi Unity Editor u Linux operacijskom sustavu. Unat
 	
 	Pozicioniranje karte u Unityju podrazumijeva na koji se naèin slika karte nacrta na \emph{Plane} objekt, gdje se je relativno ogranièeno zbog naèina èitanja \emph{nav\_msgs/OccupancyGrid} podataka te slijedno tome crtanju teksture gdje je vrlo teško napraviti precizan pomak.
 	
-	Karta se generira sukladno SLAM gmappingu pa je ona veæinom toèna. No kad se pozicija karte poremeti, daljnjim skeniranjem (šetanjem) prostora ona se u veæini sluèajeva vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer, testiranjem se utvrdilo da je pozicija robota toèna u Unity prostoru.	
+	Karta se generira sukladno SLAM gmappingu pa je ona veæinom toèna. No, kad se pozicija karte poremeti, daljnjim skeniranjem (šetanjem) prostora ona se u veæini sluèajeva vrati u normalnijim okvirima (ilustracija \ref{fig:mappingsteps}). Takoðer, testiranjem se utvrdilo da je pozicija robota toèna u Unity prostoru.	
 	
 	\begin{figure}
 		\centering	
@@ -183,16 +183,16 @@ Cilj ove faze bila je izrada 3D karte. Na slikama \ref{fig:3d1} i \ref{fig:3d2} 
 
 \begin{enumerate}
 	\item Sluèaj 1 - Generiranje objekata sukladno dobivenim podacima. U ovom se sluèaju svakim dobivenim skupom podataka generirao novi skup objekata koji su saèinjavali 3D kartu. Navedeni pristup nije bio optimiziran te se svakim pokretanjem funkcije za generiranje karte stvorio novi skup objekata koji je sadržavao nove toèke i toèke prijašnje poruke. To je u kratkom broju ažuriranja zablokiralo aplikaciju zbog masovnog broja objekata u sceni i velikog skupa podataka kroz koje se trebalo iterirati.
-	\item Sluèaj 2 - Jedna moguænost bila je napraviti collider. Collider u Unityju omoguæuje fizièka svojstva objekta tj. njegovo sudaranje s drugim objektom. Ideja je bila detektirati sudar dvaju objekata ako se nalaze na istoj toèki u 3D prostoru i jednog od njih uništiti. Problem ovog rješenja jest taj što je uništavanje u Unityju skupa operacija, pogotovo ako je u pitanju puno objekata.
+	\item Sluèaj 2 - Jedna moguænost bila je napraviti \emph{collider}. \emph{Collider} u Unityju omoguæuje fizièka svojstva objekta tj. njegovo sudaranje s drugim objektom. Ideja je bila detektirati sudar dvaju objekata ako se nalaze na istoj toèki u 3D prostoru i jednog od njih uništiti. Problem ovog rješenja jest taj što je uništavanje u Unityju skupa operacija, pogotovo ako je u pitanju puno objekata.
 	\item Sluèaj 3 - Generiranje nove 3D karte svakim novim skupom podataka. Ovaj pristup imao je bolje performanse od prijašnjih jer se prijašnja karta brisala pozivanjem funkcije za uništavanje objekata samo jednom na objektu koji je sadržavao sve toèke (objekt roditelj), ali je svako ponovno generiranje bilo loše vizualno rješenje (nestajanje nekoliko tisuæa objekata odjednom pa generiranje novih nekoliko tisuæa objekata). Osim toga, kada bi 3D karta sadržavala puno toèaka, dogodilo bi se znaèajno zamrzavanje aplikacije u trenutku ponovnog generiranja.
 	\item Sluèaj 4 - Generiranje karte u novoj dretvi. Ova je ideja nemoguæa zbog Unityja iz razloga što isti ne dopušta generiranje ni rad s objektima u zasebnoj dretvi, veæ samo u glavnoj.
-	\item Sluèaj 5 - Zadnja ideja pred rješenjem implementirala je spremanje generiranih objekata u listu gdje bi se u sljedeæem ažuriranju karte usporeðivalo novodobivene podatke s listom te bi se podudarnosti ignorirale a nove toèke iskoristilo za generiranje novih objekata i dodavanje istih u istu listu. Ideja je dobra, no kako lista raste, provjeravanje postaje vrlo skupa operacija.
+	\item Sluèaj 5 - Zadnja ideja pred rješenjem implementirala je spremanje generiranih objekata u listu gdje bi se u sljedeæem ažuriranju karte usporeðivalo novodobivene podatke s listom te bi se podudarnosti ignorirale, a nove toèke iskoristilo za generiranje novih objekata i dodavanje istih u istu listu. Ideja je dobra, no kako lista raste, provjeravanje postaje vrlo skupa operacija.
 \end{enumerate}
 
 Konaèno rješenje kombinacija je sluèaja 4 i 5 i podijeljeno je u nekoliko funkcija:
 \begin{enumerate}
 	\item Asinkrona funkcija \emph{MapPrep()} - Pokreæe sljedeæe dvije funkcije.
-	\item Funkcija provjere postojeæih toèaka \emph{CheckExistingPoints()} - Provjerava listu postojeæih imena generiranih objekata s novo dobivenim podacima. Ime se generira konkatenacijom stringova x, y i z koordinata toèke što osigurava jedinstvenost i toènost usporedbe. Pri detekciji nove toèke ista se stavlja u novu listu koja sadrži podatke prijašnje navedenog prilagoðenog formata \emph{CustomPointCloud}.
+	\item Funkcija provjere postojeæih toèaka \emph{CheckExistingPoints()} - Provjerava listu postojeæih imena generiranih objekata s novodobivenim podacima. Ime se generira konkatenacijom stringova x, y i z koordinata toèke što osigurava jedinstvenost i toènost usporedbe. Pri detekciji nove toèke ista se stavlja u novu listu koja sadrži podatke prijašnje navedenog prilagoðenog formata \emph{CustomPointCloud}.
 	\item Funkcija za generiranje novih objekata u prostoru \emph{Create3DMap()} odnosno ažuriranje karte - generira nove objekte u prostoru po koordinatama u novoj listi koja sadrži samo nove toèke. Takoðer dodaje imena novih objekata u prikladnu listu.
 \end{enumerate}
 Primitkom nove poruke (samo u sluèaju da je prijašnja iteracija tj. generiranje karte gotovo) poziva se asinkrona funkcija \emph{MapPrep()} u kojoj se poziva novi C\# \emph{Task} koji pokreæe funkciju \emph{CheckExistingPoints()}. Izvršavanje navedene funkcije se uspješno odraðuje u novoj dretvi jer navedena funkcija ne radi ništa s Unity objektima. Kraj izvršavanja zadatka se išèekuje C\# \emph{await} naredbom koja služi za èekanje kraja izvršavanja asinkronih funkcija te se nakon toga pokreæe \emph{Create3DMap()} koja generira nove objekte.

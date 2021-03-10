@@ -74,6 +74,12 @@ U.~Technologies. Unity razvojno okruženje. , s Interneta,
 Ros službene stranice. , s Interneta,  \url{www.ros.org} {, 17. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{rossharprepo}
+\BIBentryALTinterwordspacing
+Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
+  23. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{urdf}
 \BIBentryALTinterwordspacing
 ROS. Urdf. , s Interneta,  \url{http://wiki.ros.org/urdf} {, 31. sijeènja
@@ -83,8 +89,8 @@ ROS. Urdf. , s Interneta,  \url{http://wiki.ros.org/urdf} {, 31. sijeènja
 \bibitem{unityroboticshub}
 \BIBentryALTinterwordspacing
 U.~Technologies. Unity robotics hub. , s Interneta,
-  \url{https://github.com/Unity-Technologies/Unity-Robotics-Hub} {, 28.
-  sijeènja 2021.}
+  \url{https://github.com/Unity-Technologies/Unity-Robotics-Hub} {, 02. ožujka
+  2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{unityros}
@@ -93,11 +99,49 @@ M.~Jenkin. Unity ros. , s Interneta,
   \url{https://github.com/michaeljenkin/unityros} {, 31. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
+\bibitem{monoabout}
+\BIBentryALTinterwordspacing
+M.~Project. Mono. , s Interneta,
+  \url{https://www.mono-project.com/docs/about-mono/} {, 21. rujna 2020.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dotnetstandard}
+\BIBentryALTinterwordspacing
+Microsoft. .net standard. , s Interneta,
+  \url{https://docs.microsoft.com/en-us/dotnet/standard/net-standard} {, 28.
+  sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rostopic}
+\BIBentryALTinterwordspacing
+ROS. Ros teme. , s Interneta,  \url{http://wiki.ros.org/Topics} {, 28. veljaèe
+  2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{movebase}
+\BIBentryALTinterwordspacing
+------. move base. , s Interneta,  \url{http://wiki.ros.org/move_base} {, 02.
+  ožujka 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{rosmessage}
+\BIBentryALTinterwordspacing
+------. Ros poruke. , s Interneta,  \url{http://wiki.ros.org/Messages} {, 28.
+  veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{roscontrol}
 \BIBentryALTinterwordspacing
 ROS.org. Upravljanje robotom. , s Interneta,
   \url{http://wiki.ros.org/robotican/Tutorials/Command you robot with simple
   motion commands} {, 29. sijeènja 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{slam}
+\BIBentryALTinterwordspacing
+Wikipedia. Slam. , s Interneta,
+  \url{https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping} {,
+  02. ožujka 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{inteljoule}
@@ -114,21 +158,9 @@ Intel. Intel® joule 570x. , s Interneta,
   {, 07. sijeènja 2021.}
 \BIBentrySTDinterwordspacing
 
-\bibitem{rostopic}
-\BIBentryALTinterwordspacing
-ROS. Ros teme. , s Interneta,  \url{http://wiki.ros.org/Topics} {, 28. veljaèe
-  2021.}
-\BIBentrySTDinterwordspacing
-
 \bibitem{rosnode}
 \BIBentryALTinterwordspacing
-------. Ros èvorovi. , s Interneta,  \url{http://wiki.ros.org/Nodes} {, 28.
-  veljaèe 2021.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{rosmessage}
-\BIBentryALTinterwordspacing
-------. Ros poruke. , s Interneta,  \url{http://wiki.ros.org/Messages} {, 28.
+ROS. Ros èvorovi. , s Interneta,  \url{http://wiki.ros.org/Nodes} {, 28.
   veljaèe 2021.}
 \BIBentrySTDinterwordspacing
 
@@ -150,16 +182,11 @@ U.~Technologies. Unity asset store. , s Interneta,
   \url{https://assetstore.unity.com} {, 22. rujna 2020.}
 \BIBentrySTDinterwordspacing
 
-\bibitem{monoabout}
+\bibitem{siemens}
 \BIBentryALTinterwordspacing
-M.~Project. Mono. , s Interneta,
-  \url{https://www.mono-project.com/docs/about-mono/} {, 21. rujna 2020.}
-\BIBentrySTDinterwordspacing
-
-\bibitem{rossharprepo}
-\BIBentryALTinterwordspacing
-Siemens. Ros\#. , s Interneta,  \url{https://github.com/siemens/ros-sharp} {,
-  23. rujna 2020.}
+Siemens. Siemens. , s Interneta,
+  \url{https://new.siemens.com/global/en/company/about.html} {, 02. ožujka
+  2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{rosbridgesuite}
@@ -178,6 +205,39 @@ Gazebo. Gazebo. , s Interneta,  \url{http://gazebosim.org/} {, 22. veljaèe
 \BIBentryALTinterwordspacing
 ------. Gazebo roslaunch. , s Interneta,
   \url{http://gazebosim.org/tutorials?tut=ros_roslaunch} {, 28. veljaèe 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cartographer}
+\BIBentryALTinterwordspacing
+Google. Cartographer slam. , s Interneta,
+  \url{https://google-cartographer.readthedocs.io/en/latest/} {, 02. ožujka
+  2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{hector}
+\BIBentryALTinterwordspacing
+T.~Hector. Hector slam. , s Interneta,
+  \url{https://www.teamhector.de/resources/32-hector-slam2} {, 02. ožujka
+  2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{karto}
+\BIBentryALTinterwordspacing
+ROS. Karto slam. , s Interneta,  \url{http://wiki.ros.org/slam_karto} {, 02.
+  ožujka 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{gmapping}
+\BIBentryALTinterwordspacing
+------. Gmapping slam. , s Interneta,  \url{http://wiki.ros.org/gmapping} {,
+  02. ožujka 2021.}
+\BIBentrySTDinterwordspacing
+
+\bibitem{task}
+\BIBentryALTinterwordspacing
+Microsoft. Task. , s Interneta,
+  \url{https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task?view=net-5.0}
+  {, 02. ožujka 2021.}
 \BIBentrySTDinterwordspacing
 
 \bibitem{octomap}

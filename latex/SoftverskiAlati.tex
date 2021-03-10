@@ -2,7 +2,7 @@
 
 % !TeX encoding = windows-1250
 \chapter{Programski alati}
-\qquad Prije samog rješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirati æe se i koji su preduvjeti, tj. knjižnice ili alati koji svaki od njih zahtjeva da se može odraditi funkcija koja im je zadana za prethodno navedenu svrhu.
+\qquad Prije samog rješavanja problematike kako napraviti navedenu aplikaciju, potrebno je objasniti što su i kako funkcioniraju korišteni softverski alati. Definirat æe se i koji su preduvjeti, tj. knjižnice ili alati koji zahtijevaju izvršavanje zadane funkcije.
 
 Korištene su najnovije dostupne te stabilne inaèice korištenih alata:
 \begin{enumerate}
@@ -14,11 +14,11 @@ Sve to na najnovijoj tada dostupnoj LTS verziji Linux Ubuntu operacijskog sustav
 \clearpage
 
 \section{ROS}
-\qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav i unatoè tome što sadrži rijeèi operacijski sustav, on to nije. Iako postoji i eksperimentalna verzija za Windows 10 i OS X, ovaj æe se rad usredotoèiti na razvoj na Linuxu radi kompatibilnosti s raznim alatima. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez posebnih znanja o istima.
+\qquad Robotski Operacijski Sustav (ROS) je radni okvir (eng. framework) koji se instalira u Linux operacijski sustav i unatoè tome što sadrži rijeèi operacijski sustav, on to nije. Iako postoji i eksperimentalna verzija za Windows 10 i Mac OS X, ovaj æe se rad usredotoèiti na razvoj na Linuxu radi kompatibilnosti s raznim alatima. Jedna od najbitnijih karakteristika ROS sustava jest da je omoguæena komunikacija i upravljanje hardverom robota preko softverskih alata ROS-a bez posebnih znanja o istima.
 
-ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje praktiènosti i potencijala ubrzo proširio i u ostale grane robotike. Prije prelaska na ROS, svaki proizvoðaè robota je trebao razvijati svoj API (Application Programming Interface) za komunikaciju i upravljanje svojim robotima. Sada roboti diljem svijeta veæinom koriste ROS kao svoj primarni sustav za komunikaciju i upravljanje, te je zbog toga vrlo korisno nauèiti služiti se istime te poznavati njegovu primjenu. Radi unificirane primjene ROS sustava, steèenim znanjima i vještinama moguæe je razviti softver koji æe poslužiti na razlièitim robotima, odnosno robotima razlièitih proizvoðaèa.
+ROS se ponajviše koristio u znanstvene i obrazovne svrhe, ali se zbog svoje praktiènosti i potencijala ubrzo proširio i u ostale grane robotike. Prije prelaska na ROS, svaki proizvoðaè robota je trebao razvijati svoj API (Application Programming Interface) za komunikaciju i upravljanje svojim robotima. Sada roboti diljem svijeta veæinom koriste ROS kao svoj primarni sustav za komunikaciju i upravljanje, te je zbog toga vrlo korisno nauèiti služiti se istim te poznavati njegovu primjenu. Radi unificirane primjene ROS sustava, steèenim znanjima i vještinama moguæe je razviti softver koji æe poslužiti na razlièitim robotima, odnosno robotima razlièitih proizvoðaèa.
 
-ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno jako pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. Takoðer ROS sadrži razne upravljaèke programe i algoritme, i sve je otvorenog koda - besplatno.\cite{rosurl}
+ROS sadrži razne alate i knjižnice, koji su razvijeni i posloženi po odreðenoj ROS konvenciji. Sve zajedno uvelike pojednostavljuje razvoj novih robotskih softvera i omoguæava kompleksno ponašanje robota. Takoðer ROS sadrži razne upravljaèke programe i algoritme, i sve je otvorenog koda - besplatno.\cite{rosurl}
 
 Nedavno je razvijen i novi ROS, ROS 2. Prva službena verzija izdana je krajem 2017. Iako je preporuèljivo koristiti tehnologije otporne na buduænost (future-proof), za ovaj rad odabran je ROS 1 iz razloga što neki od kritiènih alata za uspjeh rada nisu podržani na najnovijim verzijama ROSa 2. Unatoè tome što je ROS 2 više otporan na buduænost i noviji, ROS 1 se i dalje razvija te nova verzija izlazi svake godine. Neke od razlika izmeðu ROSa 1 i 2 navedene su u tablici \ref{tab:rosversions}.
 
@@ -47,7 +47,7 @@ Nedavno je razvijen i novi ROS, ROS 2. Prva službena verzija izdana je krajem 20
 	\label{tab:rosversions}
 \end{table}
 
-Glavni naèin komunikacije kroz ROS vrši se putem ROS tema (eng. topic) \cite{rostopic}. ROS teme su \emph{"kanali"} putem kojih ROS èvorovi (eng. nodes) izmijenjuju podatke. ROS èvor je proces koji odraðuje odreðeni zadatak \cite{rosnode}. Èvor objavljuje podatke na odreðenu temu a drugi se èvor pretplaæuje na istu temu da bi dobivao objavljene podatke te jedna tema može imati više èvorova koji su pretplaæeni ili objavljuju na nju. Svaka ROS tema ima odreðeni tip podataka i može primati i slati podatke samo tog formata - ROS poruka. ROS poruka je jednostavni oblik strukture podataka s odreðenim tipovima varijabla (primitivni tipovi, polja primitivnih tipova i ugnježðeni tipovi podataka) \cite{rosmessage}.
+Glavni naèin komunikacije kroz ROS vrši se putem ROS tema (eng. topic) \cite{rostopic}. ROS teme su \emph{"kanali"} putem kojih ROS èvorovi (eng. nodes) izmijenjuju podatke. ROS èvor je proces koji odraðuje odreðeni zadatak \cite{rosnode}. Èvor objavljuje podatke na odreðenu temu, a drugi se èvor pretplaæuje na istu temu da bi dobivao objavljene podatke te jedna tema može imati više èvorova koji su pretplaæeni ili objavljuju na nju. Svaka ROS tema ima odreðeni tip podataka i može primati i slati podatke samo tog formata - ROS poruka. ROS poruka je jednostavni oblik strukture podataka s odreðenim tipovima varijabla (primitivni tipovi, polja primitivnih tipova i ugniježðeni tipovi podataka) \cite{rosmessage}.
 
 \emph{roslaunch} je ROS alat koji omoguæuje pokretanje više ROS èvorova odjednom iz \emph{.launch} datoteka XML formata \cite{roslaunch}. U njemu se mogu definirate sve potrebne stvari potrebne za pokretanje simulacije, npr. pokretanje i uèitavanje simuliranog okruženja, pokretanje potrebnih èvorova te definiranje potrebnih argumenata. \emph{roslaunch} automatski pokreæe i \emph{roscore} - ROS znaèajka koja služi kao jezgra svih ROS èvorova koja mora postojati da bi ROS èvorovi mogli komunicirati. \cite{roscore}
 
@@ -69,7 +69,7 @@ U sluèaju da je potrebno testirati aplikaciju na drugoj platformi, potrebno je i
 	\item Hierarchy (hijerarhija) - Hijerarhijski prikaz svih elemenata u trenutnoj sceni. Unity svoje elemente u sceni naziva GameObject (igraèi objekt). 
 	\item Scene (scena) - Glavni prozor gdje se radi sve u vezi s elementima koji se mogu grafièki prikazati.
 	\item Game (igra) - Prozor koji služi kao emulacija igre. Pritiskom na "Play" gumb pokreæe se igra i ovaj prozor gdje se može igrati i vidjeti što i kako radi nakon izrade u scenskom prozoru.
-	\item Inspector (inspektor) - Nakon odabira odreðenog elementa iz hijerarhije (element se takoðer može odabrati i u sceni), ovdje se prikazuju sve komponente nadodane na taj odabrani element tj. GameObject. Mogu se dodavati razne komponente koje Unity pruža, tipa prikaz slika i teksta, animacije, efekti i još mnogo toga, ali i skripte koje sama osoba koja razvija softver može napisati.
+	\item Inspector (inspektor) - Nakon odabira odreðenog elementa iz hijerarhije (element se takoðer može odabrati i u sceni), ovdje se prikazuju sve komponente nadodane na taj odabrani element, tj. GameObject. Mogu se dodavati razne komponente koje Unity pruža, tipa prikaz slika i teksta, animacije, efekti i još mnogo toga, ali i skripte koje sama osoba koja razvija softver može napisati.
 	\item Console (konzola) - Mjesto gdje se ispisuju sve poruke, upozorenja i greške. 
 	\item Project (projekt) - Ovime se može upravljati arhitekturom projekta. Od klasiènog stvaranja mapa i datoteka, imenovanja i ostalog, do dodavanja specifiènih Unity dodataka.
 	\item Ostalo - Meni traka u kojoj se mogu pristupiti svim ostalim postavkama (ukljuèujuæi i veæ navedenim stavkama). Dodatni alati se mogu postaviti kao aktivni i vidljivi, npr. pristup Asset Storeu, panel za animacije i animator te ostale stvari koje nisu vezane za ovaj rad. 
@@ -87,7 +87,7 @@ U sluèaju da je potrebno testirati aplikaciju na drugoj platformi, potrebno je i
 
 \qquad Unity takoðer svojim korisnicima omoguæava programiranje vlastitih ili korištenje tuðih skripti. Programiranje se vrši u C\# programskom jeziku, koji se izvršava na \textit{Mono} razvojnom okruženju. Takoðer, moguæe je skripte programirati u \textit{JavaScriptu}, ali je podrška znatno lošija.
 
-\qquad Cilj \textit{Mono} razvojnog okruženja je da omoguæi korištenje .NET Frameworka na razne operacijske sustave, jer je inaèe .NET framework razvijen od strane Microsofta samo za Windows OS. Komponente \textit{Mono} frameworka ukljuèuju:
+Cilj \textit{Mono} razvojnog okruženja je da omoguæi korištenje .NET Frameworka na razne operacijske sustave, jer je inaèe .NET framework razvijen od strane Microsofta samo za Windows OS. Komponente \textit{Mono} frameworka ukljuèuju:
 \begin{enumerate}
 	\item C\# kompajler - Potpun kompajler, sa svim znaèajkama od C\# 1.0 do 6.0.
 	\item Mono Runtime \cite{monoabout} - Glavne komponente:
@@ -103,7 +103,8 @@ U sluèaju da je potrebno testirati aplikaciju na drugoj platformi, potrebno je i
 	\item .NET Framework knjižnica klasa - \textit{Mono} platforma pruža set klasa kao temelj za razvijanje aplikacija. Navedene su klase kompatibilne s Microsoftovim .NET Framework klasama.
 	\item \textit{Mono} pruža i dodatne klase koje nisu ukljuèene u Microsoftovim baznim klasama koje su posebice korisne za razvijanje Linux aplikacija, npr. Gtk+, Zip, OpenGL, Cairo, POSIX i druge.
 \end{enumerate}
-\qquad Glavne znaèajke \textit{Mono} radnog okruženja:
+
+Glavne znaèajke \textit{Mono} radnog okruženja:
 \begin{itemize}
 	\item Multi-platformsko radno okruženje - Linux, macOS, BSD, Microsoft Windows.
 	\item Multi-jezièan - C\#, VB 8, Java, Python, Ruby i još mnogi.
@@ -113,15 +114,15 @@ U sluèaju da je potrebno testirati aplikaciju na drugoj platformi, potrebno je i
 	\item Opsežna pokrivenost - implementacije mnogih popularnih knjižnica i protokola.
 \end{itemize}
 
-\qquad Programiranje prilagoðenih skripti omoguæava kompleksna ponašanja i radnje u igri/softveru kojega se razvija. Gotovo sve akcije koje se može napraviti u Editoru, može se i u skripti, te se time može drastièno poveæati opseg moguænosti.
+Programiranje prilagoðenih skripti omoguæava kompleksna ponašanja i radnje u igri/softveru kojega se razvija. Gotovo sve akcije koje se mogu napraviti u Editoru, mogu se i u skripti, te se time može drastièno poveæati opseg moguænosti.
 \clearpage
 
 \section{ROS\#}
-\qquad ROS\# je set programskih knjižnica i alata otvorenog koda u C\#u koja omoguæuje komunikaciju izmeðu ROS-a i .NET aplikacija - Unityja, razvijen od strane Siemens kompanije. Siemens je kompanija koja se bavi razvijanjem tehnologije za bitne ekonomske industrije (transport, tvornice i sl.). 
+\qquad ROS\# je set programskih knjižnica i alata otvorenog koda u C\#u koja omoguæuje komunikaciju izmeðu ROSa i .NET aplikacija - Unityja, razvijen od strane Siemens kompanije. Siemens je kompanija koja se bavi razvijanjem tehnologije za bitne ekonomske industrije (transport, tvornice i sl.). \cite{siemens}
 
 ROS\# je bio primarno razvijen za Windows operacijski sustav, ali se uspješno može koristiti i na druge operacijske sustave. Paket se može preuzeti s Unity Asset Storea ili direktno sa službenog Github repozitorija. \cite{rossharprepo} ROS\# je ujedno i glavni alat koji æe se koristiti u ovom radu za stvaranje mosta izmeðu ROSa i Unitya.
 
-\qquad Glavni sadržaj ovog paketa je sljedeæi:
+Glavni sadržaj ovog paketa je sljedeæi:
 \begin{enumerate}
 	\item .NET rješenje za RosBridgeClient (knjižnica koja omoguæuje spajanje vanjskih aplikacija na ROS sustav), URDF (robotski modeli) i MessageGeneration (generiranje poruka).
 	\item ROS paketi korišteni od strane ROS\#a.
@@ -134,7 +135,7 @@ ROS\# je bio primarno razvijen za Windows operacijski sustav, ali se uspješno mo
 
 \section{Gazebo}
 
-\qquad Gazebo je alat za 3D simulaciju robota i njegovog okruženja kojega se æe se u radu koristiti za pokretanje Turtlebot simulacije (slika \ref{fig:gazebo}). Neke od bitnijih znaèajki ovog alata su: realistièna fizika u simulaciji, napredna 3D grafika i efekti, stvaranje senzornih podataka, prikaz robotskih modela i slièno.  \cite{gazebosim}
+\qquad Gazebo je alat za 3D simulaciju robota i njegovog okruženja kojega æe se u radu koristiti za pokretanje Turtlebot simulacije (slika \ref{fig:gazebo}). Neke od bitnijih znaèajki ovog alata su: realistièna fizika u simulaciji, napredna 3D grafika i efekti, stvaranje senzornih podataka, prikaz robotskih modela i slièno.  \cite{gazebosim}
 
 Gazebo simulaciju æe se pokretati \emph{roslaunch} naredbom nad datotekom ekstenzije \emph{.launch} koja sadrži potrebne parametre simulacije, od kojih je za Gazebo bitna lokacija \emph{.world} datoteke. \emph{World} datoteka opisuje model svijeta tj. okoline koja æe se simulirati. \cite{gazeboroslaunch}
 

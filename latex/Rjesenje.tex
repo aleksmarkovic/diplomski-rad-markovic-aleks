@@ -1,11 +1,11 @@
 % !TeX encoding = windows-1250
 \chapter{Opis rješenja}
 
-\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Zahtjevi aplikacije bili su omoguæiti upravljanje robotom i kartiranje okoline koristeæi Unitz Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente i glavni dijelovi sustava.
+\qquad Nastavno na dosad navedeno opisat æe se aplikacija i njezina struktura, kako je ista napravljena i na kojem principu funkcionira. Zahtjevi aplikacije bili su omoguæiti upravljanje robotom i kartiranje okoline koristeæi Unity. Tri glavne komponente ovog sustava, kao što je veæ navedeno, su: ROS, ROS\# i Unity. Na slici \ref{fig:maindiagram} prikazan je dijagram kako sustav izgleda gdje su nam navedene komponente i glavni dijelovi sustava.
 
 Preduvjet koji treba biti ispunjen prije pokretanja sustava jest imati model robota u Unityju da prikaz i osjeæaj pri upravljanju budu kao u simulaciji. Jednom kad Unity sadrži funkcionalnu ROS\# knjižnicu, dobiva se pristup alatu za uvoženje URDF modela robota, što je ujedno i prvi korak u izradu konkretne aplikacije. Potrebno je uvesti model korištenog robota što ukljuèuje i njegove fizièke i motorièke karakteristike kako bi se ga moglo ispravno prikazati u Unityju te upravljati istim. U tu svrhu potrebno je pokrenuti \emph{publish\_description\_turtlebot.launch} datoteku koja je detaljnije opisana u Dodatku A ovog rada. Prije samog pokretanja ove \emph{launch} datoteke potrebno je navesti u kojem æe se ROS paketu i gdje unutar paketa pronaæi i uèitati URDF model željenog robota. Pokretanjem \emph{launch} datoteke uèitava se URDF model robota te se kroz \emph{file\_server} alat objavljuje kao ROS èvor kojega ROS\# URDF alat može proèitati i uvesti u Unity. 
 
-Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti, s obzirom da postoje dva sustava, odnosno ROS 1 i ROS 2 sustav.  ROS 1 sustav se i dalje razvija te se kontinuirano svake godine izraðuju nove verzije istog, dok ROS 2 sustav polako zamjenjuje ROS 1 sustav zbog novijih tehnologija i bogatijih znaèajka. Zakljuèno je ipak bolje trenutno odabrati ROS 1. Najveæi razlog za tu odluku stoji u tome što ROS\# paket trenutno službeno podržava samo ROS 1 sustav. Moguæe je ROS\# koristiti i sa ROS 2 sustavom, no potrebne su mnoge adaptacije koje nisu dokumentirane od strane službenih programera ROS\#a pa je i vjerojatnost nailaženja na probleme i greške visoka. Sukladno navedenom koristit æe se ROS 1 sustav.
+Na samom poèetku bilo je potrebno istražiti koji ROS sustav koristiti, s obzirom da postoje dva sustava, odnosno ROS 1 i ROS 2 sustav.  ROS 1 sustav se i dalje razvija te se kontinuirano svake godine izraðuju nove verzije istog, dok ROS 2 sustav polako zamijenjuje ROS 1 sustav zbog novijih tehnologija i bogatijih znaèajka. Zakljuèno je ipak bolje trenutno odabrati ROS 1. Najveæi razlog za tu odluku stoji u tome što ROS\# paket trenutno službeno podržava samo ROS 1 sustav. Moguæe je ROS\# koristiti i sa ROS 2 sustavom, no potrebne su mnoge adaptacije koje nisu dokumentirane od strane službenih programera ROS\#a pa je i vjerojatnost nailaženja na probleme i greške visoka. Sukladno navedenom koristit æe se ROS 1 sustav.
 \clearpage
 
 \section{Opis suèelja i Unity objekata}
@@ -41,7 +41,7 @@ Sljedeæe æe se navesti svi elementi (objekti) u sceni 1 te èemu služe.
 
 \subsection{Plane}
 
-\qquad Plane je 3D objekt koji služi kao podloga (pod ili teren) robotu. Bez podloge bi se trebalo iskljuèiti svojstvo gravitacije u Unityju, no na taj naèin se može podloga iskoristiti za projekciju generirane 2D karte okoline robota. Na naèin kada postavimo prikaz scene iznad navedenog objekta i robota, dobiva se efekt robota koji ide kroz kartu koja se paralelno izraðuje.
+\qquad Plane je 3D objekt koji služi kao podloga (pod ili teren) robotu. Bez podloge bi se trebalo iskljuèiti svojstvo gravitacije u Unityju, no na taj naèin se može podloga iskoristiti za projekciju generirane 2D karte okoline robota. Na naèin kada postavimo prikaz scene iznad navedenog objekta i robota, dobiva se efekt robota koji se kreæe kroz kartu koja se paralelno izraðuje.
 
 \subsection{Model robota}
 
@@ -59,17 +59,17 @@ Pomièni podobjekti, npr. kotaèi, se vrte isto kao i u simulaciji zahvaljujuæi po
 
 \subsection{Canvas}
 
-\qquad \textbf{Canvas} u Unityju je 2D objekt koji veæinom služi za slaganje grafièkih komponenta suèelja, npr. gumbovi, tekst ulazi i sl. Jedna od najveæih prednosti Canvasa je responzivnost. Canvasu se može definirati bazna rezolucija, koja se onda može skalirati ovisno o rezoluciji ureðaja gdje je aplikacija pokrenuta. Isto vrijedi za sve elemente u Canvasu. Elementi se mogu "usidriti" u nekom kutu ekrana, mogu se širiti i smanjivati ovisno o rezoluciji, mijenjati poziciju ovisno o velièini ekrana i sl.
+\qquad \textbf{Canvas} u Unityju je 2D objekt koji veæinom služi za slaganje grafièkih komponenta suèelja, npr. gumbovi, tekst ulazi i sl. Jedna od najveæih prednosti Canvasa je responzivnost. Canvasu se može definirati bazna rezolucija, koja se onda može skalirati ovisno o rezoluciji ureðaja gdje je aplikacija pokrenuta. Isto vrijedi za sve elemente u Canvasu. Elementi se mogu \emph{"usidriti"} u nekom kutu ekrana, mogu se širiti i smanjivati ovisno o rezoluciji, mijenjati poziciju ovisno o velièini ekrana i sl.
 
 U ovoj aplikaciji Canvas se sastoji od sljedeæih elemenata:
 \begin{enumerate}
 	\item \emph{Camera Image} kao što ime govori, je element Canvasa gdje nam se prikazuje slika s kamere. Slika kamere uèitava se kao tekstura te se ista preslikava kao \emph{Sprite} (grafièki element u Unityju - slika) na navedeni element koji sadrži polje za sliku. Element je proširen po cijeloj dužini i širini Canvasa, tako da se ovisno o rezoluciji ekrana skalira.
 	\item \emph{Control} je objekt koji sadrži podobjekte koji su gumbovi za odreðivanje linearne i kutne brzine robota. 
 	\item \emph{Laserscan Button} je gumb koji ukljuèuje i iskljuèuje prikaz objekata generiranih laserskim skenom.
-	\item \emph{Camera Button} je gumb koji mjenja prikaz kamere (topografski prikaz karte i robota te prikaz u prvom licu s kamere robota).
+	\item \emph{Camera Button} je gumb koji mijenja prikaz kamere (topografski prikaz karte i robota te prikaz u prvom licu s kamere robota).
 	\item \emph{2D Map Button} je gumb koji ukljuèuje i iskljuèuje crtanje i prikaz 2D karte na \emph{Plane} objekt.
-	\item \emph{Switch Robot Camera} mjenja prikaz kamere u prvom licu na drugog robota (u sluèaju da ima više robota u simulaciji). Ako u simulaciji postoji samo jedan robot, tada je taj gumb iskljuèen.
-	\item \emph{FPS} koji prikazuje trenutni FPS (broj ažuriranja slike u sekundi) u sceni.
+	\item \emph{Switch Robot Camera} mijenja prikaz kamere u prvom licu na drugog robota (u sluèaju da ima više robota u simulaciji). Ako u simulaciji postoji samo jedan robot, tada je taj gumb iskljuèen.
+	\item \emph{FPS} koji prikazuje trenutni FPS (eng. Frames Per Second) u sceni - broj ažuriranja slike u sekundi.
 \end{enumerate}
 
 \subsection{Multi Robot Control}
@@ -84,13 +84,13 @@ U ovoj aplikaciji Canvas se sastoji od sljedeæih elemenata:
 
 \section{Znaèajke i moguænosti rješenja}
 
-\qquad U sljedeæoj æe se sekciji navesti i opisati znaèajke i moguænosti koje se implementiralo u ovom radu.
+\qquad U sljedeæoj æe se sekciji navesti i opisati znaèajke i moguænosti koje su se implementirale u ovom radu.
 
 \subsection{Kamere}
 
-\qquad U sceni postoje dvije kamere. Kamera u Unityju oznaèava kako se scena prikazuje. Ona može biti iz razlièitih kuteva, sa razlièitom širinom i dubinom snimanja, bilo kojom pozicijom snimanja i još mnogo postavka. Jedna æe kamera biti postavljena iznad 3D objekata, a druga æe biti namještena da snima Canvas - u ovom sluèaju pozicija kamere nije bitna jer fiksno snima 2D Canvas.
+\qquad U sceni postoje dvije kamere. Kamera u Unityju oznaèava kako se scena prikazuje. Ona može biti iz razlièitih kuteva, s razlièitom širinom i dubinom snimanja, bilo kojom pozicijom snimanja i još mnogo postavka. Jedna æe kamera biti postavljena iznad 3D objekata, a druga æe biti namještena da snima Canvas - u ovom sluèaju pozicija kamere nije bitna jer fiksno snima 2D Canvas.
 
-Prikaz kamere iz prvog lica - Prva znaèajka na koju se nailazi prilikom pokretanja aplikacije je prikaz kamere iz prvog lica. Slika se u stvarnom vremenu dohvaæa sa robota te se kao tekstura postavlja na prijašnje navedenom Canvas objektu. Testiran je još jedan naèin na koji se može prikazivati slika kamere, a to je postaviti 3D objekt ispred robota koji služi kao platno gdje se postavlja slika. Platno bi trebalo biti fiksne pozicije u odnosu na poziciju i orijentaciju robota. Zbog nemoguænosti efikasnog skaliranja slike na razlièite rezolucije i ureðaje ovu se metodu odbacilo
+Prikaz kamere iz prvog lica - Prva znaèajka na koju se nailazi prilikom pokretanja aplikacije je prikaz kamere iz prvog lica. Slika se u stvarnom vremenu dohvaæa sa robota te se kao tekstura postavlja na prijašnje navedenom Canvas objektu. Testiran je još jedan naèin na koji se može prikazivati slika kamere, a to je postaviti 3D objekt ispred robota koji služi kao platno gdje se postavlja slika. Platno bi trebalo biti fiksne pozicije u odnosu na poziciju i orijentaciju robota. Zbog nemoguænosti efikasnog skaliranja slike na razlièite rezolucije i ureðaje, ovu se metodu odbacilo.
 
 Prikaz kamere iz ptièje perspektive - U ovoj se perspektivi prikazuje 3D model robota na 2D karti koja se izraðuje s dobivenim podacima iz \emph{/map} ROS teme, gdje se izraðuje nova tekstura koja se precrtava na \emph{Plane} objekt. U ovoj su perspektivi takoðer vidljive sfere (takoðer 3D objekti) koji se crtaju shodno podacima iz \emph{/scan} ROS teme (laserskog skena).
 
@@ -103,12 +103,12 @@ U poèetnoj fazi implementacije slike s kamere robota pokušano je postaviti sliku
 
 \subsection{2D kartiranje}
 
-\qquad Pošto postoji mnoštvo SLAM metoda za 2D kartiranje, navesti æe se nekoliko njih koje su prikladne za Turtlebotove moguænosti:
+\qquad Pošto postoji mnoštvo SLAM metoda za 2D kartiranje, navest æe se nekoliko njih koje su prikladne za Turtlebotove moguænosti:
 \begin{enumerate}
-	\item Cartographer	
-	\item Hector
-	\item Karto
-	\item Gmapping
+	\item Cartographer \cite{cartographer}
+	\item Hector \cite{hector}
+	\item Karto \cite{karto}
+	\item Gmapping \cite{gmapping}
 \end{enumerate}
 
 Svi navedeni algoritmi koriste podatke 2D lidar senzora - laserski skener, kao glavni izvor podataka za izgradnju karata. Podatke laserskog skenera dobivaju pretplatom na ROS temu \emph{sensor\_msgs/LaserScan} koja sadrži polje podataka koje opisuje rezultirajuæi raspon u prostoru. Svaki element u polju oznaèava rezultat skeniranja u nekom smjeru, gdje inkrement smjera ovisi o specifikaciji senzora. Iz razloga što je najèešæe prisutan u edukacijske svrhe, u ovom æe se radu koristit \emph{gmapping} algoritam, koji svoju rezultirajuæu karti objaljuje na ROS temu \emph{/map}.
@@ -117,15 +117,15 @@ Svi navedeni algoritmi koriste podatke 2D lidar senzora - laserski skener, kao g
 Proces crtanja karte u Unityju je sljedeæi:
 \begin{enumerate}
 	\item Uèitava se dužina i širina karte.
-	\item Inicijalizira se nova varijabla za kartu koja æe biti tipa \emph{Color} i biti æe iste duljine kao i polje podataka iz \emph{/map} teme.
+	\item Inicijalizira se nova varijabla za kartu koja æe biti tipa \emph{Color} i bit æe iste duljine kao i polje podataka iz \emph{/map} teme.
 	\item Iterira se po tom dobivenom polju podataka te se ovisno o dobivenom podatku u novoinicijalizirano polje boja dodaje nova definirana boja.
-	\item Nakon iteriranja je potrebno postaviti zastavicu (flag) u \emph{true} koja predstavlja da je potrebno nacrtati novu kartu na suèelju.
+	\item Nakon iteriranja je potrebno postaviti zastavicu (eng. flag) u \emph{true} koja predstavlja da je potrebno nacrtati novu kartu na suèelju.
 	\item Unity funkcija \emph{Update()} koja se izvršava svako osvježavanje ekrana, provjerava navedenu zastavicu i izraðuje novu teksturu na temelju definiranog polja boja, dužine i širine karte. Nova se tekstura sprema na glavnu teksturu \emph{Renderer} komponente na \emph{Plane} objektu. 
 \end{enumerate}
 
 Korištena metoda kartiranja je \emph{SLAM gmapping} koja je bazirana na podacima laserskog skena i pozicije robota. Ista je stvoritelj prijašnje navedenih \emph{Occupancy Grid} podataka (mreža popunjenosti) tj. karte. Karta se ažurira u intervalu od 4 sekunde.
 
-Ispunjavanje novog polja boja u petlji je vrlo loše optimiziran pristup. U aplikaciji se osjeæao trzaj u izvršavanju tijekom izrade karte, pa se kao rješenje na to izvršavanje funkcije koja sadrži petlju izvršava kao novi \emph{Task} koji u C\# oznaèuje asinkronu operaciju na novoj dretvi. Time se drastièno smanjio trzaj u aplikaciji.
+Ispunjavanje novog polja boja u petlji je loše optimiziran pristup. U aplikaciji se osjeæao trzaj u izvršavanju tijekom izrade karte, pa se kao rješenje na to izvršavanje funkcije koja sadrži petlju izvršava kao novi \emph{Task} koji u C\# oznaèuje asinkronu operaciju na novoj dretvi \cite{task}. Time se drastièno smanjio trzaj u aplikaciji.
 
 \subsection{Upravljanje}
 
@@ -135,7 +135,7 @@ Ispunjavanje novog polja boja u petlji je vrlo loše optimiziran pristup. U aplik
 	\item Kombinacijom tipka (w, a, s, d) ili tipka strelica - Unity pomoæu ROS\# pomoænih skripti koje uèitavaju promjenu u ulazu \emph{Input Managera}, pretvara ulaze u upravljaèku naredbu za \emph{/joy} ROS temu. Nakon toga ROS\# èvor \emph{joy\_to\_twist} pretvara poruke \emph{/joy} ROS teme u poruke formata \emph{geometry\_msgs/Twist} te šalje na ROS temu \emph{/cmd\_vel}. Unity \emph{Input Manager} je dio postavka gdje se mogu konfigurirati naèini ulaza naredba u aplikaciju.
 \end{itemize}
 
-Samo se jedna od navedenih metoda može koristiti odjednom iz razloga što obe metode šalju poruke na istu ROS temu (\emph{/cmd\_vel}) pa æe u sluèaju korištenja obe metode, metoda joysticka ili tipka premostiti metodu gumbova. 
+Samo se jedna od navedenih metoda može koristiti odjednom iz razloga što obje metode šalju poruke na istu ROS temu (\emph{/cmd\_vel}) pa æe u sluèaju korištenja obje metode, metoda joysticka ili tipka premostiti metodu gumbova. 
 
 Povratna informacija s \emph{/odom} ROS teme se koristi za ažuriranje odometrijskih podataka robotskog modela u Unity prostoru.
 
@@ -197,7 +197,7 @@ Ovim koracima stvara se 3D karta u Unity aplikaciji.
 
 \qquad Na slici \ref{fig:rqtgraph} prikazan je cjelovit RQT graf sustava. \emph{rqt\_graph} je grafièki alat za prikaz ROS grafa pokrenutog sustava/aplikacije. U njemu su prikazane poveznice izmeðu pokrenutih ROS tema i èvorova.
 
-U grafu je vidljivo da sve ROS teme s povratnim informacijama idu u \emph{/ros\_websocket} a iz njega odlaze poruke u ROS teme za upravljanje robotom.
+U grafu je vidljivo da sve ROS teme s povratnim informacijama idu u \emph{/ros\_websocket}, a iz njega odlaze poruke u ROS teme za upravljanje robotom.
 
 \begin{figure}[!htbp]
 	\begin{center}
